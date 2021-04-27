@@ -34,7 +34,7 @@ const IndexPage = () => {
           <Trans>Go to page 2</Trans>
         </Link>{" "}
         <br />
-        <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+        <Link to="/TS/using-typescript/">Go to "Using TypeScript"</Link>
       </p>
     </Layout>
   )
