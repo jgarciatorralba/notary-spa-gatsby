@@ -1,21 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import { Link, useI18next } from "gatsby-plugin-react-i18next"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+const Header = ({ siteTitle }) => {
+  const { languages, originalPath } = useI18next()
+
+  return (
+    <header className="main-header">
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
@@ -27,9 +18,18 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
-  </header>
-)
+      <ul className="languages">
+        {languages.map(lng => (
+          <li key={lng}>
+            <Link to={originalPath} language={lng}>
+              {lng}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
