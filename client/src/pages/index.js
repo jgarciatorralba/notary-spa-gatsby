@@ -6,16 +6,18 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import "../styles/pages/index.scss"
+
 const IndexPage = () => {
   const { t } = useTranslation()
 
   return (
     <Layout>
       <Seo title={t("Home")} />
-      <h1>
+      <h1 className="bg-green-500">
         <Trans>Hi people</Trans>
       </h1>
-      <p>
+      <p className="test">
         <Trans>Welcome to your new Gatsby site.</Trans>
       </p>
       <p>
