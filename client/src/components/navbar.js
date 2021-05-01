@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import * as React from "react"
 import { Fragment } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
