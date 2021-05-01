@@ -21,6 +21,7 @@ const Navbar = () => {
     { name: "main", to: "/", current: true },
     { name: "about", to: "/sobre-nosotros/", current: false },
     { name: "contact", to: "/contacto/", current: false },
+    { name: "services", to: "/servicios/", current: false },
   ]
 
   return (
@@ -61,14 +62,22 @@ const Navbar = () => {
                         to={item.to}
                         className={classNames(
                           // item.current
-                          item.to === context.originalPath
+                          //item.to === context.originalPath
+                          item.to === context.originalPath ||
+                            (context.originalPath.includes(item.to) &&
+                              item.to !== "/")
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
                           "px-3 py-2 rounded-md text-sm font-medium"
                         )}
                         aria-current={
                           // item.current
-                          item.to === context.originalPath ? "page" : undefined
+                          //item.to === context.originalPath
+                          item.to === context.originalPath ||
+                          (context.originalPath.includes(item.to) &&
+                            item.to !== "/")
+                            ? "page"
+                            : undefined
                         }
                       >
                         {/* {item.name} */}
@@ -169,14 +178,21 @@ const Navbar = () => {
                   to={item.to}
                   className={classNames(
                     // item.current
-                    item.to === context.originalPath
+                    // item.to === context.originalPath
+                    item.to === context.originalPath ||
+                      (context.originalPath.includes(item.to) &&
+                        item.to !== "/")
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
                   aria-current={
                     // item.current
-                    item.to === context.originalPath ? "page" : undefined
+                    //item.to === context.originalPath
+                    item.to === context.originalPath ||
+                    (context.originalPath.includes(item.to) && item.to !== "/")
+                      ? "page"
+                      : undefined
                   }
                 >
                   {item.name}
