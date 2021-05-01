@@ -2,7 +2,11 @@ import * as React from "react"
 import { Fragment } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
-import { Link, useTranslation } from "gatsby-plugin-react-i18next"
+import {
+  Link,
+  useTranslation,
+  I18nextContext,
+} from "gatsby-plugin-react-i18next"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
@@ -10,6 +14,8 @@ function classNames(...classes) {
 
 const Navbar = () => {
   const { t } = useTranslation()
+
+  const context = React.useContext(I18nextContext)
 
   const navigation = [
     { name: "main", to: "/", current: true },
@@ -54,12 +60,16 @@ const Navbar = () => {
                         key={item.name}
                         to={item.to}
                         className={classNames(
-                          item.current
+                          // item.current
+                          item.to === context.originalPath
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
                           "px-3 py-2 rounded-md text-sm font-medium"
                         )}
-                        aria-current={item.current ? "page" : undefined}
+                        aria-current={
+                          // item.current
+                          item.to === context.originalPath ? "page" : undefined
+                        }
                       >
                         {/* {item.name} */}
                         {/* <Trans>{`components.navbar.${item.name}`}</Trans> */}
@@ -158,12 +168,16 @@ const Navbar = () => {
                   key={item.name}
                   to={item.to}
                   className={classNames(
-                    item.current
+                    // item.current
+                    item.to === context.originalPath
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
-                  aria-current={item.current ? "page" : undefined}
+                  aria-current={
+                    // item.current
+                    item.to === context.originalPath ? "page" : undefined
+                  }
                 >
                   {item.name}
                 </Link>
