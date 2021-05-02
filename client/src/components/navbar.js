@@ -22,8 +22,8 @@ const Navbar = () => {
   const navigation = [
     { name: "main", to: "/", current: true },
     { name: "about", to: "/sobre-nosotros/", current: false },
-    { name: "contact", to: "/contacto/", current: false },
     { name: "services", to: "/servicios/", current: false },
+    { name: "contact", to: "/contacto/", current: false },
   ]
 
   return (
