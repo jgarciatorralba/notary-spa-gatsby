@@ -2,11 +2,7 @@ import * as React from "react"
 import { Fragment } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
-import {
-  Link,
-  useTranslation,
-  I18nextContext,
-} from "gatsby-plugin-react-i18next"
+import { Link, useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 
 import "../styles/components/navbar.scss"
 
@@ -17,7 +13,7 @@ function classNames(...classes) {
 const Navbar = () => {
   const { t } = useTranslation()
 
-  const context = React.useContext(I18nextContext)
+  const { language, languages, originalPath } = useI18next()
 
   const navigation = [
     { name: "main", to: "/", current: true },
@@ -65,9 +61,11 @@ const Navbar = () => {
                         className={classNames(
                           // item.current
                           //item.to === context.originalPath
-                          item.to === context.originalPath ||
-                            (context.originalPath.includes(item.to) &&
-                              item.to !== "/")
+                          // item.to === context.originalPath ||
+                          //   (context.originalPath.includes(item.to) &&
+                          //     item.to !== "/")
+                          item.to === originalPath ||
+                            (originalPath.includes(item.to) && item.to !== "/")
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
                           "px-3 py-2 rounded-full text-sm font-medium"
@@ -75,9 +73,8 @@ const Navbar = () => {
                         aria-current={
                           // item.current
                           //item.to === context.originalPath
-                          item.to === context.originalPath ||
-                          (context.originalPath.includes(item.to) &&
-                            item.to !== "/")
+                          item.to === originalPath ||
+                          (originalPath.includes(item.to) && item.to !== "/")
                             ? "page"
                             : undefined
                         }
@@ -90,14 +87,14 @@ const Navbar = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+              <ul className="languages absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                {/* <button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                </button> */}
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="ml-3 relative">
+                {/* <Menu as="div" className="ml-3 relative">
                   {({ open }) => (
                     <>
                       <div>
@@ -167,8 +164,21 @@ const Navbar = () => {
                       </Transition>
                     </>
                   )}
-                </Menu>
-              </div>
+                </Menu> */}
+                {languages.map(lng => (
+                  <li
+                    key={lng}
+                    className={classNames(
+                      lng === language ? "text-white" : "text-gray-300",
+                      "mx-2"
+                    )}
+                  >
+                    <Link to={originalPath} language={lng}>
+                      {lng}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
           <Transition
@@ -190,9 +200,8 @@ const Navbar = () => {
                     className={classNames(
                       // item.current
                       // item.to === context.originalPath
-                      item.to === context.originalPath ||
-                        (context.originalPath.includes(item.to) &&
-                          item.to !== "/")
+                      item.to === originalPath ||
+                        (originalPath.includes(item.to) && item.to !== "/")
                         ? "bg-gray-900 text-white"
                         : "text-gray-300 hover:bg-gray-700 hover:text-white",
                       "w-3/4 my-2 block px-3 py-2 rounded-full text-base text-center font-medium"
@@ -200,9 +209,8 @@ const Navbar = () => {
                     aria-current={
                       // item.current
                       //item.to === context.originalPath
-                      item.to === context.originalPath ||
-                      (context.originalPath.includes(item.to) &&
-                        item.to !== "/")
+                      item.to === originalPath ||
+                      (originalPath.includes(item.to) && item.to !== "/")
                         ? "page"
                         : undefined
                     }
