@@ -8,6 +8,8 @@ import {
   I18nextContext,
 } from "gatsby-plugin-react-i18next"
 
+import "../styles/components/navbar.scss"
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
@@ -68,7 +70,7 @@ const Navbar = () => {
                               item.to !== "/")
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
+                          "px-3 py-2 rounded-full text-sm font-medium"
                         )}
                         aria-current={
                           // item.current
@@ -171,7 +173,7 @@ const Navbar = () => {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="custom-mobile-panel px-2 pt-2 pb-3 min-w-full fixed bg-gray-800 z-10 flex flex-col justify-center content-center items-center">
               {navigation.map(item => (
                 <Link
                   key={item.name}
@@ -184,7 +186,7 @@ const Navbar = () => {
                         item.to !== "/")
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block px-3 py-2 rounded-md text-base font-medium"
+                    "w-3/4 my-2 block px-3 py-2 rounded-full text-base text-center font-medium"
                   )}
                   aria-current={
                     // item.current
@@ -195,7 +197,7 @@ const Navbar = () => {
                       : undefined
                   }
                 >
-                  {item.name}
+                  {t(item.name)}
                 </Link>
               ))}
             </div>
