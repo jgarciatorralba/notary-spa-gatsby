@@ -171,37 +171,48 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-
-          <Disclosure.Panel className="sm:hidden">
-            <div className="custom-mobile-panel px-2 pt-2 pb-3 min-w-full fixed bg-gray-800 z-10 flex flex-col justify-center content-center items-center">
-              {navigation.map(item => (
-                <Link
-                  key={item.name}
-                  to={item.to}
-                  className={classNames(
-                    // item.current
-                    // item.to === context.originalPath
-                    item.to === context.originalPath ||
+          <Transition
+            show={open}
+            as={Fragment}
+            enter="transition ease-out duration-150"
+            enterFrom="transform opacity-0 scale-95"
+            enterTo="transform opacity-100 scale-100"
+            leave="transition ease-in duration-150"
+            leaveFrom="transform opacity-100 scale-100"
+            leaveTo="transform opacity-0 scale-95"
+          >
+            <Disclosure.Panel className="sm:hidden" static>
+              <div className="custom-mobile-panel px-2 pt-2 pb-3 min-w-full fixed bg-gray-800 z-50 flex flex-col justify-center content-center items-center">
+                {navigation.map(item => (
+                  <Link
+                    key={item.name}
+                    to={item.to}
+                    className={classNames(
+                      // item.current
+                      // item.to === context.originalPath
+                      item.to === context.originalPath ||
+                        (context.originalPath.includes(item.to) &&
+                          item.to !== "/")
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      "w-3/4 my-2 block px-3 py-2 rounded-full text-base text-center font-medium"
+                    )}
+                    aria-current={
+                      // item.current
+                      //item.to === context.originalPath
+                      item.to === context.originalPath ||
                       (context.originalPath.includes(item.to) &&
                         item.to !== "/")
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "w-3/4 my-2 block px-3 py-2 rounded-full text-base text-center font-medium"
-                  )}
-                  aria-current={
-                    // item.current
-                    //item.to === context.originalPath
-                    item.to === context.originalPath ||
-                    (context.originalPath.includes(item.to) && item.to !== "/")
-                      ? "page"
-                      : undefined
-                  }
-                >
-                  {t(item.name)}
-                </Link>
-              ))}
-            </div>
-          </Disclosure.Panel>
+                        ? "page"
+                        : undefined
+                    }
+                  >
+                    {t(item.name)}
+                  </Link>
+                ))}
+              </div>
+            </Disclosure.Panel>
+          </Transition>
         </>
       )}
     </Disclosure>
