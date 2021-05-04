@@ -1,7 +1,13 @@
+@import "../settings/variables";
+
 .custom-mobile-panel {
   min-height: calc(100vh - 64px);
 }
 
 .languages {
   text-transform: uppercase;
+
+  li:not(:last-child) {
+    border-right: 1px solid $tailwind-gray-300;
+  }
 }
