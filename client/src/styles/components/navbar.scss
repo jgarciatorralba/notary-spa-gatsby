@@ -11,3 +11,11 @@
     border-right: 1px solid $tailwind-gray-300;
   }
 }
+
+.logo-text {
+  font-family: "Alex Brush", cursive;
+  font-size: 32px;
+  color: $tailwind-gray-300;
+  position: relative;
+  bottom: 7px;
+}
