@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Notaría Vic`,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque blandit egestas. Etiam ac elit a erat dictum imperdiet. In enim nunc, fringilla sit amet dictum non, tempor vel augue. Integer scelerisque sem varius fermentum tincidunt. Mauris sagittis dignissim tortor vel dictum. Nulla eu condimentum leo. Fusce rhoncus nibh mi, vitae ultrices purus mollis a. Maecenas pharetra posuere nibh, id vehicula ligula ultrices id.`,
+    author: `@jgarciatorralba`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
