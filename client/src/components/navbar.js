@@ -14,6 +14,7 @@ const Navbar = () => {
   const { t } = useTranslation()
 
   const { language, languages, originalPath } = useI18next()
+  const { title } = t("metadata", { returnObjects: true })
 
   const navigation = [
     { name: "main", to: "/", current: true },
@@ -52,7 +53,7 @@ const Navbar = () => {
                     alt="Workflow"
                   /> */}
                   <p className="hidden lg:block h-8 w-auto logo-text">
-                    Notaría Vic
+                    {title}
                   </p>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
