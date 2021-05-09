@@ -61,7 +61,7 @@ module.exports = {
         languages: [`es`, `ca`],
         defaultLanguage: `es`,
         // if you are using Helmet, you must include siteUrl, and make sure you add http:https
-        siteUrl: `http://localhost:8000/`,
+        siteUrl: `http://localhost:8000/`, // https://notariaminguez.com
         // pass following options to allow message content as a key
         i18nextOptions: {
           interpolation: {
