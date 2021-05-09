@@ -43,7 +43,7 @@ module.exports = {
       options: {
         postCssPlugins: [
           require("tailwindcss"),
-          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+          require("./tailwind.config.js"),
         ],
       },
     },
@@ -57,12 +57,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        localeJsonSourceName: `locale`, // name given to `gatsby-source-filesystem` plugin.
+        localeJsonSourceName: `locale`,
         languages: [`es`, `ca`],
         defaultLanguage: `es`,
-        // if you are using Helmet, you must include siteUrl, and make sure you add http:https
         siteUrl: `http://localhost:8000/`, // https://notariaminguez.com
-        // pass following options to allow message content as a key
         i18nextOptions: {
           interpolation: {
             escapeValue: false,
