@@ -3,6 +3,7 @@ import { Fragment } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
 import { Link, useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import Logo from "../images/demo/emblem.png"
 
 import "../styles/components/navbar.scss"
 
@@ -44,8 +45,8 @@ const Navbar = () => {
                 <div className="flex-shrink-0 flex items-center">
                   <img
                     className="block lg:hidden h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                    alt="Workflow"
+                    src={Logo}
+                    alt="Company logo"
                   />
                   {/* <img
                     className="hidden lg:block h-8 w-auto"
