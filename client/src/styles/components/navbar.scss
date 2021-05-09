@@ -2,6 +2,10 @@
 
 .custom-mobile-panel {
   min-height: calc(100vh - 64px);
+  a {
+    position: relative;
+    bottom: 32px;
+  }
 }
 
 .languages {
