@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Notaría Mínguez`,
-    description: `ES: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque blandit egestas. Etiam ac elit a erat dictum imperdiet. In enim nunc, fringilla sit amet dictum non, tempor vel augue. Integer scelerisque sem varius fermentum tincidunt. Mauris sagittis dignissim tortor vel dictum. Nulla eu condimentum leo. Fusce rhoncus nibh mi, vitae ultrices purus mollis a. Maecenas pharetra posuere nibh, id vehicula ligula ultrices id.`,
+    description: `ES: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque blandit egestas. Etiam ac elit a erat dictum imperdiet. In enim nunc, fringilla sit amet dictum non, tempor vel augue. Integer scelerisque sem varius fermentum tincidunt. Mauris sagittis dignissim tortor vel dictum. Nulla eu condimentum leo.`,
     author: `@jgarciatorralba`,
   },
   plugins: [
