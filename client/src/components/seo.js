@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useI18next } from "gatsby-plugin-react-i18next"
 
-function Seo({ description, meta, title, localizedDefaultTitle }) {
+function Seo({ description, meta, pageTitle, defaultTitle }) {
   const { language } = useI18next()
 
   const { site } = useStaticQuery(
@@ -21,16 +21,21 @@ function Seo({ description, meta, title, localizedDefaultTitle }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = localizedDefaultTitle || site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata?.description
+  const metaDefaultTitle = defaultTitle || site.siteMetadata?.title
+  const metaTitle = pageTitle || metaDefaultTitle
 
   return (
     <Helmet
       htmlAttributes={{
         lang: language,
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={metaTitle}
+      titleTemplate={
+        metaTitle !== metaDefaultTitle
+          ? `%s | ${metaDefaultTitle}`
+          : metaDefaultTitle
+      }
       meta={[
         {
           name: `description`,
@@ -38,7 +43,7 @@ function Seo({ description, meta, title, localizedDefaultTitle }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -58,7 +63,7 @@ function Seo({ description, meta, title, localizedDefaultTitle }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
@@ -70,17 +75,15 @@ function Seo({ description, meta, title, localizedDefaultTitle }) {
 }
 
 Seo.defaultProps = {
-  lang: `en`,
   meta: [],
   description: ``,
 }
 
 Seo.propTypes = {
   description: PropTypes.string,
-  lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-  localizedDefaultTitle: PropTypes.string,
+  pageTitle: PropTypes.string,
+  defaultTitle: PropTypes.string,
 }
 
 export default Seo

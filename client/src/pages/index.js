@@ -17,12 +17,11 @@ const IndexPage = () => {
     returnObjects: true,
   })
 
-  const { title } = homepageTranslations
   const { title: defaultTitle } = metaTranslations
 
   return (
     <Layout>
-      <Seo title={title} localizedDefaultTitle={defaultTitle} />
+      <Seo defaultTitle={defaultTitle} />
       <h1 className="bg-green-500">
         <Trans>Hi people</Trans>
       </h1>
