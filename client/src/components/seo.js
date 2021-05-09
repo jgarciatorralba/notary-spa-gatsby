@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useI18next } from "gatsby-plugin-react-i18next"
 
-function Seo({ description, meta, title }) {
+function Seo({ description, meta, title, localizedDefaultTitle }) {
   const { language } = useI18next()
 
   const { site } = useStaticQuery(
@@ -22,7 +22,7 @@ function Seo({ description, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const defaultTitle = localizedDefaultTitle || site.siteMetadata?.title
 
   return (
     <Helmet
@@ -80,6 +80,7 @@ Seo.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  localizedDefaultTitle: PropTypes.string,
 }
 
 export default Seo
