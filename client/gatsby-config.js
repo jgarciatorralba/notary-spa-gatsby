@@ -32,7 +32,7 @@ module.exports = {
             start_url: `/ca/`,
             lang: `ca`,
             name: `Notaria Mínguez a Vic`,
-            short_name: `Notaría Mínguez`,
+            short_name: `Notaria Mínguez`,
           },
         ],
       },
