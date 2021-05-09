@@ -16,12 +16,15 @@ const Navbar = () => {
 
   const { language, languages, originalPath } = useI18next()
   const { title } = t("metadata", { returnObjects: true })
+  const { main, about, contact, services } = t("navbar", {
+    returnObjects: true,
+  })
 
   const navigation = [
-    { name: "main", to: "/", current: true },
-    { name: "about", to: "/sobre-nosotros/", current: false },
-    { name: "services", to: "/servicios/", current: false },
-    { name: "contact", to: "/contacto/", current: false },
+    { name: main, to: "/", current: true },
+    { name: about, to: "/sobre-nosotros/", current: false },
+    { name: services, to: "/servicios/", current: false },
+    { name: contact, to: "/contacto/", current: false },
   ]
 
   return (
@@ -86,7 +89,7 @@ const Navbar = () => {
                       >
                         {/* {item.name} */}
                         {/* <Trans>{`components.navbar.${item.name}`}</Trans> */}
-                        {t(item.name)}
+                        {item.name}
                       </Link>
                     ))}
                   </div>
@@ -220,7 +223,7 @@ const Navbar = () => {
                         : undefined
                     }
                   >
-                    {t(item.name)}
+                    {item.name}
                   </Link>
                 ))}
               </div>
