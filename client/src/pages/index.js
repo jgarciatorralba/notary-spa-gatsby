@@ -10,10 +10,15 @@ import "../styles/pages/index.scss"
 
 const IndexPage = () => {
   const { t } = useTranslation()
+  const homepageTranslations = t("home", {
+    returnObjects: true,
+  })
+
+  const { title } = homepageTranslations
 
   return (
     <Layout>
-      <Seo title={t("Home")} />
+      <Seo title={title} />
       <h1 className="bg-green-500">
         <Trans>Hi people</Trans>
       </h1>

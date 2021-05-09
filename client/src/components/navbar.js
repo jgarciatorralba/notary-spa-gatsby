@@ -16,9 +16,9 @@ const Navbar = () => {
 
   const { language, languages, originalPath } = useI18next()
   const { title } = t("metadata", { returnObjects: true })
-  const { main, about, contact, services } = t("components", {
+  const { main, about, contact, services } = t("navbar", {
     returnObjects: true,
-  }).navbar
+  })
 
   const navigation = [
     { name: main, to: "/" },
