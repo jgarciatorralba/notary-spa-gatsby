@@ -1,5 +1,4 @@
 {
-  "Home": "Casa",
   "Hi people": "Hola gent!",
   "Welcome to your new Gatsby site.": "Benvingut al teu nou lloc Gatsby.",
   "Now go build something great.": "Ara ves i construeix alguna cosa genial.",
@@ -8,12 +7,19 @@
     "title": "Notaria Mínguez",
     "description": "CA: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque blandit egestas. Etiam ac elit a erat dictum imperdiet. In enim nunc, fringilla sit amet dictum non, tempor vel augue. Integer scelerisque sem varius fermentum tincidunt. Mauris sagittis dignissim tortor vel dictum. Nulla eu condimentum leo."
   },
+
   "components": {
     "navbar": {
       "main": "Inici",
       "about": "Sobre nosaltres",
       "contact": "Contacte",
       "services": "Serveis"
+    }
+  },
+
+  "pages": {
+    "home": {
+      "title": "Inici"
     }
   }
 }
