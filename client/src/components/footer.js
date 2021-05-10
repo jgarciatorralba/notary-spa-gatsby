@@ -29,6 +29,7 @@ const Footer = () => {
 
   return (
     <footer
+      className="bg-gray-800"
       style={{
         marginTop: `2rem`,
       }}
