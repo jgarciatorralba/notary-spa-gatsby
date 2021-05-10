@@ -15,6 +15,22 @@
     "services": "Serveis"
   },
 
+  "contact": {
+    "companyName": "Notaria Mínguez",
+    "email": "contact@notariaminguez.com",
+    "address": {
+      "street": "Rambla Hospital, 6 - 1ª",
+      "zipCode": "08500 - Vic"
+    },
+    "phones": ["938 850 816", "938 853 752"]
+  },
+
+  "footer": {
+    "legalNotice": "Avís legal",
+    "privacyPolicy": "Política de privacitat",
+    "cookiePolicy": "Política de cookies"
+  },
+
   "home": {
     "title": "Inici"
   }
