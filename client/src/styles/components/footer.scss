@@ -1,0 +1,7 @@
+@import "../settings/variables";
+
+.phone-number {
+  &:not(:last-child) {
+    border-right: 1px solid $tailwind-gray-300;
+  }
+}
