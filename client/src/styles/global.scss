@@ -11,3 +11,19 @@
   font-family: "Open Sans", sans-serif;
   font-size: $font-size;
 }
+
+main {
+  min-height: calc(100vh - #{$navbar-height} - #{$footer-height-mobile});
+}
+
+@media (min-width: 640px) {
+  main {
+    min-height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    min-height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
+  }
+}
