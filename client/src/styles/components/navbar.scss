@@ -1,10 +1,10 @@
 @import "../settings/variables";
 
 .custom-mobile-panel {
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - #{$navbar-height});
   a {
     position: relative;
-    bottom: 32px;
+    bottom: calc(#{$navbar-height} / 2);
   }
 }
 
