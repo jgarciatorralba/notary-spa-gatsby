@@ -22,7 +22,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo defaultTitle={defaultTitle} />
-      <h1 className="bg-green-500">
+      <div className="hero-wrapper">
+        <StaticImage
+          src="../images/demo/homepage/hero_signature.jpg"
+          alt=""
+          placeholder="blurred"
+          quality="75"
+        />
+      </div>
+      {/* <h1 className="bg-green-500">
         <Trans>Hi people</Trans>
       </h1>
       <p className="test">
@@ -38,7 +46,7 @@ const IndexPage = () => {
         formats={["AUTO", "WEBP", "AVIF"]}
         alt="A Gatsby astronaut"
         style={{ marginBottom: `1.45rem` }}
-      />
+      /> */}
     </Layout>
   )
 }

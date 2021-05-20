@@ -1,5 +1,39 @@
 @import "../settings/variables";
 
-.test {
-  color: $font-color;
+.hero-wrapper {
+  width: 100vw;
+  height: calc(100vh - #{$navbar-height} - #{$footer-height-mobile});
+  img {
+    width: 100vw;
+    height: calc(100vh - #{$navbar-height} - #{$footer-height-mobile});
+    z-index: -1;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-wrapper {
+    // width: 100vw;
+    // height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
+    min-width: 100vw;
+    max-height: calc(100vh - #{$navbar-height});
+    img {
+      // width: 100vw;
+      // height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
+      min-width: 100vw;
+      max-height: calc(100vh - #{$navbar-height});
+      z-index: -1;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-wrapper {
+    width: 100vw;
+    // height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
+    img {
+      width: 100vw;
+      // height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
+      z-index: -1;
+    }
+  }
 }
