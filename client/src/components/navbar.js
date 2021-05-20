@@ -3,7 +3,7 @@ import { Fragment } from "react"
 import { Disclosure, Transition } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import { Link, useTranslation, useI18next } from "gatsby-plugin-react-i18next"
-import Logo from "../images/demo/emblem.png"
+import Logo from "../images/demo/logo/emblem.png"
 
 import "../styles/components/navbar.scss"
 

@@ -26,7 +26,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/demo/emblem.png`,
+        icon: `src/images/demo/favicon/emblem.png`,
         localize: [
           {
             start_url: `/ca/`,
