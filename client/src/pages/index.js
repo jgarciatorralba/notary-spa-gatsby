@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
@@ -27,26 +27,9 @@ const IndexPage = () => {
           src="../images/demo/homepage/hero_signature.jpg"
           alt=""
           placeholder="blurred"
-          quality="75"
+          quality={100}
         />
       </div>
-      {/* <h1 className="bg-green-500">
-        <Trans>Hi people</Trans>
-      </h1>
-      <p className="test">
-        <Trans>Welcome to your new Gatsby site.</Trans>
-      </p>
-      <p>
-        <Trans>Now go build something great.</Trans>
-      </p>
-      <StaticImage
-        src="../images/gatsby-astronaut.png"
-        width={300}
-        quality={95}
-        formats={["AUTO", "WEBP", "AVIF"]}
-        alt="A Gatsby astronaut"
-        style={{ marginBottom: `1.45rem` }}
-      /> */}
     </Layout>
   )
 }

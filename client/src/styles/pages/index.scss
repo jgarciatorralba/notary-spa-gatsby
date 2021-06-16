@@ -2,10 +2,17 @@
 
 .hero-wrapper {
   width: 100vw;
-  height: calc(100vh - #{$navbar-height} - #{$footer-height-mobile});
+  // height: calc(100vh - #{$navbar-height} - #{$footer-height-mobile});
+  height: 100vh;
+  // position: relative;
+  // bottom: $navbar-height;
+  position: absolute;
+  top: 0;
+  z-index: -2;
   img {
     width: 100vw;
-    height: calc(100vh - #{$navbar-height} - #{$footer-height-mobile});
+    // height: calc(100vh - #{$navbar-height} - #{$footer-height-mobile});
+    height: 100vh;
     z-index: -1;
   }
 }
@@ -30,6 +37,8 @@
   .hero-wrapper {
     width: 100vw;
     height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
+    position: relative;
+    top: 0;
     img {
       width: 100vw;
       height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
