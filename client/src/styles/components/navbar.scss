@@ -1,11 +1,21 @@
 @import "../settings/variables";
 
-.custom-mobile-panel {
-  min-height: calc(100vh - #{$navbar-height});
-  a {
-    position: relative;
-    bottom: calc(#{$navbar-height} / 2);
+nav {
+  button {
+    z-index: 100;
   }
+}
+
+.custom-mobile-panel {
+  // min-height: calc(100vh - #{$navbar-height});
+  // a {
+  //   position: relative;
+  //   bottom: calc(#{$navbar-height} / 2);
+  // }
+  height: 100vh;
+  position: relative;
+  bottom: $navbar-height;
+  // z-index: -1;
 }
 
 .languages {
