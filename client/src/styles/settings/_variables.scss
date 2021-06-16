@@ -1,9 +1,15 @@
-// General fonts and colors
+// Fonts
 $font-size: 16px;
+
+// Colors
+$tailwind-gray-300: #d1d5db;
+
+// Heights
 $navbar-height: 64px;
 $footer-height-mobile: 160px;
 $footer-height-tablet: 120px;
 $footer-height-laptop: 100px;
 
-$font-color: #6809e5;
-$tailwind-gray-300: #d1d5db;
+// Media query breakpoints
+$breakpoint-mobile: 640px;
+$breakpoint-desktop: 1024px;
