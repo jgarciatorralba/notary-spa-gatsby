@@ -12,30 +12,24 @@
   font-size: $font-size;
 }
 
-// Smartphone portrait
-@media only screen and (max-width: 640px) {
-  main {
+main {
+  // Smartphone portrait
+  @media only screen and (max-width: $breakpoint-mobile) {
     min-height: calc(100vh - #{$navbar-height});
   }
-}
 
-// Smartphone landscape
-@media only screen and (min-width: 640px) and (max-width: 1024px) and (orientation: landscape) {
-  main {
+  // Smartphone landscape
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
     min-height: calc(100vh - #{$navbar-height});
   }
-}
 
-// Tablet portrait
-@media only screen and (min-width: 640px) and (max-width: 1024px) and (orientation: portrait) {
-  main {
+  // Tablet portrait
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
     min-height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
   }
-}
 
-// Tablet in landscape, desktops and laptops
-@media only screen and (min-width: 1024px) {
-  main {
+  // Tablet in landscape, desktops and laptops
+  @media only screen and (min-width: $breakpoint-desktop) {
     min-height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
   }
 }
