@@ -2,6 +2,7 @@ import * as React from "react"
 import { useState, useRef } from "react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import { Link, useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import { StaticImage } from "gatsby-plugin-image"
 import Logo from "../images/demo/logo/emblem.png"
 
 import "../styles/components/navbar.scss"
@@ -73,10 +74,18 @@ const Navbar = () => {
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
-              <img
+              {/* <img
                 className="block lg:hidden h-8 w-auto"
                 src={Logo}
                 alt="Company logo"
+              /> */}
+              <StaticImage
+                src="../images/demo/logo/emblem.png"
+                imgClassName="block lg:hidden h-8 w-auto"
+                alt=""
+                placeholder="blurred"
+                quality={100}
+                height={32}
               />
               <p className="hidden lg:block h-8 w-auto logo-text">{title}</p>
             </div>
