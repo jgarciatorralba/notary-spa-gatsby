@@ -3,7 +3,6 @@ import { useState, useRef } from "react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import { Link, useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
-import Logo from "../images/demo/logo/emblem.png"
 
 import "../styles/components/navbar.scss"
 
@@ -28,8 +27,6 @@ const Navbar = () => {
   ]
 
   const [open, setOpen] = useState(false)
-  const [windowHeight, setWindowHeight] = useState(0)
-
   const mobilePanelRef = useRef(null)
 
   function handleClick() {
@@ -39,21 +36,6 @@ const Navbar = () => {
     wrapper.classList.toggle("is-open")
   }
 
-  function toggleOpen() {
-    setOpen(!open)
-    // setWindowHeight(window.scrollY)
-
-    if (!open) {
-      // document.body.style.position = "fixed"
-      // document.body.style.overflow = "hidden"
-    } else {
-      // document.body.style.position = "relative"
-      // document.body.style.overflow = "visible"
-      // window.scrollTo(0, windowHeight)
-      // setWindowHeight(0)
-    }
-  }
-
   return (
     <nav className="sticky top-0 bg-transparent sm:bg-gray-800">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -61,7 +43,6 @@ const Navbar = () => {
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              // onClick={toggleOpen}
               onClick={handleClick}
             >
               <span className="sr-only">Open main menu</span>
@@ -74,14 +55,9 @@ const Navbar = () => {
           </div>
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
-              {/* <img
-                className="block lg:hidden h-8 w-auto"
-                src={Logo}
-                alt="Company logo"
-              /> */}
               <StaticImage
                 src="../images/demo/logo/emblem.png"
-                imgClassName="block lg:hidden h-8 w-auto"
+                className="block lg:hidden h-8 w-auto"
                 alt=""
                 placeholder="blurred"
                 quality={100}
@@ -132,11 +108,11 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {/* {open && ( */}
+
       <div className="sm:hidden">
         <div
           ref={mobilePanelRef}
-          className="custom-mobile-panel px-2 pt-2 pb-3 min-w-full fixed bg-gray-800 z-50 flex flex-col justify-center content-center items-center"
+          className="custom-mobile-panel px-2 pt-2 pb-3 min-w-full fixed bg-gray-800 flex flex-col justify-center content-center items-center"
         >
           {navigation.map(item => (
             <Link
@@ -161,7 +137,6 @@ const Navbar = () => {
           ))}
         </div>
       </div>
-      {/* )} */}
     </nav>
   )
 }
