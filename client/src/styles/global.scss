@@ -30,6 +30,6 @@ main {
 
   // Tablet in landscape, desktops and laptops
   @media only screen and (min-width: $breakpoint-desktop) {
-    min-height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
+    min-height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
   }
 }
