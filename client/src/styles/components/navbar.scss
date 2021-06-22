@@ -4,6 +4,26 @@ nav {
   button {
     z-index: 100;
   }
+
+  // Smartphone portrait
+  @media only screen and (max-width: $breakpoint-mobile) {
+    background-color: transparent !important;
+  }
+
+  // Smartphone landscape
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+    background-color: transparent !important;
+  }
+
+  // Tablet portrait
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+    background-color: $tailwind-gray-800 !important;
+  }
+
+  // Tablet in landscape, desktops and laptops
+  @media only screen and (min-width: $breakpoint-desktop) {
+    background-color: $tailwind-gray-800 !important;
+  }
 }
 
 .custom-mobile-panel {
