@@ -1,40 +1,49 @@
 @import "../settings/variables";
 
 .hero-wrapper {
-  width: 100vw;
-  // height: calc(100vh - #{$navbar-height} - #{$footer-height-mobile});
-  height: 100vh;
-  // position: relative;
-  // bottom: $navbar-height;
-  position: absolute;
-  top: 0;
-  z-index: -2;
-  img {
-    width: 100vw;
-    // height: calc(100vh - #{$navbar-height} - #{$footer-height-mobile});
-    height: 100vh;
-    z-index: -1;
-  }
-}
+  z-index: -1;
 
-@media (min-width: 640px) {
-  .hero-wrapper {
+  // Smartphone portrait
+  @media only screen and (max-width: $breakpoint-mobile) {
     width: 100vw;
-    height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
-    // min-width: 100vw;
-    // max-height: calc(100vh - #{$navbar-height});
+    height: 100vh;
+    position: absolute;
+    top: 0;
     img {
       width: 100vw;
-      height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
-      // min-width: 100vw;
-      // max-height: calc(100vh - #{$navbar-height});
+      height: 100vh;
       z-index: -1;
     }
   }
-}
 
-@media (min-width: 1024px) {
-  .hero-wrapper {
+  // Smartphone landscape
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    img {
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+  }
+
+  // Tablet portrait
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+    width: 100vw;
+    height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
+    position: relative;
+    top: 0;
+    img {
+      width: 100vw;
+      height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
+      z-index: -1;
+    }
+  }
+
+  // Tablet in landscape, desktops and laptops
+  @media only screen and (min-width: $breakpoint-desktop) {
     width: 100vw;
     height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
     position: relative;
