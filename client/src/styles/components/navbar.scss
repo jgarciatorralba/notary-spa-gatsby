@@ -8,51 +8,101 @@ nav {
   // Smartphone portrait
   @media only screen and (max-width: $breakpoint-mobile) {
     background-color: transparent !important;
+
+    .navigation {
+      display: none;
+    }
+
+    .mobile-navigation {
+      a {
+        width: 75%;
+      }
+    }
   }
 
   // Smartphone landscape
   @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
     background-color: transparent !important;
+
+    .navigation {
+      display: none;
+    }
+
+    .logo {
+      position: absolute;
+      top: calc(#{$navbar-height} / 2 - #{$logo-height} / 2);
+      left: calc(50% - #{$logo-width} / 2);
+    }
+
+    .mobile-navigation {
+      a {
+        width: 50%;
+      }
+    }
   }
 
   // Tablet portrait
   @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
     background-color: $tailwind-gray-800 !important;
+
+    .mobile-button {
+      display: none;
+    }
+
+    .mobile-navigation-wrapper {
+      display: none;
+    }
+
+    .navigation {
+      display: block;
+    }
   }
 
   // Tablet in landscape, desktops and laptops
   @media only screen and (min-width: $breakpoint-desktop) {
     background-color: $tailwind-gray-800 !important;
+
+    .mobile-button {
+      display: none;
+    }
+
+    .mobile-navigation-wrapper {
+      display: none;
+    }
+
+    .navigation {
+      display: block;
+    }
   }
-}
 
-.custom-mobile-panel {
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.25s ease-in-out;
-
-  &.is-open {
-    pointer-events: auto;
-    opacity: 1;
+  .mobile-navigation {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
     transition: opacity 0.25s ease-in-out;
+  
+    &.is-open {
+      pointer-events: auto;
+      opacity: 1;
+      transition: opacity 0.25s ease-in-out;
+    }
   }
-}
-
-.languages {
-  text-transform: uppercase;
-
-  li:not(:last-child) {
-    border-right: 1px solid $tailwind-gray-300;
+  
+  .languages {
+    text-transform: uppercase;
+  
+    li:not(:last-child) {
+      border-right: 1px solid $tailwind-gray-300;
+    }
   }
-}
-
-.logo-text {
-  font-family: "Alex Brush", cursive;
-  font-size: 32px;
-  color: $tailwind-gray-300;
-  position: relative;
-  bottom: 7px;
+  
+  .logo-text {
+    font-family: "Alex Brush", cursive;
+    font-size: 32px;
+    color: $tailwind-gray-300;
+    position: relative;
+    bottom: 7px;
+  }
 }
