@@ -18,11 +18,14 @@ const IndexPage = () => {
   })
 
   const { title: defaultTitle } = metaTranslations
+  const { header } = homepageTranslations
 
   return (
     <Layout>
       <Seo defaultTitle={defaultTitle} />
       <div className="hero-wrapper">
+        <h1 className="page-main-title text-white">{header}</h1>
+
         <StaticImage
           src="../images/demo/homepage/hero_signature.jpg"
           alt=""

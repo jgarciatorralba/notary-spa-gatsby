@@ -3,6 +3,17 @@
 .hero-wrapper {
   z-index: -1;
 
+  .page-main-title {
+    text-align: center;
+    width: 75%;
+    font-weight: bold;
+    font-size: 7rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   // Smartphone portrait
   @media only screen and (max-width: $breakpoint-mobile) {
     width: 100vw;
