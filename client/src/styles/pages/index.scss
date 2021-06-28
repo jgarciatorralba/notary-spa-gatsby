@@ -79,4 +79,10 @@
       font-size: 3rem;
     }
   }
+
+  @media only screen and (min-width: $breakpoint-xl) {
+    .page-main-title {
+      font-size: 4.5rem;
+    }
+  }
 }
