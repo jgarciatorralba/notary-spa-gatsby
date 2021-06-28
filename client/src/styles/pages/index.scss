@@ -4,14 +4,12 @@
   z-index: -1;
 
   .page-main-title {
-    text-align: center;
-    width: 75%;
-    font-weight: bold;
-    font-size: 7rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   // Smartphone portrait
@@ -24,6 +22,10 @@
       width: 100vw;
       height: 100vh;
       z-index: -1;
+    }
+
+    .page-main-title {
+      font-size: 1.5rem;
     }
   }
 
@@ -38,6 +40,10 @@
       height: 100vh;
       z-index: -1;
     }
+
+    .page-main-title {
+      font-size: 2rem;
+    }
   }
 
   // Tablet portrait
@@ -51,6 +57,10 @@
       height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
       z-index: -1;
     }
+
+    .page-main-title {
+      font-size: 2.75rem;
+    }
   }
 
   // Tablet in landscape, desktops and laptops
@@ -63,6 +73,10 @@
       width: 100vw;
       height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
       z-index: -1;
+    }
+
+    .page-main-title {
+      font-size: 3rem;
     }
   }
 }
