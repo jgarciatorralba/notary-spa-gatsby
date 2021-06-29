@@ -1,17 +1,33 @@
 import * as React from "react"
-import { Link, useI18next } from "gatsby-plugin-react-i18next"
+import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const AboutPage = () => (
-  <Layout>
-    <Seo pageTitle="About" />
-    <h1>About</h1>
-    <Link to="/">Go back to the homepage</Link>
-  </Layout>
-)
+const AboutPage = () => {
+  const { t } = useTranslation()
+  const aboutTranslations = t("about", {
+    returnObjects: true,
+  })
+
+  const { title, header, summary } = aboutTranslations
+
+  return (
+    <Layout>
+      <Seo pageTitle={title} />
+
+      <h1>
+        <Trans
+          i18nKey={header}
+        />
+      </h1>
+      <p>{summary}</p>
+
+      <Link to="/">Go back to the homepage</Link>
+    </Layout>
+  )
+}
 
 export default AboutPage
 
