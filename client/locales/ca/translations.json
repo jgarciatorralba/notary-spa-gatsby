@@ -34,5 +34,11 @@
   "home": {
     "title": "Inici",
     "header": "La seva notaria a Vic"
+  },
+
+  "about": {
+    "title": "Sobre nosaltres",
+    "header": "<strong>Notaria Mínguez</strong> a Vic",
+    "summary": "La nostra prioritat és oferir-li un servei i assessorament notarial de qualitat sostingut per tres pilars, al nostre entendre, imprescindibles: eficàcia, professionalitat i proximitat."
   }
 }
