@@ -7,20 +7,26 @@ import Seo from "../components/seo"
 
 const AboutPage = () => {
   const { t } = useTranslation()
+  const metaTranslations = t("metadata", {
+    returnObjects: true,
+  })
   const aboutTranslations = t("about", {
     returnObjects: true,
   })
 
+  const { title: defaultTitle, description } = metaTranslations
   const { title, header, summary } = aboutTranslations
 
   return (
     <Layout>
-      <Seo pageTitle={title} />
+      <Seo
+        defaultTitle={defaultTitle}
+        pageTitle={title}
+        description={description}
+      />
 
       <h1>
-        <Trans
-          i18nKey={header}
-        />
+        <Trans i18nKey={header} />
       </h1>
       <p>{summary}</p>
 

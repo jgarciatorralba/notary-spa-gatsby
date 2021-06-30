@@ -17,12 +17,16 @@ const IndexPage = () => {
     returnObjects: true,
   })
 
-  const { title: defaultTitle } = metaTranslations
-  const { header } = homepageTranslations
+  const { title: defaultTitle, description } = metaTranslations
+  const { title, header } = homepageTranslations
 
   return (
     <Layout>
-      <Seo defaultTitle={defaultTitle} />
+      <Seo
+        defaultTitle={defaultTitle}
+        pageTitle={title}
+        description={description}
+      />
       <div className="hero-wrapper">
         <h1 className="page-main-title text-white text-center font-bold px-3 sm:px-4 lg:px-6 py-1 sm:py-2">
           {header}
