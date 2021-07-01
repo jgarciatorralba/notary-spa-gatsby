@@ -15,7 +15,7 @@ const AboutPage = () => {
   })
 
   const { title: defaultTitle, description } = metaTranslations
-  const { title, header, summary } = aboutTranslations
+  const { title, header, summary, companyValues, team } = aboutTranslations
 
   return (
     <Layout>
