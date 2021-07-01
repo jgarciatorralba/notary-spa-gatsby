@@ -35,6 +35,48 @@
   "about": {
     "title": "Sobre nosotros",
     "header": "<strong>Notaría Mínguez</strong> en Vic",
-    "summary": "Nuestra prioridad es ofrecerle un servicio y asesoramiento notarial de calidad sostenido por tres pilares, a nuestro entender, imprescindibles: eficacia, profesionalidad y proximidad."
+    "summary": "Nuestra prioridad es ofrecerle un servicio y asesoramiento notarial de calidad sostenido por tres pilares, a nuestro entender, imprescindibles: eficacia, profesionalidad y proximidad.",
+    "companyValues": [
+      {
+        "valueName": "Eficacia",
+        "valueDescription": "Gestionamos cada consulta, trámite y/o solicitud con la mayor rapidez posible. De esta manera, dispondrás de la información, documentos y soluciones que precisas, cuando realmente las necesitas, evitando molestos e interminables tiempos de espera."
+      },
+      {
+        "valueName": "Profesionalidad",
+        "valueDescription": "Nuestro equipo de profesionales, con años de experiencia en la función notarial, garantizan la diligencia, formalidad y precisión tanto en la tramitación de tus actas y escrituras, como en la prestación de asesoramiento y orientación."
+      },
+      {
+        "valueName": "Proximidad",
+        "valueDescription": "Uno de nuestros objetivos es crear una relación basada en la confianza. Por ello, nos encargamos de asegurar, desde el primer momento, una comunicación fluida y un trato cercano, transparente y amable."
+      }
+    ],
+    "team": [
+      {
+        "name": "Jorge Mínguez Balaguer",
+        "position": "Notario",
+        "highlights": [
+          "Valencia, 1990",
+          "Grado en derecho por ESADE, 2008-2012",
+          "Máster en derecho de los negocios por ESADE, 2012-2013",
+          "Notario del ilustre colegio notarial de Cataluña",
+          "Preparador de opositores a notarías y registros"
+        ]
+      },
+      {
+        "name": "Laura González",
+        "position": "Oficial",
+        "contact": "laura@notariaminguez.com"
+      },
+      {
+        "name": "Emilio Sánchez",
+        "position": "Oficial",
+        "contact": "emilio@notariaminguez.com"
+      },
+      {
+        "name": "Gemma Planas",
+        "position": "Copista",
+        "contact": "gemma@notariaminguez.com"
+      }
+    ]
   }
 }
