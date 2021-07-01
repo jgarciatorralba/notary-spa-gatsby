@@ -52,6 +52,7 @@
     ],
     "team": [
       {
+        "isNotary": "Yes",
         "name": "Jorge Mínguez Balaguer",
         "position": "Notario",
         "highlights": [
@@ -63,16 +64,19 @@
         ]
       },
       {
+        "isNotary": "No",
         "name": "Laura González",
         "position": "Oficial",
         "contact": "laura@notariaminguez.com"
       },
       {
+        "isNotary": "No",
         "name": "Emilio Sánchez",
         "position": "Oficial",
         "contact": "emilio@notariaminguez.com"
       },
       {
+        "isNotary": "No",
         "name": "Gemma Planas",
         "position": "Copista",
         "contact": "gemma@notariaminguez.com"
