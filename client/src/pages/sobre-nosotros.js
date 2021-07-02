@@ -56,7 +56,12 @@ const AboutPage = () => {
             <div key={employee.name} className="team-member">
               <h3>{employee.name}</h3>
               <p>{employee.position}</p>
-              <a href={`mailto:${employee.contact}`}>{employee.contact}</a>
+              <a
+                target="_blank"
+                href={`mailto:${employee.contact}`}
+              >
+                {employee.contact}
+              </a>
             </div>
           )
         )}
