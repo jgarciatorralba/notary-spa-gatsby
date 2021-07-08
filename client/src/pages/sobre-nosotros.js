@@ -57,6 +57,7 @@ const AboutPage = () => {
               <h3>{employee.name}</h3>
               <p>{employee.position}</p>
               <a
+                rel="noreferrer"
                 target="_blank"
                 href={`mailto:${employee.contact}`}
               >
