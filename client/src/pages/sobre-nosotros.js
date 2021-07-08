@@ -34,7 +34,7 @@ const AboutPage = () => {
 
       <div className="block-values">
         {companyValues.map(value => (
-          <div className="value-item">
+          <div key={value.valueName} className="value-item">
             <h3>{value.valueName}</h3>
             <p>{value.valueDescription}</p>
           </div>
