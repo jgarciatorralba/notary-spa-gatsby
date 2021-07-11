@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import { Link, useTranslation, useI18next } from "gatsby-plugin-react-i18next"
 import { StaticImage } from "gatsby-plugin-image"
@@ -28,6 +28,7 @@ const Navbar = () => {
 
   const [open, setOpen] = useState(false)
   const mobilePanelRef = useRef(null)
+  const navbarRef = useRef(null)
 
   function handleClick() {
     setOpen(!open)
@@ -36,20 +37,52 @@ const Navbar = () => {
     wrapper.classList.toggle("is-open")
   }
 
+  function listenToScroll() {
+    const NAVBAR_HEIGHT = 64
+    const windowScroll =
+      document.body.scrollTop || document.documentElement.scrollTop
+    const navbar = navbarRef.current
+
+    if (windowScroll >= NAVBAR_HEIGHT / 2) {
+      navbar.classList.add("scrolled")
+    } else {
+      navbar.classList.remove("scrolled")
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll)
+  }, [listenToScroll])
+
+  useEffect(() => {
+    return () => {
+      window.removeEventListener("scroll", listenToScroll)
+    }
+  }, [listenToScroll])
+
   return (
-    <nav className="sticky top-0 bg-gray-800">
+    <nav
+      ref={navbarRef}
+      className={classNames(
+        originalPath === "/" ? "is-front-page" : "",
+        "navbar-wrapper sticky top-0"
+      )}
+    >
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="mobile-button absolute inset-y-0 left-0 flex items-center">
             <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               onClick={handleClick}
             >
               <span className="sr-only">Open main menu</span>
               {open ? (
-                <XIcon className="block h-6 w-6" aria-hidden="true" />
+                <XIcon className="x-icon block h-6 w-6" aria-hidden="true" />
               ) : (
-                <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                <MenuIcon
+                  className="menu-icon block h-6 w-6"
+                  aria-hidden="true"
+                />
               )}
             </button>
           </div>
@@ -74,8 +107,8 @@ const Navbar = () => {
                     className={classNames(
                       item.to === originalPath ||
                         (originalPath.includes(item.to) && item.to !== "/")
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        ? "is-current"
+                        : "is-not-current",
                       "px-3 py-2 rounded-full text-sm font-medium"
                     )}
                     aria-current={
@@ -96,7 +129,7 @@ const Navbar = () => {
               <li
                 key={lng}
                 className={classNames(
-                  lng === language ? "text-white" : "text-gray-300",
+                  lng === language ? "text-white" : "",
                   "px-2 py-1"
                 )}
               >
@@ -112,7 +145,7 @@ const Navbar = () => {
       <div className="mobile-navigation-wrapper">
         <div
           ref={mobilePanelRef}
-          className="mobile-navigation px-2 pt-2 pb-3 min-w-full fixed bg-gray-800 flex flex-col justify-center content-center items-center"
+          className="mobile-navigation px-2 pt-2 pb-3 min-w-full fixed flex flex-col justify-center content-center items-center"
         >
           {navigation.map(item => (
             <Link
@@ -121,8 +154,8 @@ const Navbar = () => {
               className={classNames(
                 item.to === originalPath ||
                   (originalPath.includes(item.to) && item.to !== "/")
-                  ? "bg-gray-900 text-white"
-                  : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                  ? "is-current"
+                  : "is-not-current",
                 "my-2 block px-3 py-2 rounded-full text-base text-center font-medium"
               )}
               aria-current={

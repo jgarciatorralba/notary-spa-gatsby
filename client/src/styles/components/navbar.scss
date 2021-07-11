@@ -1,14 +1,39 @@
 @import "../settings/variables";
 
-nav {
-  button {
-    z-index: 100;
+.navbar-wrapper {
+  background-color: $palette-darkest;
+  color: $palette-lightest;
+
+  .mobile-button {
+    button {
+      z-index: 100;
+      .x-icon,
+      .menu-icon {
+        color: $palette-lightest;
+      }
+    }
+  }
+
+  .navigation,
+  .mobile-navigation {
+    .is-current {
+      color: white;
+      background-color: $palette-dark;
+    }
+    .is-not-current {
+      &:hover {
+        color: white;
+        background-color: $palette-medium;
+      }
+    }
+  }
+
+  .mobile-navigation {
+    background-color: $palette-darkest;
   }
 
   // Smartphone portrait
   @media only screen and (max-width: $breakpoint-mobile) {
-    background-color: transparent !important;
-
     .navigation {
       display: none;
     }
@@ -22,8 +47,6 @@ nav {
 
   // Smartphone landscape
   @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
-    background-color: transparent !important;
-
     .navigation {
       display: none;
     }
@@ -46,8 +69,6 @@ nav {
 
   // Tablet portrait
   @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
-    background-color: $tailwind-gray-800 !important;
-
     .mobile-button {
       display: none;
     }
@@ -63,8 +84,6 @@ nav {
 
   // Tablet in landscape, desktops and laptops
   @media only screen and (min-width: $breakpoint-desktop) {
-    background-color: $tailwind-gray-800 !important;
-
     .mobile-button {
       display: none;
     }
@@ -85,27 +104,58 @@ nav {
     pointer-events: none;
     opacity: 0;
     transition: opacity 0.25s ease-in-out;
-  
+
     &.is-open {
       pointer-events: auto;
       opacity: 1;
       transition: opacity 0.25s ease-in-out;
     }
   }
-  
+
   .languages {
     text-transform: uppercase;
-  
+
+    li {
+      &:hover {
+        color: white;
+      }
+    }
+
     li:not(:last-child) {
-      border-right: 1px solid $tailwind-gray-300;
+      border-right: 1px solid $palette-lightest;
     }
   }
-  
+
   .logo-text {
     font-family: "Alex Brush", cursive;
     font-size: 32px;
-    color: $tailwind-gray-300;
+    color: $palette-lightest;
     position: relative;
     bottom: 7px;
   }
+}
+
+.navbar-wrapper.is-front-page {
+  @media only screen and (max-width: $breakpoint-mobile) {
+    background-color: transparent !important;
+    transition: background-color 0.75s ease-in-out;
+  }
+
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+    background-color: transparent !important;
+    transition: background-color 0.75s ease-in-out;
+  }
+
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+    background-color: $palette-darkest !important;
+  }
+
+  @media only screen and (min-width: $breakpoint-desktop) {
+    background-color: $palette-darkest !important;
+  }
+}
+
+.navbar-wrapper.is-front-page.scrolled {
+  background-color: $palette-darkest !important;
+  transition: background-color 0.75s ease-in-out;
 }
