@@ -28,7 +28,7 @@ const IndexPage = () => {
         description={description}
       />
       <div className="hero-wrapper">
-        <h1 className="page-main-title text-white text-center font-bold px-3 sm:px-4 lg:px-6 py-1 sm:py-2">
+        <h1 className="page-main-title text-center font-bold px-3 sm:px-4 lg:px-6 py-1 sm:py-2">
           {header}
         </h1>
 
