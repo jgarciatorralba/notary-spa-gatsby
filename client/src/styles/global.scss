@@ -12,6 +12,11 @@
   font-size: $font-size;
 }
 
+body {
+  color: $palette-darkest;
+  background-color: $palette-lightest;
+}
+
 main {
   // Smartphone portrait
   @media only screen and (max-width: $breakpoint-mobile) {
