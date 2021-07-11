@@ -47,8 +47,8 @@ const AboutPage = () => {
             <div key={employee.name} className="team-member notary">
               <h2>{employee.name}</h2>
               <ul>
-                {employee.highlights.map(highlight => (
-                  <li>{highlight}</li>
+                {employee.highlights.map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
                 ))}
               </ul>
             </div>
