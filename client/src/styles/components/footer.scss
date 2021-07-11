@@ -1,7 +1,12 @@
 @import "../settings/variables";
 
-.phone-number {
-  &:not(:last-child) {
-    border-right: 1px solid $tailwind-gray-300;
+.footer-wrapper {
+  background-color: $palette-darkest;
+  color: $palette-lightest;
+
+  .phone-number {
+    &:not(:last-child) {
+      border-right: 1px solid $palette-lightest;
+    }
   }
 }

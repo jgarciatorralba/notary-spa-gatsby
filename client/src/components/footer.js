@@ -39,7 +39,7 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-gray-800">
+    <footer className="footer-wrapper">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="contact-wrapper flex flex-wrap justify-center py-4">
           {contact.map(item => (
@@ -50,7 +50,7 @@ const Footer = () => {
                   ? "font-bold w-full sm:w-auto text-center sm:text-justify"
                   : "font-medium",
                 item.name.includes("phone") ? "phone-number" : "",
-                "flex-shrink-0 text-sm text-gray-300 px-2 sm:px-3 py-0 self-center"
+                "flex-shrink-0 text-sm px-2 sm:px-3 py-0 self-center"
               )}
             >
               {item.value}
@@ -67,7 +67,7 @@ const Footer = () => {
                   item.to === originalPath ||
                     (originalPath.includes(item.to) && item.to !== "/")
                     ? "text-white"
-                    : "text-gray-300 hover:text-white",
+                    : "hover:text-white",
                   "mx-3 pt-4 pb-4 text-xs font-medium"
                 )}
                 aria-current={
@@ -81,7 +81,7 @@ const Footer = () => {
               </Link>
             ))}
           </div>
-          <div className="hidden sm:block text-gray-300 text-xs font-medium mx-3 pt-4 pb-4">
+          <div className="hidden sm:block text-xs font-medium mx-3 pt-4 pb-4">
             © {new Date().getFullYear()}
             {` `}
             {companyName}
