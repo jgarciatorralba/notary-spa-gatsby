@@ -52,13 +52,11 @@ const Navbar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", listenToScroll)
-  }, [listenToScroll])
 
-  useEffect(() => {
     return () => {
       window.removeEventListener("scroll", listenToScroll)
     }
-  }, [listenToScroll])
+  }, [])
 
   return (
     <nav
