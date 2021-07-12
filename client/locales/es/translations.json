@@ -34,7 +34,10 @@
 
   "about": {
     "title": "Sobre nosotros",
-    "header": "<strong>Notaría Mínguez</strong> en Vic",
+    "header": {
+      "businessName": "Notaría Mínguez",
+      "businessLocation": "en Vic"
+    },
     "summary": "Nuestra prioridad es ofrecerle un servicio y asesoramiento notarial de calidad sostenido por tres pilares, a nuestro entender, imprescindibles: eficacia, profesionalidad y proximidad.",
     "companyValues": [
       {
