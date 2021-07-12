@@ -1,9 +1,11 @@
 import * as React from "react"
-import { Link, Trans, useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+
+import "../styles/pages/sobre-nosotros.scss"
 
 const AboutPage = () => {
   const { t } = useTranslation()
@@ -24,51 +26,51 @@ const AboutPage = () => {
         pageTitle={title}
         description={description}
       />
+      <div className="about-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
+        <div className="block-intro mb-4">
+          <h2 className="mb-2">
+            <strong>{header.businessName}</strong>{" "}
+            <span>{header.businessLocation}</span>
+          </h2>
+          <p className="mb-2">{summary}</p>
+        </div>
 
-      <div className="block-intro">
-        <h2>
-          <Trans i18nKey={header} />
-        </h2>
-        <p>{summary}</p>
-      </div>
-
-      <div className="block-values">
-        {companyValues.map(value => (
-          <div key={value.valueName} className="value-item">
-            <h3>{value.valueName}</h3>
-            <p>{value.valueDescription}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="block-team">
-        {team.map(employee =>
-          employee.isNotary === "Yes" ? (
-            <div key={employee.name} className="team-member notary">
-              <h2>{employee.name}</h2>
-              <ul>
-                {employee.highlights.map((highlight, index) => (
-                  <li key={index}>{highlight}</li>
-                ))}
-              </ul>
+        <div className="block-values mb-4">
+          {companyValues.map(value => (
+            <div key={value.valueName} className="value-item mb-4">
+              <h3 className="mb-2 font-bold">{value.valueName}</h3>
+              <p className="mb-2">{value.valueDescription}</p>
             </div>
-          ) : (
-            <div key={employee.name} className="team-member">
-              <h3>{employee.name}</h3>
-              <p>{employee.position}</p>
-              <a
-                rel="noreferrer"
-                target="_blank"
-                href={`mailto:${employee.contact}`}
-              >
-                {employee.contact}
-              </a>
-            </div>
-          )
-        )}
-      </div>
+          ))}
+        </div>
 
-      <Link to="/">Go back to the homepage</Link>
+        <div className="block-team mb-4">
+          {team.map(employee =>
+            employee.isNotary === "Yes" ? (
+              <div key={employee.name} className="team-member notary">
+                <h2>{employee.name}</h2>
+                <ul>
+                  {employee.highlights.map((highlight, index) => (
+                    <li key={index}>{highlight}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <div key={employee.name} className="team-member">
+                <h3>{employee.name}</h3>
+                <p>{employee.position}</p>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href={`mailto:${employee.contact}`}
+                >
+                  {employee.contact}
+                </a>
+              </div>
+            )
+          )}
+        </div>
+      </div>
     </Layout>
   )
 }
