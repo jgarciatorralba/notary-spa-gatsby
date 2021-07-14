@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ValueCard from "../components/valueCard"
 
 import "../styles/pages/sobre-nosotros.scss"
 
@@ -37,10 +38,12 @@ const AboutPage = () => {
 
         <div className="block-values mb-4">
           {companyValues.map(value => (
-            <div key={value.valueName} className="value-item mb-4">
-              <h3 className="mb-2 font-bold">{value.valueName}</h3>
-              <p className="mb-2">{value.valueDescription}</p>
-            </div>
+            <ValueCard
+              key={value.valueKey}
+              valueKey={value.valueKey}
+              valueName={value.valueName}
+              valueDescription={value.valueDescription}
+            />
           ))}
         </div>
 
