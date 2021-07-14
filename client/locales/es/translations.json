@@ -41,14 +41,17 @@
     "summary": "Nuestra prioridad es ofrecerle un servicio y asesoramiento notarial de calidad sostenido por tres pilares, a nuestro entender, imprescindibles: eficacia, profesionalidad y proximidad.",
     "companyValues": [
       {
+        "valueKey": "Effectiveness",
         "valueName": "Eficacia",
         "valueDescription": "Gestionamos cada consulta, trámite o solicitud con la mayor rapidez posible. De esta manera, dispondrás de la información, documentos y soluciones que precisas, cuando realmente las necesitas."
       },
       {
+        "valueKey": "Professionalism",
         "valueName": "Profesionalidad",
         "valueDescription": "Nuestro equipo de profesionales, con años de experiencia en la función notarial, garantizan la diligencia, formalidad y precisión tanto en la tramitación de tus actas y escrituras, como en la prestación de asesoramiento y orientación."
       },
       {
+        "valueKey": "Proximity",
         "valueName": "Proximidad",
         "valueDescription": "Uno de nuestros objetivos es crear una relación basada en la confianza. Por ello, nos encargamos de asegurar, desde el primer momento, una comunicación fluida y un trato cercano, transparente y amable."
       }

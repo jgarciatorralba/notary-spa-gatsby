@@ -41,14 +41,17 @@
     "summary": "La nostra prioritat és oferir-li un servei i assessorament notarial de qualitat sostingut per tres pilars, al nostre entendre, imprescindibles: eficàcia, professionalitat i proximitat.",
     "companyValues": [
       {
+        "valueKey": "Effectiveness",
         "valueName": "Eficàcia",
         "valueDescription": "Gestionem cada consulta, tràmit o sol·licitud amb la major rapidesa possible. D'aquesta manera, disposaràs de la informació, documents i solucions que precises, quan realment les necessites."
       },
       {
+        "valueKey": "Professionalism",
         "valueName": "Professionalitat",
         "valueDescription": "El nostre equip de professionals, amb anys d'experiència en la funció notarial, garanteixen la diligència, formalitat i precisió tant en la tramitació de les teves actes i escriptures, com en la prestació d'assessorament i orientació."
       },
       {
+        "valueKey": "Proximity",
         "valueName": "Proximitat",
         "valueDescription": "Un dels nostres objectius és crear una relació basada en la confiança. Per això, ens encarreguem d'assegurar, des del primer moment, una comunicació fluïda i un tracte proper, transparent i amable."
       }
