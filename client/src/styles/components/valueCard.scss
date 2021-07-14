@@ -1,0 +1,11 @@
+@import "../settings/variables";
+
+.value-item {
+  .card-body {
+    .value-icon {
+      svg {
+        width: 128px;
+      }
+    }
+  }
+}
