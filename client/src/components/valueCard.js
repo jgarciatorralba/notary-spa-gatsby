@@ -8,12 +8,8 @@ import "../styles/components/valueCard.scss"
 
 const ValueCard = ({ valueKey, valueName, valueDescription }) => {
   return (
-    <div className="value-item mb-4 p-4">
-      <div className="card-header">
-        <h3 className="mb-2 font-bold text-center">{valueName}</h3>
-      </div>
-
-      <div className="card-body">
+    <div className="value-item mb-4">
+      <div className="card-header p-4">
         <span className="value-icon">
           {valueKey === "Effectiveness" && (
             <EffectivenessIcon className="mx-auto" />
@@ -23,7 +19,11 @@ const ValueCard = ({ valueKey, valueName, valueDescription }) => {
           )}
           {valueKey === "Proximity" && <ProximityIcon className="mx-auto" />}
         </span>
-        <p className="mb-2">{valueDescription}</p>
+        <h3 className="value-name mt-2 font-bold text-center">{valueName}</h3>
+      </div>
+
+      <div className="card-body p-4">
+        <p className="value-description text-sm">{valueDescription}</p>
       </div>
     </div>
   )
