@@ -36,7 +36,7 @@ const AboutPage = () => {
           <p className="mb-2">{summary}</p>
         </div>
 
-        <div className="block-values mb-4 flex flex-col md:flex-row justify-between">
+        <div className="block-values mb-4 mx-4 sm:mx-0 flex flex-col md:flex-row justify-between">
           {companyValues.map(value => (
             <ValueCard
               key={value.valueKey}
