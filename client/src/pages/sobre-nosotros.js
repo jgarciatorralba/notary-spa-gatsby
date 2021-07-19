@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -51,13 +52,26 @@ const AboutPage = () => {
           <h2 className="mb-2">{team.header}</h2>
           {team.members.map(member =>
             member.isNotary === "Yes" ? (
-              <div key={member.name} className="team-member notary">
-                <h3>{member.name}</h3>
-                <ul>
-                  {member.highlights.map((highlight, index) => (
-                    <li key={index}>{highlight}</li>
-                  ))}
-                </ul>
+              <div
+                key={member.name}
+                className="team-member notary flex flex-row justify-center"
+              >
+                <div className="section-picture p-4">
+                  <StaticImage
+                    src="../images/demo/about/team/notary.jpg"
+                    alt=""
+                    placeholder="blurred"
+                    quality={90}
+                  />
+                </div>
+                <div className="section-description p-4">
+                  <h3>{member.name}</h3>
+                  <ul>
+                    {member.highlights.map((highlight, index) => (
+                      <li key={index}>{highlight}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ) : (
               <div key={member.name} className="team-member">
