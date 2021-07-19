@@ -48,26 +48,26 @@ const AboutPage = () => {
         </div>
 
         <div className="block-team mb-4">
-          {team.map(employee =>
-            employee.isNotary === "Yes" ? (
-              <div key={employee.name} className="team-member notary">
-                <h2>{employee.name}</h2>
+          {team.members.map(member =>
+            member.isNotary === "Yes" ? (
+              <div key={member.name} className="team-member notary">
+                <h2>{member.name}</h2>
                 <ul>
-                  {employee.highlights.map((highlight, index) => (
+                  {member.highlights.map((highlight, index) => (
                     <li key={index}>{highlight}</li>
                   ))}
                 </ul>
               </div>
             ) : (
-              <div key={employee.name} className="team-member">
-                <h3>{employee.name}</h3>
-                <p>{employee.position}</p>
+              <div key={member.name} className="team-member">
+                <h3>{member.name}</h3>
+                <p>{member.position}</p>
                 <a
                   rel="noreferrer"
                   target="_blank"
-                  href={`mailto:${employee.contact}`}
+                  href={`mailto:${member.contact}`}
                 >
-                  {employee.contact}
+                  {member.contact}
                 </a>
               </div>
             )
