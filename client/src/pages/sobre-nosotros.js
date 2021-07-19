@@ -49,7 +49,7 @@ const AboutPage = () => {
         </div>
 
         <div className="block-team mb-4">
-          <h2 className="mb-2">{team.header}</h2>
+          <h2 className="mb-2 font-bold">{team.header}</h2>
           {team.members.map(member =>
             member.isNotary === "Yes" ? (
               <div
