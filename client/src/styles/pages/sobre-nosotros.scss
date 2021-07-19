@@ -9,4 +9,29 @@
       }
     }
   }
+
+  .block-values {
+    display: flex;
+    justify-content: space-between;
+
+    // Smartphone portrait
+    @media only screen and (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+    }
+
+    // Smartphone landscape
+    @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+      flex-direction: row;
+    }
+
+    // Tablet portrait
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+    flex-direction: row;
+  }
+
+  // Tablet in landscape, desktops and laptops
+  @media only screen and (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+  }
+  }
 }
