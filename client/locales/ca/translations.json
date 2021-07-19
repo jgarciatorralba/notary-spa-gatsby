@@ -56,37 +56,40 @@
         "valueDescription": "Un dels nostres objectius és crear una relació basada en la confiança. Per això, ens encarreguem d'assegurar, des del primer moment, una comunicació fluïda i un tracte proper, transparent i amable."
       }
     ],
-    "team": [
-      {
-        "isNotary": "Yes",
-        "name": "Jorge Mínguez Balaguer",
-        "position": "Notari",
-        "highlights": [
-          "València, 1990",
-          "Grau en dret per ESADE, 2008-2012",
-          "Màster en dret dels negocis per ESADE, 2012-2013",
-          "Notari del il·lustre colegi notarial de Catalunya",
-          "Preparador d'opositors a notaries i registres"
-        ]
-      },
-      {
-        "isNotary": "No",
-        "name": "Laura González",
-        "position": "Oficial",
-        "contact": "laura@notariaminguez.com"
-      },
-      {
-        "isNotary": "No",
-        "name": "Emilio Sánchez",
-        "position": "Oficial",
-        "contact": "emilio@notariaminguez.com"
-      },
-      {
-        "isNotary": "No",
-        "name": "Gemma Planas",
-        "position": "Copista",
-        "contact": "gemma@notariaminguez.com"
-      }
-    ]
+    "team": {
+      "header": "El nostre equip",
+      "members": [
+        {
+          "isNotary": "Yes",
+          "name": "Jorge Mínguez Balaguer",
+          "position": "Notari",
+          "highlights": [
+            "València, 1990",
+            "Grau en dret per ESADE, 2008-2012",
+            "Màster en dret dels negocis per ESADE, 2012-2013",
+            "Notari del il·lustre colegi notarial de Catalunya",
+            "Preparador d'opositors a notaries i registres"
+          ]
+        },
+        {
+          "isNotary": "No",
+          "name": "Laura González",
+          "position": "Oficial",
+          "contact": "laura@notariaminguez.com"
+        },
+        {
+          "isNotary": "No",
+          "name": "Emilio Sánchez",
+          "position": "Oficial",
+          "contact": "emilio@notariaminguez.com"
+        },
+        {
+          "isNotary": "No",
+          "name": "Gemma Planas",
+          "position": "Copista",
+          "contact": "gemma@notariaminguez.com"
+        }
+      ]
+    }
   }
 }
