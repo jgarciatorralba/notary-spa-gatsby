@@ -8,7 +8,7 @@ import "../styles/components/valueCard.scss"
 
 const ValueCard = ({ valueKey, valueName, valueDescription }) => {
   return (
-    <div className="value-item mb-4">
+    <div className="value-item mb-4 mx-auto">
       <div className="card-header p-4">
         <span className="value-icon">
           {valueKey === "Effectiveness" && (
