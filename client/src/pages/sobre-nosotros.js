@@ -48,10 +48,11 @@ const AboutPage = () => {
         </div>
 
         <div className="block-team mb-4">
+          <h2 className="mb-2">{team.header}</h2>
           {team.members.map(member =>
             member.isNotary === "Yes" ? (
               <div key={member.name} className="team-member notary">
-                <h2>{member.name}</h2>
+                <h3>{member.name}</h3>
                 <ul>
                   {member.highlights.map((highlight, index) => (
                     <li key={index}>{highlight}</li>
