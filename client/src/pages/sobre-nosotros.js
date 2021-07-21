@@ -65,10 +65,13 @@ const AboutPage = () => {
                   />
                 </div>
                 <div className="section-description p-4">
-                  <h3>{member.name}</h3>
-                  <ul>
+                  <h3 className="text-xl mb-4">{member.name}</h3>
+                  <p className="mb-4">{member.bio}</p>
+                  <ul className="list-disc ml-8">
                     {member.highlights.map((highlight, index) => (
-                      <li key={index}>{highlight}</li>
+                      <li className="mb-1" key={index}>
+                        {highlight}
+                      </li>
                     ))}
                   </ul>
                 </div>
