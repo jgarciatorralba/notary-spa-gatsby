@@ -45,6 +45,10 @@
     .team-member.notary {
       .section-picture {
         width: 45%;
+
+        img {
+          z-index: -1;
+        }
       }
 
       .section-description {
