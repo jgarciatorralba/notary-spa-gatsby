@@ -56,7 +56,7 @@ const AboutPage = () => {
                 key={member.name}
                 className="team-member notary flex flex-row justify-center"
               >
-                <div className="section-picture p-4">
+                <div className="section-picture p-4 flex items-center">
                   <StaticImage
                     src="../images/demo/about/team/notary.jpg"
                     alt=""
