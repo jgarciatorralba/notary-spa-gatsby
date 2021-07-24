@@ -60,7 +60,6 @@
       "header": "El nostre equip",
       "members": [
         {
-          "isNotary": "Yes",
           "name": "Jorge Mínguez Balaguer",
           "position": "Notari",
           "bio": "Llicenciat en Dret per la Universitat de València l'any 2010. Inicia la funció notarial en 2015 a Capellades per a més tard, el 2018, traslladar la seva activitat a Vic.",
@@ -72,19 +71,16 @@
           ]
         },
         {
-          "isNotary": "No",
           "name": "Laura González",
           "position": "Oficial",
           "contact": "laura@notariaminguez.com"
         },
         {
-          "isNotary": "No",
           "name": "Emilio Sánchez",
-          "position": "Administración",
+          "position": "Administració",
           "contact": "emilio@notariaminguez.com"
         },
         {
-          "isNotary": "No",
           "name": "Gemma Planas",
           "position": "Copista",
           "contact": "gemma@notariaminguez.com"
