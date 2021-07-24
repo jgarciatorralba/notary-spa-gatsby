@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ValueCard from "../components/valueCard"
+import NotaryCard from "../components/notaryCard"
 
 import EnvelopeIcon from "../images/demo/about/team/envelope.svg"
 
@@ -62,27 +63,12 @@ const AboutPage = () => {
           <h2 className="mb-2 font-bold">{team.header}</h2>
           {team.members.map(member =>
             member.isNotary ? (
-              <div key={member.name} className="team-member notary">
-                <div className="section-picture p-4 flex items-center">
-                  <StaticImage
-                    src="../images/demo/about/team/notary.jpg"
-                    alt=""
-                    placeholder="blurred"
-                    quality={90}
-                  />
-                </div>
-                <div className="section-description p-4">
-                  <h3 className="text-xl mb-4">{member.name}</h3>
-                  <p className="mb-4">{member.bio}</p>
-                  <ul className="list-disc ml-8">
-                    {member.highlights.map((highlight, index) => (
-                      <li className="mb-1" key={index}>
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              <NotaryCard
+                key={member.name}
+                name={member.name}
+                bio={member.bio}
+                highlights={member.highlights}
+              />
             ) : (
               <div
                 key={member.contact}
