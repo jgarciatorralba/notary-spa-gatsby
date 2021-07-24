@@ -96,7 +96,6 @@
       @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
         flex-direction: column;
         margin: 0 auto;
-        width: 65%;
 
         .section-picture {
           padding-left: 0rem;
