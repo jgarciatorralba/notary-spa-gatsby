@@ -71,7 +71,7 @@ const AboutPage = () => {
               <MemberCard
                 key={member.contact}
                 name={member.name}
-                position={member.positon}
+                position={member.position}
                 contact={member.contact}
               />
             )
