@@ -15,6 +15,7 @@
         bottom: 0.1rem;
       }
       &:hover {
+        color: $palette-lightest;
         background-color: $palette-medium;
         box-shadow: 0 4px 8px $palette-lightest;
         transition: all 0.25s ease-in-out;
