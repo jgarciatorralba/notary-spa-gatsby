@@ -52,10 +52,7 @@ const AboutPage = () => {
           <h2 className="mb-2 font-bold">{team.header}</h2>
           {team.members.map(member =>
             member.isNotary === "Yes" ? (
-              <div
-                key={member.name}
-                className="team-member notary flex flex-row justify-center"
-              >
+              <div key={member.name} className="team-member notary">
                 <div className="section-picture p-4 flex items-center">
                   <StaticImage
                     src="../images/demo/about/team/notary.jpg"
