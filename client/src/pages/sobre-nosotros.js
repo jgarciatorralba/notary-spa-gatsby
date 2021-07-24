@@ -7,6 +7,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ValueCard from "../components/valueCard"
 
+import EnvelopeIcon from "../images/demo/about/team/envelope.svg"
+
 import "../styles/pages/sobre-nosotros.scss"
 
 const AboutPage = () => {
@@ -20,6 +22,14 @@ const AboutPage = () => {
 
   const { title: defaultTitle, description } = metaTranslations
   const { title, header, summary, companyValues, team } = aboutTranslations
+  let { members } = team
+
+  members.forEach(member => {
+    member.isNotary =
+      member.position === "Notario" || member.position === "Notari"
+        ? true
+        : false
+  })
 
   return (
     <Layout>
@@ -51,7 +61,7 @@ const AboutPage = () => {
         <div className="block-team mb-4">
           <h2 className="mb-2 font-bold">{team.header}</h2>
           {team.members.map(member =>
-            member.isNotary === "Yes" ? (
+            member.isNotary ? (
               <div key={member.name} className="team-member notary">
                 <div className="section-picture p-4 flex items-center">
                   <StaticImage
@@ -75,24 +85,45 @@ const AboutPage = () => {
               </div>
             ) : (
               <div
-                key={member.name}
-                className="team-member p-4 text-center mx-auto"
+                key={member.contact}
+                className="team-member px-4 pt-4 pb-6 text-center mx-auto my-4"
               >
-                <StaticImage
-                  src="../images/demo/about/team/officer.jpg"
-                  alt=""
-                  placeholder="blurred"
-                  quality={90}
-                  className="mb-2"
-                />
+                {member.contact.includes("laura") && (
+                  <StaticImage
+                    src="../images/demo/about/team/officer.jpg"
+                    alt=""
+                    placeholder="blurred"
+                    quality={90}
+                    className="mb-2"
+                  />
+                )}
+                {member.contact.includes("emilio") && (
+                  <StaticImage
+                    src="../images/demo/about/team/administration.jpg"
+                    alt=""
+                    placeholder="blurred"
+                    quality={90}
+                    className="mb-2"
+                  />
+                )}
+                {member.contact.includes("gemma") && (
+                  <StaticImage
+                    src="../images/demo/about/team/copyist.jpg"
+                    alt=""
+                    placeholder="blurred"
+                    quality={90}
+                    className="mb-2"
+                  />
+                )}
                 <h3 className="text-xl">{member.name}</h3>
                 <p className="uppercase mb-4">{member.position}</p>
                 <a
                   rel="noreferrer"
                   target="_blank"
                   href={`mailto:${member.contact}`}
+                  className="my-2 px-4 py-2 rounded-full"
                 >
-                  {member.contact}
+                  <EnvelopeIcon /> {member.contact}
                 </a>
               </div>
             )

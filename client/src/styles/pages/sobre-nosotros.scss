@@ -43,12 +43,6 @@
       font-size: 1.5rem;
     }
 
-    .section-picture {
-      img {
-        z-index: -1;
-      }
-    }
-
     .team-member.notary {
       display: flex;
 
@@ -126,10 +120,24 @@
 
     .team-member {
       &:not(.notary) {
+        background-color: whitesmoke;
+        box-shadow: 0 4px 8px $palette-light;
         max-width: 30%;
 
-        img {
-          z-index: -1;
+        a {
+          background-color: $palette-light;
+          transition: all 0.25s ease-in-out;
+
+          svg {
+            display: inline;
+            position: relative;
+            bottom: 0.1rem;
+          }
+          &:hover {
+            background-color: $palette-medium;
+            box-shadow: 0 4px 8px $palette-lightest;
+            transition: all 0.25s ease-in-out;
+          }
         }
       }
     }
