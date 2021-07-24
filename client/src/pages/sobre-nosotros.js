@@ -1,14 +1,12 @@
 import * as React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ValueCard from "../components/valueCard"
 import NotaryCard from "../components/notaryCard"
-
-import EnvelopeIcon from "../images/demo/about/team/envelope.svg"
+import MemberCard from "../components/memberCard"
 
 import "../styles/pages/sobre-nosotros.scss"
 
@@ -70,48 +68,12 @@ const AboutPage = () => {
                 highlights={member.highlights}
               />
             ) : (
-              <div
+              <MemberCard
                 key={member.contact}
-                className="team-member px-4 pt-4 pb-6 text-center mx-auto my-4"
-              >
-                {member.contact.includes("laura") && (
-                  <StaticImage
-                    src="../images/demo/about/team/officer.jpg"
-                    alt=""
-                    placeholder="blurred"
-                    quality={90}
-                    className="mb-2"
-                  />
-                )}
-                {member.contact.includes("emilio") && (
-                  <StaticImage
-                    src="../images/demo/about/team/administration.jpg"
-                    alt=""
-                    placeholder="blurred"
-                    quality={90}
-                    className="mb-2"
-                  />
-                )}
-                {member.contact.includes("gemma") && (
-                  <StaticImage
-                    src="../images/demo/about/team/copyist.jpg"
-                    alt=""
-                    placeholder="blurred"
-                    quality={90}
-                    className="mb-2"
-                  />
-                )}
-                <h3 className="text-xl">{member.name}</h3>
-                <p className="uppercase mb-4">{member.position}</p>
-                <a
-                  rel="noreferrer"
-                  target="_blank"
-                  href={`mailto:${member.contact}`}
-                  className="my-2 px-4 py-2 rounded-full"
-                >
-                  <EnvelopeIcon /> {member.contact}
-                </a>
-              </div>
+                name={member.name}
+                position={member.positon}
+                contact={member.contact}
+              />
             )
           )}
         </div>
