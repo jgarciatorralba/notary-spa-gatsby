@@ -122,7 +122,6 @@
       &:not(.notary) {
         background-color: whitesmoke;
         box-shadow: 0 4px 8px $palette-light;
-        max-width: 30%;
 
         a {
           background-color: $palette-light;
@@ -138,6 +137,27 @@
             box-shadow: 0 4px 8px $palette-lightest;
             transition: all 0.25s ease-in-out;
           }
+        }
+
+        // Smartphone portrait
+        @media only screen and (max-width: $breakpoint-mobile) {
+          max-width: 380px;
+        }
+
+        // Smartphone landscape
+        @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+          max-width: 320px;
+        }
+
+        // Tablet portrait
+        @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+          max-width: 380px;
+        }
+
+        // Tablet in landscape, desktops and laptops
+        @media only screen and (min-width: $breakpoint-desktop) {
+          min-width: 320px;
+          max-width: 30%;
         }
       }
     }
