@@ -1,5 +1,9 @@
 @import "../settings/variables";
 
+nav {
+  z-index: 10;
+}
+
 .navbar-wrapper {
   background-color: $palette-darkest;
   color: $palette-lightest;
