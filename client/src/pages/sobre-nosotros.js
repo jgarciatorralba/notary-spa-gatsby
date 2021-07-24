@@ -74,9 +74,19 @@ const AboutPage = () => {
                 </div>
               </div>
             ) : (
-              <div key={member.name} className="team-member">
-                <h3>{member.name}</h3>
-                <p>{member.position}</p>
+              <div
+                key={member.name}
+                className="team-member p-4 text-center mx-auto"
+              >
+                <StaticImage
+                  src="../images/demo/about/team/officer.jpg"
+                  alt=""
+                  placeholder="blurred"
+                  quality={90}
+                  className="mb-2"
+                />
+                <h3 className="text-xl">{member.name}</h3>
+                <p className="uppercase mb-4">{member.position}</p>
                 <a
                   rel="noreferrer"
                   target="_blank"

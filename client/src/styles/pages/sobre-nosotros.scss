@@ -123,5 +123,15 @@
         }
       }
     }
+
+    .team-member {
+      &:not(.notary) {
+        max-width: 30%;
+
+        img {
+          z-index: -1;
+        }
+      }
+    }
   }
 }
