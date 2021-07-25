@@ -1,8 +1,8 @@
 import * as React from "react"
 
-import EffectivenessIcon from "../images/demo/about/company_values/effectiveness.svg"
-import ProfessionalismIcon from "../images/demo/about/company_values/professionalism.svg"
-import ProximityIcon from "../images/demo/about/company_values/proximity.svg"
+import EffectivenessIcon from "../assets/svgs/about/company_values/effectiveness.svg"
+import ProfessionalismIcon from "../assets/svgs/about/company_values/professionalism.svg"
+import ProximityIcon from "../assets/svgs/about/company_values/proximity.svg"
 
 import "../styles/components/valueCard.scss"
 

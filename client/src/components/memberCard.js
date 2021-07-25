@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-import EnvelopeIcon from "../images/demo/about/team/envelope.svg"
+import EnvelopeIcon from "../assets/svgs/about/team/envelope.svg"
 
 import "../styles/components/memberCard.scss"
 
@@ -10,7 +10,7 @@ const MemberCard = ({ name, position, contact }) => {
     <div className="team-member px-4 pt-4 pb-6 text-center mx-auto my-4">
       {contact.includes("laura") && (
         <StaticImage
-          src="../images/demo/about/team/officer.jpg"
+          src="../assets/images/demo/about/team/officer.jpg"
           alt=""
           placeholder="blurred"
           quality={90}
@@ -19,7 +19,7 @@ const MemberCard = ({ name, position, contact }) => {
       )}
       {contact.includes("emilio") && (
         <StaticImage
-          src="../images/demo/about/team/administration.jpg"
+          src="../assets/images/demo/about/team/administration.jpg"
           alt=""
           placeholder="blurred"
           quality={90}
@@ -28,7 +28,7 @@ const MemberCard = ({ name, position, contact }) => {
       )}
       {contact.includes("gemma") && (
         <StaticImage
-          src="../images/demo/about/team/copyist.jpg"
+          src="../assets/images/demo/about/team/copyist.jpg"
           alt=""
           placeholder="blurred"
           quality={90}

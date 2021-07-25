@@ -33,7 +33,7 @@ const IndexPage = () => {
         </h1>
 
         <StaticImage
-          src="../images/demo/homepage/hero_signature.jpg"
+          src="../assets/images/demo/homepage/hero_signature.jpg"
           alt=""
           placeholder="blurred"
           quality={100}

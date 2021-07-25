@@ -8,7 +8,7 @@ const NotaryCard = ({ name, bio, highlights }) => {
     <div className="team-member notary">
       <div className="section-picture p-4 flex items-center">
         <StaticImage
-          src="../images/demo/about/team/notary.jpg"
+          src="../assets/images/demo/about/team/notary.jpg"
           alt=""
           placeholder="blurred"
           quality={90}
