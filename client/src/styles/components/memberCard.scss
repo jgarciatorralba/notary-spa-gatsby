@@ -34,11 +34,17 @@
 
     // Smartphone landscape
     @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
-      max-width: 320px;
+      // max-width: 320px;
+      max-width: 260px;
 
       p,
       a {
-        font-size: 0.875rem;
+        // font-size: 0.875rem;
+        font-size: 0.75rem;
+
+        svg {
+          transform: scale(0.8);
+        }
       }
     }
 
@@ -49,8 +55,14 @@
 
     // Tablet in landscape, desktops and laptops
     @media only screen and (min-width: $breakpoint-desktop) {
-      min-width: 320px;
+      // min-width: 320px;
+      min-width: 300px;
       max-width: 30%;
+
+      p,
+      a {
+        font-size: 0.875rem;
+      }
     }
   }
 }
