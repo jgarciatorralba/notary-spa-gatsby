@@ -5,8 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ValueCard from "../components/valueCard"
-import NotaryCard from "../components/notaryCard"
-import MemberCard from "../components/memberCard"
+import TeamSlider from "../components/teamSlider"
 
 import "../styles/pages/sobre-nosotros.scss"
 
@@ -20,15 +19,7 @@ const AboutPage = () => {
   })
 
   const { title: defaultTitle, description } = metaTranslations
-  const { title, header, summary, companyValues, team } = aboutTranslations
-  let { members } = team
-
-  members.forEach(member => {
-    member.isNotary =
-      member.position === "Notario" || member.position === "Notari"
-        ? true
-        : false
-  })
+  const { title, header, summary, companyValues } = aboutTranslations
 
   return (
     <Layout>
@@ -57,26 +48,7 @@ const AboutPage = () => {
           ))}
         </div>
 
-        <div className="block-team mb-4">
-          <h2 className="mb-2 font-bold">{team.header}</h2>
-          {team.members.map(member =>
-            member.isNotary ? (
-              <NotaryCard
-                key={member.name}
-                name={member.name}
-                bio={member.bio}
-                highlights={member.highlights}
-              />
-            ) : (
-              <MemberCard
-                key={member.contact}
-                name={member.name}
-                position={member.position}
-                contact={member.contact}
-              />
-            )
-          )}
-        </div>
+        <TeamSlider />
       </div>
     </Layout>
   )

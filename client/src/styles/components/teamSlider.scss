@@ -1,0 +1,14 @@
+@import "../settings/variables";
+
+.block-team {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .slider {
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
