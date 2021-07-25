@@ -13,7 +13,7 @@ const MemberCard = ({ name, position, contact }) => {
           src="../assets/images/demo/about/team/officer.jpg"
           alt=""
           placeholder="blurred"
-          quality={90}
+          quality={70}
           className="mb-2"
         />
       )}
@@ -22,7 +22,7 @@ const MemberCard = ({ name, position, contact }) => {
           src="../assets/images/demo/about/team/administration.jpg"
           alt=""
           placeholder="blurred"
-          quality={90}
+          quality={70}
           className="mb-2"
         />
       )}
@@ -31,7 +31,7 @@ const MemberCard = ({ name, position, contact }) => {
           src="../assets/images/demo/about/team/copyist.jpg"
           alt=""
           placeholder="blurred"
-          quality={90}
+          quality={70}
           className="mb-2"
         />
       )}
