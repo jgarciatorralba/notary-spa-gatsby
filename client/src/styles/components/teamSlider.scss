@@ -10,5 +10,27 @@
       display: flex;
       align-items: center;
     }
+
+    .slick-dots {
+      li button {
+        &:before {
+          color: $palette-light;
+          opacity: 1;
+          font-size: 9px;
+        }
+
+        &:hover {
+          &:before {
+            color: $palette-dark;
+          }
+        }
+      }
+
+      li.slick-active button {
+        &:before {
+          color: $palette-dark;
+        }
+      }
+    }
   }
 }
