@@ -66,11 +66,16 @@
     justify-content: center;
 
     .section-picture {
-      width: 55%;
+      width: 60%;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
 
     .section-description {
-      width: 45%;
+      width: 40%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
     }
   }
 }
