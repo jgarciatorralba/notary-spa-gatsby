@@ -24,7 +24,8 @@
 
     // Smartphone portrait
     @media only screen and (max-width: $breakpoint-mobile) {
-      max-width: 300px;
+      width: 300px;
+      height: 490px;
 
       p,
       a {
@@ -34,12 +35,19 @@
 
     // Smartphone landscape
     @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
-      // max-width: 320px;
-      max-width: 260px;
+      width: 260px;
+      height: 360px;
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      p {
+        margin-bottom: 0.5rem;
+      }
 
       p,
       a {
-        // font-size: 0.875rem;
         font-size: 0.75rem;
 
         svg {
@@ -50,18 +58,29 @@
 
     // Tablet portrait
     @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
-      max-width: 380px;
+      width: 400px;
+      height: 640px;
     }
 
     // Tablet in landscape, desktops and laptops
     @media only screen and (min-width: $breakpoint-desktop) {
-      // min-width: 320px;
-      min-width: 300px;
-      max-width: 30%;
+      width: 280px;
+      height: 390px;
 
       p,
       a {
-        font-size: 0.875rem;
+        font-size: 0.75rem;
+      }
+    }
+
+    // Large desktop
+    @media only screen and (min-width: $breakpoint-xl) {
+      width: 340px;
+      height: 480px;
+
+      p,
+      a {
+        font-size: 1rem;
       }
     }
   }
