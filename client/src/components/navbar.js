@@ -88,7 +88,7 @@ const Navbar = () => {
             <div className="flex-shrink-0 flex items-center">
               <StaticImage
                 src="../assets/images/demo/logo/emblem.png"
-                className="logo block lg:hidden h-8 w-auto"
+                className="logo h-8 w-auto"
                 alt=""
                 placeholder="blurred"
                 quality={100}

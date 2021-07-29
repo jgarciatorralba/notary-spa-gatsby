@@ -84,6 +84,10 @@ nav {
     .navigation {
       display: block;
     }
+
+    .logo {
+      display: block;
+    }
   }
 
   // Tablet in landscape, desktops and laptops
@@ -98,6 +102,10 @@ nav {
 
     .navigation {
       display: block;
+    }
+
+    .logo {
+      display: none;
     }
   }
 
@@ -141,13 +149,23 @@ nav {
 
 .navbar-wrapper.is-front-page {
   @media only screen and (max-width: $breakpoint-mobile) {
+    .logo {
+      opacity: 0 !important;
+      transition: all 0.75s ease-in-out;
+    }
+
     background-color: transparent !important;
-    transition: background-color 0.75s ease-in-out;
+    transition: all 0.75s ease-in-out;
   }
 
   @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+    .logo {
+      opacity: 0 !important;
+      transition: all 0.75s ease-in-out;
+    }
+
     background-color: transparent !important;
-    transition: background-color 0.75s ease-in-out;
+    transition: all 0.75s ease-in-out;
   }
 
   @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
@@ -161,5 +179,18 @@ nav {
 
 .navbar-wrapper.is-front-page.scrolled {
   background-color: $palette-darkest !important;
-  transition: background-color 0.75s ease-in-out;
+
+  @media only screen and (max-width: $breakpoint-mobile) {
+    .logo {
+      opacity: 1 !important;
+      transition: all 0.75s ease-in-out;
+    }
+  }
+
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+    .logo {
+      opacity: 1 !important;
+      transition: all 0.75s ease-in-out;
+    }
+  }
 }
