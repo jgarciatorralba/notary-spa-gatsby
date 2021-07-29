@@ -1,10 +1,11 @@
 import * as React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { StaticImage } from "gatsby-plugin-image"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+
+import HomepageImage from "../components/bgImages/homepageImage"
 
 import "../styles/pages/index.scss"
 
@@ -27,18 +28,11 @@ const IndexPage = () => {
         pageTitle={title}
         description={description}
       />
-      <div className="hero-wrapper">
+      <HomepageImage>
         <h1 className="page-main-title text-center font-bold px-3 sm:px-4 lg:px-6 py-1 sm:py-2">
           {header}
         </h1>
-
-        <StaticImage
-          src="../assets/images/demo/homepage/hero_signature.jpg"
-          alt=""
-          placeholder="blurred"
-          quality={100}
-        />
-      </div>
+      </HomepageImage>
     </Layout>
   )
 }

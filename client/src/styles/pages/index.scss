@@ -1,89 +1,36 @@
 @import "../settings/variables";
 
-.hero-wrapper {
-  z-index: -1;
-
-  .page-main-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: fit-content;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: $palette-lightest;
-  }
+.page-main-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: $palette-lightest;
 
   // Smartphone portrait
   @media only screen and (max-width: $breakpoint-mobile) {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    img {
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-    }
-
-    .page-main-title {
-      font-size: 1.5rem;
-    }
+    font-size: 1.5rem;
   }
 
   // Smartphone landscape
   @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    img {
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-    }
-
-    .page-main-title {
-      font-size: 2rem;
-    }
+    font-size: 2rem;
   }
 
   // Tablet portrait
   @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
-    width: 100vw;
-    height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
-    position: relative;
-    top: 0;
-    img {
-      width: 100vw;
-      height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
-      z-index: -1;
-    }
-
-    .page-main-title {
-      font-size: 2.75rem;
-    }
+    font-size: 2.75rem;
   }
 
   // Tablet in landscape, desktops and laptops
   @media only screen and (min-width: $breakpoint-desktop) {
-    width: 100vw;
-    height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
-    position: relative;
-    top: 0;
-    img {
-      width: 100vw;
-      height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
-      z-index: -1;
-    }
-
-    .page-main-title {
-      font-size: 3rem;
-    }
+    font-size: 3rem;
   }
 
+  // Large desktops
   @media only screen and (min-width: $breakpoint-xl) {
-    .page-main-title {
-      font-size: 4.5rem;
-    }
+    font-size: 4.5rem;
   }
 }
