@@ -20,7 +20,7 @@ Promotional site for a notary office built with Gatsby.
 
 ### Frontend:
 
-  - Gatsby
+  - Gatsby v3
   - Tailwind CSS
   - SCSS
   - i18next
