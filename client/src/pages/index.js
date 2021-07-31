@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import HomepageImage from "../components/bgImages/homepageImage"
+import HomepageImage from "../components/bg-images/homepage/homepageImage"
 
 import "../styles/pages/index.scss"
 

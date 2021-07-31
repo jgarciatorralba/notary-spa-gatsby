@@ -1,9 +1,9 @@
 import * as React from "react"
 
 import EnvelopeIcon from "../assets/svgs/about/team/envelope.svg"
-import AdministrationImage from "./bgImages/administrationImage"
-import OfficerImage from "./bgImages/officerImage"
-import CopyistImage from "./bgImages/copyistImage"
+import AdministrationImage from "./bg-images/about/administrationImage"
+import OfficerImage from "./bg-images/about/officerImage"
+import CopyistImage from "./bg-images/about/copyistImage"
 
 import "../styles/components/memberCard.scss"
 

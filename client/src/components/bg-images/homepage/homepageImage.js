@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
 
-import "../../styles/components/bgImages/homepageImage.scss"
+import "../../../styles/components/bg-images/homepage/homepageImage.scss"
 
 const HomepageImage = ({ children }) => {
   const { image } = useStaticQuery(

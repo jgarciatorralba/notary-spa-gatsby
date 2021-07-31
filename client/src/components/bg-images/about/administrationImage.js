@@ -3,13 +3,15 @@ import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
 
-import "../../styles/components/bgImages/copyistImage.scss"
+import "../../../styles/components/bg-images/about/administrationImage.scss"
 
-const CopyistImage = () => {
+const AdministrationImage = () => {
   const { image } = useStaticQuery(
     graphql`
       query {
-        image: file(relativePath: { eq: "demo/about/team/copyist.jpg" }) {
+        image: file(
+          relativePath: { eq: "demo/about/team/administration.jpg" }
+        ) {
           childImageSharp {
             gatsbyImageData(
               width: 1200
@@ -25,7 +27,9 @@ const CopyistImage = () => {
 
   const pluginImage = getImage(image)
 
-  return <BgImage image={pluginImage} className="copyist-bg-image mb-2" />
+  return (
+    <BgImage image={pluginImage} className="administration-bg-image mb-2" />
+  )
 }
 
-export default CopyistImage
+export default AdministrationImage
