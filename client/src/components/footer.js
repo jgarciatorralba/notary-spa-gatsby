@@ -11,7 +11,7 @@ const Footer = () => {
   const { t } = useTranslation()
   const { originalPath } = useI18next()
 
-  const { companyName, email, address, phones } = t("contact", {
+  const { companyName, email, address, phone } = t("contact", {
     returnObjects: true,
   })
   const {
@@ -34,28 +34,80 @@ const Footer = () => {
     { name: "street", value: address.street },
     { name: "zip code", value: address.zipCode },
   ]
-  for (let i = 0; i < phones.length; i++) {
-    contact = [...contact, { name: `phone-${i + 1}`, value: phones[i] }]
+  for (let i = 0; i < phone.numbers.length; i++) {
+    contact = [...contact, { name: `phone-${i + 1}`, value: phone.numbers[i] }]
   }
 
   return (
     <footer className="footer-wrapper">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="contact-wrapper flex flex-wrap justify-center py-4">
-          {contact.map(item => (
-            <div
-              key={item.name}
-              className={classNames(
-                item.name === "company name"
-                  ? "font-bold w-full sm:w-auto text-center sm:text-justify"
-                  : "font-medium",
-                item.name.includes("phone") ? "phone-number" : "",
-                "flex-shrink-0 text-sm px-2 sm:px-3 py-0 self-center"
-              )}
-            >
-              {item.value}
-            </div>
-          ))}
+          {contact.map(item => {
+            if (item.name === "email") {
+              return (
+                <div
+                  key={item.name}
+                  className="flex-shrink-0 px-2 sm:px-3 py-0 self-center flex"
+                >
+                  <a
+                    href={`mailto:${item.value}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium self-center text-sm hover:text-white"
+                  >
+                    {item.value}
+                  </a>
+                </div>
+              )
+            } else if (item.name === "phone-1") {
+              return (
+                <div
+                  key={item.name}
+                  className="phone-section flex-shrink-0 px-2 sm:px-3 py-0 self-center flex"
+                >
+                  <span className="phone-abbreviation font-medium text-sm self-center">{phone.abbreviation}</span>
+                  <a
+                    href={`tel:${item.value}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium self-center text-sm hover:text-white"
+                  >
+                    {item.value}
+                  </a>
+                </div>
+              )
+            } else if (item.name === "phone-2") {
+              return (
+                <div
+                  key={item.name}
+                  className="phone-number flex-shrink-0 px-2 sm:px-3 py-0 self-center flex"
+                >
+                  <a
+                    href={`tel:${item.value}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium self-center text-sm hover:text-white"
+                  >
+                    {item.value}
+                  </a>
+                </div>
+              )
+            } else {
+              return (
+                <div
+                  key={item.name}
+                  className={classNames(
+                    item.name === "company name"
+                      ? "font-bold w-full sm:w-auto text-center sm:text-justify"
+                      : "font-medium",
+                    "flex-shrink-0 text-sm px-2 sm:px-3 py-0 self-center"
+                  )}
+                >
+                  {item.value}
+                </div>
+              )
+            }
+          })}
         </div>
         <div className="links-wrapper flex flex-wrap justify-center sm:justify-between">
           <div className="flex justify-around sm:justify-evenly">

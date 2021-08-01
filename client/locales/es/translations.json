@@ -18,7 +18,10 @@
       "street": "Rambla Hospital, 6 - 1ª",
       "zipCode": "08500 - Vic, Barcelona"
     },
-    "phones": ["tlfs. 938 850 816", "938 853 752"]
+    "phone": {
+      "abbreviation": "tlfs.",
+      "numbers": ["938 850 816", "938 853 752"]
+    }
   },
 
   "footer": {

@@ -4,9 +4,13 @@
   background-color: $palette-darkest;
   color: $palette-lightest;
 
-  .phone-number {
+  .phone-section {
     &:not(:last-child) {
       border-right: 1px solid $palette-lightest;
+    }
+
+    .phone-abbreviation {
+      margin-right: 0.25rem;
     }
   }
 }
