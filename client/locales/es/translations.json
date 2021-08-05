@@ -11,7 +11,7 @@
     "services": "Servicios"
   },
 
-  "contact": {
+  "contact-details": {
     "companyName": "Notaría Mínguez",
     "email": "contact@notariaminguez.com",
     "address": {
@@ -90,5 +90,9 @@
         }
       ]
     }
+  },
+
+  "contact": {
+    "header": "Cómo encontrarnos"
   }
 }

@@ -11,7 +11,7 @@ const Footer = () => {
   const { t } = useTranslation()
   const { originalPath } = useI18next()
 
-  const { companyName, email, address, phone } = t("contact", {
+  const { companyName, email, address, phone } = t("contact-details", {
     returnObjects: true,
   })
   const {
