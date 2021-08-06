@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -17,12 +17,31 @@ const ContactPage = () => {
     zoom: 16,
   }
 
+  const { t } = useTranslation()
+  const contactTranslations = t("contact", {
+    returnObjects: true,
+  })
+  const metaTranslations = t("metadata", {
+    returnObjects: true,
+  })
+
+  const { title: defaultTitle, description } = metaTranslations
+  const { title, header } = contactTranslations
+
   return (
     <Layout>
-      <Seo title="Contact" />
+      <Seo
+        defaultTitle={defaultTitle}
+        pageTitle={title}
+        description={description}
+      />
 
-      <div className="map-wrapper max-w-7xl mx-auto">
-        <div className="section-map">
+      <div className="contact-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
+        <h2 className="mb-2">
+          {header}
+        </h2>
+
+        <div className="section-map my-4">
           <iframe
             title="test"
             src={`${map.baseUrl}${map.mode}?key=${map.apiKey}&q=${map.marker}&zoom=${map.zoom}&language=${language}`}

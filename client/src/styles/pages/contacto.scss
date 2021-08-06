@@ -1,24 +1,8 @@
 @import "../settings/variables";
 
-.map-wrapper {
-  // Smartphone portrait
-  @media only screen and (max-width: $breakpoint-mobile) {
-    padding: 1rem;
-  }
-
-  // Smartphone landscape
-  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
-    padding: 1rem 2rem;
-  }
-
-  // Tablet portrait
-  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
-    padding: 2rem;
-  }
-
-  // Tablet in landscape, desktops and laptops
-  @media only screen and (min-width: $breakpoint-desktop) {
-    padding: 2rem;
+.contact-wrapper {
+  h2 {
+    font-size: 1.5rem;
   }
 
   .section-map {
