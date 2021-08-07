@@ -42,7 +42,7 @@ const ContactPage = () => {
         </h2>
 
         <div className="sections-wrapper">
-          <div className="section-map my-4">
+          <div className="section-map mb-4">
             <iframe
               title={iframe.title}
               src={`${map.baseUrl}${map.mode}?key=${map.apiKey}&q=${map.marker}&zoom=${map.zoom}&language=${language}`}
@@ -51,7 +51,7 @@ const ContactPage = () => {
             />
           </div>
 
-          <div className="section-form my-4">
+          <div className="section-form mb-4">
 
           </div>
         </div>
