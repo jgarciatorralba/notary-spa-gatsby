@@ -27,7 +27,8 @@
   // Tablet in landscape, desktops and laptops
   @media only screen and (min-width: $breakpoint-desktop) {
     width: 47.5%;
-    height: 400px;
+    height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop} - 8rem);
+    max-height: 650px;
   }
 
   // Large desktops
