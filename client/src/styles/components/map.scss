@@ -15,6 +15,7 @@
   @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
     width: 47.5%;
     height: calc(100vh - #{$navbar-height} - 2rem);
+    max-height: 400px;
   }
 
   // Tablet portrait
@@ -32,7 +33,8 @@
   // Large desktops
   @media only screen and (min-width: $breakpoint-xl) {
     width: 47.5%;
-    height: 500px;
+    height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop} - 8rem);
+    max-height: 650px;
   }
 
   iframe {
