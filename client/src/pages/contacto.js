@@ -41,13 +41,18 @@ const ContactPage = () => {
           {header}
         </h2>
 
-        <div className="section-map my-4">
-          <iframe
-            title="test"
-            src={`${map.baseUrl}${map.mode}?key=${map.apiKey}&q=${map.marker}&zoom=${map.zoom}&language=${language}`}
-            allowFullScreen
-            loading="lazy"
-          />
+        <div className="sections-wrapper">
+          <div className="section-map my-4">
+            <iframe
+              title="test"
+              src={`${map.baseUrl}${map.mode}?key=${map.apiKey}&q=${map.marker}&zoom=${map.zoom}&language=${language}`}
+              allowFullScreen
+              loading="lazy"
+            />
+          </div>
+          <div className="section-form my-4">
+
+          </div>
         </div>
       </div>
     </Layout>
