@@ -36,32 +36,5 @@
       flex-direction: row;
       justify-content: space-between;
     }
-
-    .section-form {
-      // Smartphone portrait
-      @media only screen and (max-width: $breakpoint-mobile) {
-        width: 100%;
-      }
-    
-      // Smartphone landscape
-      @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
-        width: 47.5%;
-      }
-    
-      // Tablet portrait
-      @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
-        width: 47.5%;
-      }
-    
-      // Tablet in landscape, desktops and laptops
-      @media only screen and (min-width: $breakpoint-desktop) {
-        width: 47.5%;
-      }
-  
-      // Large desktops
-      @media only screen and (min-width: $breakpoint-xl) {
-        width: 47.5%;
-      }
-    }
   }
 }

@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Map from "../components/map"
+import Form from "../components/form"
 
 import "../styles/pages/contacto.scss"
 
@@ -38,9 +39,7 @@ const ContactPage = () => {
             iframeTitle={iframe.title}
           />
 
-          <div className="section-form mb-4">
-
-          </div>
+          <Form />
         </div>
       </div>
     </Layout>
