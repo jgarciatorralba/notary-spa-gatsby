@@ -26,7 +26,7 @@ const ContactPage = () => {
   })
 
   const { title: defaultTitle, description } = metaTranslations
-  const { title, header } = contactTranslations
+  const { title, header, iframe } = contactTranslations
 
   return (
     <Layout>
@@ -44,7 +44,7 @@ const ContactPage = () => {
         <div className="sections-wrapper">
           <div className="section-map my-4">
             <iframe
-              title="test"
+              title={iframe.title}
               src={`${map.baseUrl}${map.mode}?key=${map.apiKey}&q=${map.marker}&zoom=${map.zoom}&language=${language}`}
               allowFullScreen
               loading="lazy"

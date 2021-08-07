@@ -94,6 +94,9 @@
 
   "contact": {
     "title": "Contacte",
-    "header": "Com trobar-nos"
+    "header": "Com trobar-nos",
+    "iframe": {
+      "title": "Localització de la notaria"
+    }
   }
 }

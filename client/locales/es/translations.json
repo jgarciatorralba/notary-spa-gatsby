@@ -94,6 +94,9 @@
 
   "contact": {
     "title": "Contacto",
-    "header": "Cómo encontrarnos"
+    "header": "Cómo encontrarnos",
+    "iframe": {
+      "title": "Localización de la notaría"
+    }
   }
 }
