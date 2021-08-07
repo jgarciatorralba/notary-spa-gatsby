@@ -1,22 +1,14 @@
 import * as React from "react"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Map from "../components/map"
 
 import "../styles/pages/contacto.scss"
 
 const ContactPage = () => {
-  const { language } = useI18next()
-  const map = {
-    baseUrl: process.env.GATSBY_MAPS_EMBED_BASE_URL,
-    mode: "place",
-    apiKey: process.env.GATSBY_MAPS_EMBED_API_KEY,
-    marker: encodeURI("Notaria+Jorge+Míngez+Balaguer"),
-    zoom: 16,
-  }
-
   const { t } = useTranslation()
   const contactTranslations = t("contact", {
     returnObjects: true,
@@ -42,14 +34,9 @@ const ContactPage = () => {
         </h2>
 
         <div className="sections-wrapper">
-          <div className="section-map mb-4">
-            <iframe
-              title={iframe.title}
-              src={`${map.baseUrl}${map.mode}?key=${map.apiKey}&q=${map.marker}&zoom=${map.zoom}&language=${language}`}
-              allowFullScreen
-              loading="lazy"
-            />
-          </div>
+          <Map
+            iframeTitle={iframe.title}
+          />
 
           <div className="section-form mb-4">
 
