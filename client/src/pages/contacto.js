@@ -50,6 +50,7 @@ const ContactPage = () => {
               loading="lazy"
             />
           </div>
+
           <div className="section-form my-4">
 
           </div>
