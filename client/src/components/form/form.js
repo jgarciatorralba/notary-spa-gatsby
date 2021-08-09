@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import "../styles/components/form.scss"
+import "../../styles/components/form/form.scss"
 
 const Form = () => {
   function handleSubmit(e) {

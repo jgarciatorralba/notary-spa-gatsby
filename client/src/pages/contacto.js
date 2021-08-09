@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Map from "../components/map"
-import Form from "../components/form"
+import Form from "../components/form/form"
 
 import "../styles/pages/contacto.scss"
 
