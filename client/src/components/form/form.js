@@ -121,7 +121,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
             classes={classNames(
               "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             )}
-            placeholder={emailLocales.placeholder}
+            placeholder={messageLocales.placeholder}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
@@ -129,7 +129,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
           <ErrorMessage
             classes="text-red-500 text-xs italic"
           >
-            {emailLocales.errors.empty}
+            {messageLocales.errors.empty}
           </ErrorMessage>
         </div>
 
