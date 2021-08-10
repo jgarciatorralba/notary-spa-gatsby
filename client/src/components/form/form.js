@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 
 import Input from "./input"
 import Textarea from "./textarea"
@@ -13,9 +14,20 @@ function classNames(...classes) {
 }
 
 const Form = () => {
+  const [fullname, setFullname] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+
   function handleSubmit(e) {
     e.preventDefault()
+
     console.log("submit!")
+    if (fullname)
+      console.log(fullname)
+    if (email)
+      console.log(email)
+    if (message)
+      console.log(message)
   }
 
   return (
@@ -44,6 +56,8 @@ const Form = () => {
                 "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
               )}
               placeholder="Jane"
+              value={fullname}
+              onChange={(e) => setFullname(e.target.value)}
             />
 
             <ErrorMessage
@@ -71,6 +85,8 @@ const Form = () => {
                 "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
               )}
               placeholder="janedoe@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
 
             <ErrorMessage
@@ -98,6 +114,8 @@ const Form = () => {
               "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             )}
             placeholder="Your message here"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           />
 
           <ErrorMessage
