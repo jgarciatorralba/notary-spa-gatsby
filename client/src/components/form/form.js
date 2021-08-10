@@ -47,7 +47,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
           className="flex flex-wrap justify-between"
         >
           <div
-            className="w-full sm:w-5/12 mb-6"
+            className="inline-input mb-6"
           >
             <Label
               htmlFor="fullname"
@@ -76,7 +76,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
           </div>
 
           <div
-            className="w-full sm:w-5/12 mb-6"
+            className="inline-input mb-6"
           >
             <Label
               htmlFor="email"

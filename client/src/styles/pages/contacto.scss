@@ -15,14 +15,12 @@
   
     // Smartphone landscape
     @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
-      flex-direction: row;
-      justify-content: space-between;
+      flex-direction: column;
     }
   
     // Tablet portrait
     @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
-      flex-direction: row;
-      justify-content: space-between;
+      flex-direction: column;
     }
   
     // Tablet in landscape, desktops and laptops
