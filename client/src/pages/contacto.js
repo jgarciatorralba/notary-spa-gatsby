@@ -19,7 +19,8 @@ const ContactPage = () => {
   })
 
   const { title: defaultTitle, description } = metaTranslations
-  const { title, header, iframe } = contactTranslations
+  const { title, header, iframe, form } = contactTranslations
+  const { inputs, button } = form
 
   return (
     <Layout>
@@ -39,7 +40,10 @@ const ContactPage = () => {
             iframeTitle={iframe.title}
           />
 
-          <Form />
+          <Form
+            inputsLocales={inputs}
+            buttonLocales={button}
+          />
         </div>
       </div>
     </Layout>
