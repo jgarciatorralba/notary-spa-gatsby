@@ -21,7 +21,7 @@
 
   // Tablet portrait
   @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
-    width: calc(50% - 1rem);
+    width: 100%;
 
     .inline-input {
       width: calc(50% - 1rem);

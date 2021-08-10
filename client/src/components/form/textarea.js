@@ -7,7 +7,7 @@ const Textarea = ({
   name,
   classes = "",
   placeholder = "",
-  rows = 4,
+  rows = 3,
   ...props
 }) => {
   return (
