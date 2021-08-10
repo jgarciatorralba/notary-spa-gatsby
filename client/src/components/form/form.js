@@ -1,8 +1,10 @@
 import * as React from "react"
 
-import InputGroup from "./inputGroup"
-import TextareaGroup from "./textareaGroup"
+import Input from "./input"
+import Textarea from "./textarea"
+import Label from "./label"
 import Button from "./button"
+import ErrorMessage from "./errorMessage"
 
 import "../../styles/components/form/form.scss"
 
@@ -21,51 +23,86 @@ const Form = () => {
       <form
         onSubmit={handleSubmit}
       >
-        <div className="flex flex-wrap justify-between">
-          <InputGroup
-            wrapperClasses="w-full sm:w-5/12 mb-6"
-            labelClasses="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            labelText="First Name"
-            htmlType="text"
-            id="fullname"
-            name="fullname"
-            inputClasses={classNames(
-              "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-            )}
-            placeholder="Jane"
-            errorClasses="text-red-500 text-xs italic"
-            errorText="Please fill out this field."
-          />
+        <div
+          className="flex flex-wrap justify-between"
+        >
+          <div
+            className="w-full sm:w-5/12 mb-6"
+          >
+            <Label
+              htmlFor="fullname"
+              classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              text="First Name"
+            />
 
-          <InputGroup
-            wrapperClasses="w-full sm:w-5/12 mb-6"
-            labelClasses="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            labelText="Email"
-            htmlType="email"
-            id="email"
-            name="email"
-            inputClasses={classNames(
-              "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-            )}
-            placeholder="janedoe@email.com"
-            errorClasses="text-red-500 text-xs italic"
-            errorText="Please fill out your email."
-          />
+            <Input
+              htmlType="text"
+              id="fullname"
+              name="fullname"
+              classes={classNames(
+                "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              )}
+              placeholder="Jane"
+            />
+
+            <ErrorMessage
+              classes="text-red-500 text-xs italic"
+            >
+              Please fill out this field.
+            </ErrorMessage>
+          </div>
+
+          <div
+            className="w-full sm:w-5/12 mb-6"
+          >
+            <Label
+              htmlFor="email"
+              classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              text="Email"
+            />
+
+            <Input
+              htmlType="email"
+              id="email"
+              name="email"
+              classes={classNames(
+                "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              )}
+              placeholder="janedoe@email.com"
+            />
+
+            <ErrorMessage
+              classes="text-red-500 text-xs italic"
+            >
+              Please fill out your email.
+            </ErrorMessage>
+          </div>
         </div>
 
-        <TextareaGroup
-          wrapperClasses="mb-6"
-          labelClasses="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-          labelText="Message"
-          id="message"
-          name="message"
-          textareaClasses={classNames(
-            "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-          )}
-          placeholder="Your message here"
-          errorClasses="text-red-500 text-xs italic"
-          errorText="Please fill out this field."
-        />
+        <div
+          className="mb-6"
+        >
+          <Label
+            htmlFor="message"
+            classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            text="Message"
+          />
+
+          <Textarea
+            id="message"
+            name="message"
+            classes={classNames(
+              "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            )}
+            placeholder="Your message here"
+          />
+
+          <ErrorMessage
+            classes="text-red-500 text-xs italic"
+          >
+            Please fill out this field.
+          </ErrorMessage>
+        </div>
 
         <div className="mb-6">
           <Button
