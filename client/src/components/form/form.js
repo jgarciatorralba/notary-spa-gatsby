@@ -39,7 +39,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
   }
 
   return (
-    <div className="section-form mb-4">
+    <div className="section-form">
       <form
         onSubmit={handleSubmit}
       >

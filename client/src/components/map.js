@@ -14,7 +14,7 @@ const Map = ({ iframeTitle }) => {
   }
 
   return (
-    <div className="section-map mb-4">
+    <div className="section-map mb-8">
       <iframe
         title={iframeTitle}
         src={`${map.baseUrl}${map.mode}?key=${map.apiKey}&q=${map.marker}&zoom=${map.zoom}&language=${language}`}
