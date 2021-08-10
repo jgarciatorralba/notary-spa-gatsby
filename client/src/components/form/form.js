@@ -32,8 +32,9 @@ const Form = () => {
             <Label
               htmlFor="fullname"
               classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              text="First Name"
-            />
+            >
+              First Name
+            </Label>
 
             <Input
               htmlType="text"
@@ -58,8 +59,9 @@ const Form = () => {
             <Label
               htmlFor="email"
               classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              text="Email"
-            />
+            >
+              Email
+            </Label>
 
             <Input
               htmlType="email"
@@ -85,8 +87,9 @@ const Form = () => {
           <Label
             htmlFor="message"
             classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-            text="Message"
-          />
+          >
+            Message
+          </Label>
 
           <Textarea
             id="message"

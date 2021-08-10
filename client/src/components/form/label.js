@@ -3,9 +3,9 @@ import * as React from "react"
 import "../../styles/components/form/label.scss"
 
 const Label = ({
+  children,
   htmlFor,
   classes = "",
-  text,
   ...props
 }) => {
   return (
@@ -14,7 +14,7 @@ const Label = ({
       className={classes}
       {...props}
     >
-      {text}
+      {children}
     </label>
   )
 }

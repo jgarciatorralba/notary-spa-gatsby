@@ -3,6 +3,7 @@ import * as React from "react"
 import "../../styles/components/form/errorMessage.scss"
 
 const ErrorMessage = ({
+  children,
   classes = "",
   text,
   ...props
@@ -12,7 +13,7 @@ const ErrorMessage = ({
       className={classes}
       {...props}
     >
-      {text}
+      {children}
     </p>
   )
 }
