@@ -153,7 +153,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
           <Button
             type="submit"
             classes={classNames(
-              "shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full"
+              "focus:outline-none py-2 px-4 rounded-full"
             )}
           >
             {buttonLocales.text}
