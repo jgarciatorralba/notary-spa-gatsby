@@ -13,10 +13,18 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-const Form = () => {
+const Form = ({ inputsLocales, buttonLocales }) => {
   const [fullname, setFullname] = useState("")
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
+  const [honeypot, setHoneypot] = useState("")
+
+  const {
+    fullname: fullnameLocales,
+    email: emailLocales,
+    message: messageLocales,
+    honeypot: honeypotLocales
+  } = inputsLocales
 
   function handleSubmit(e) {
     e.preventDefault()
@@ -45,7 +53,7 @@ const Form = () => {
               htmlFor="fullname"
               classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             >
-              First Name
+              {fullnameLocales.label}
             </Label>
 
             <Input
@@ -55,7 +63,7 @@ const Form = () => {
               classes={classNames(
                 "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
               )}
-              placeholder="Jane"
+              placeholder={fullnameLocales.placeholder}
               value={fullname}
               onChange={(e) => setFullname(e.target.value)}
             />
@@ -63,7 +71,7 @@ const Form = () => {
             <ErrorMessage
               classes="text-red-500 text-xs italic"
             >
-              Please fill out this field.
+              {fullnameLocales.errors.empty}
             </ErrorMessage>
           </div>
 
@@ -74,7 +82,7 @@ const Form = () => {
               htmlFor="email"
               classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             >
-              Email
+              {emailLocales.label}
             </Label>
 
             <Input
@@ -84,7 +92,7 @@ const Form = () => {
               classes={classNames(
                 "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
               )}
-              placeholder="janedoe@email.com"
+              placeholder={emailLocales.placeholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -92,7 +100,7 @@ const Form = () => {
             <ErrorMessage
               classes="text-red-500 text-xs italic"
             >
-              Please fill out your email.
+              {emailLocales.errors.invalid}
             </ErrorMessage>
           </div>
         </div>
@@ -104,7 +112,7 @@ const Form = () => {
             htmlFor="message"
             classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
           >
-            Message
+            {messageLocales.label}
           </Label>
 
           <Textarea
@@ -113,7 +121,7 @@ const Form = () => {
             classes={classNames(
               "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
             )}
-            placeholder="Your message here"
+            placeholder={emailLocales.placeholder}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
@@ -121,8 +129,24 @@ const Form = () => {
           <ErrorMessage
             classes="text-red-500 text-xs italic"
           >
-            Please fill out this field.
+            {emailLocales.errors.empty}
           </ErrorMessage>
+        </div>
+
+        <div
+          className="mb-6"
+        >
+          <Input
+            htmlType="text"
+            id="honeypot"
+            name="honeypot"
+            classes={classNames(
+              "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            )}
+            placeholder={honeypotLocales.placeholder}
+            value={honeypot}
+            onChange={(e) => setHoneypot(e.target.value)}
+          />
         </div>
 
         <div className="mb-6">
@@ -132,7 +156,7 @@ const Form = () => {
               "shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-full"
             )}
           >
-            Sign up
+            {buttonLocales.text}
           </Button>
         </div>
       </form>
