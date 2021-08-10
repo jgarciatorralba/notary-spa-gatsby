@@ -9,13 +9,17 @@ const Button = ({
   ...props
 }) => {
   return (
-    <button
-      type={htmlType}
-      className={classes}
-      {...props}
+    <div
+      className="btn-form"
     >
-      {children}
-    </button>
+      <button
+        type={htmlType}
+        className={classes}
+        {...props}
+      >
+        {children}
+      </button>
+    </div>
   )
 }
 
