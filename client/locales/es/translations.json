@@ -97,6 +97,38 @@
     "header": "Cómo encontrarnos",
     "iframe": {
       "title": "Localización de la notaría"
+    },
+    "form": {
+      "inputs": {
+        "fullname": {
+          "label": "Nombre y apellidos",
+          "placeholder": "Carlos García",
+          "errors": {
+            "empty": "Por favor, complete este campo."
+          }
+        },
+        "email": {
+          "label": "Correo electrónico",
+          "placeholder": "carlosgarcia@ejemplo.com",
+          "errors": {
+            "empty": "Por favor, complete este campo.",
+            "invalid": "El formato utilizado no es válido."
+          }
+        },
+        "message": {
+          "label": "Mensaje",
+          "placeholder": "Escriba su mensaje aquí",
+          "errors": {
+            "empty": "Por favor, complete este campo."
+          }
+        },
+        "honeypot": {
+          "placeholder": "Si lees esto, deja el campo en blanco."
+        }
+      },
+      "button": {
+        "text": "Enviar"
+      }
     }
   }
 }

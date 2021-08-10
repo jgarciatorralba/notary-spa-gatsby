@@ -97,6 +97,38 @@
     "header": "Com trobar-nos",
     "iframe": {
       "title": "Localització de la notaria"
+    },
+    "form": {
+      "inputs": {
+        "fullname": {
+          "label": "Nom i cognoms",
+          "placeholder": "Pau Coll",
+          "errors": {
+            "empty": "Si us plau, ompli aquest camp."
+          }
+        },
+        "email": {
+          "label": "Correu electrònic",
+          "placeholder": "paucoll@exemple.com",
+          "errors": {
+            "empty": "Si us plau, ompli aquest camp.",
+            "invalid": "El format utilitzat no és vàlid."
+          }
+        },
+        "message": {
+          "label": "Missatge",
+          "placeholder": "Escrigui el seu missatge aquí",
+          "errors": {
+            "empty": "Si us plau, ompli aquest camp."
+          }
+        },
+        "honeypot": {
+          "placeholder": "Si llegeixes això, deixa el camp en blanc."
+        }
+      },
+      "button": {
+        "text": "Enviar"
+      }
     }
   }
 }
