@@ -1,1 +1,7 @@
 @import "../../settings/variables";
+
+.error-message {
+  p {
+    color: $input-error;
+  }
+}

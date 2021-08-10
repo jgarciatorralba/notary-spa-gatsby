@@ -1,1 +1,15 @@
 @import "../../settings/variables";
+
+textarea {
+  background-color: $palette-lightest;
+  border: 1px solid $palette-light;
+  border-radius: 4px;
+}
+
+textarea.error {
+  border: 1px solid $input-error;
+}
+
+textarea.success {
+  border: 1px solid $input-success;
+}

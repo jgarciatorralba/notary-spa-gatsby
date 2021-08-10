@@ -9,12 +9,14 @@ const ErrorMessage = ({
   ...props
 }) => {
   return (
-    <p
-      className={classes}
-      {...props}
-    >
-      {children}
-    </p>
+    <div className="error-message">
+      <p
+        className={classes}
+        {...props}
+      >
+        {children}
+      </p>
+    </div>
   )
 }
 

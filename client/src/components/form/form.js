@@ -14,11 +14,6 @@ function classNames(...classes) {
 }
 
 const Form = ({ inputsLocales, buttonLocales }) => {
-  const [fullname, setFullname] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-  const [honeypot, setHoneypot] = useState("")
-
   const {
     fullname: fullnameLocales,
     email: emailLocales,
@@ -26,16 +21,66 @@ const Form = ({ inputsLocales, buttonLocales }) => {
     honeypot: honeypotLocales
   } = inputsLocales
 
+  const [fullname, setFullname] = useState("")
+  const [errorFullname, setErrorFullname] = useState(null)
+  const [email, setEmail] = useState("")
+  const [errorEmail, setErrorEmail] = useState(null)
+  const [message, setMessage] = useState("")
+  const [errorMessage, setErrorMessage] = useState(null)
+  const [honeypot, setHoneypot] = useState("")
+  const [formIsSubmitted, setFormIsSubmitted] = useState(false)
+
+  function validateInputs() {
+    let inputsAreValid = true
+
+    if (fullname) {
+      setErrorFullname(null)
+    } else {
+      setErrorFullname(fullnameLocales.errors.empty)
+      inputsAreValid = false
+    }
+
+    const regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if (!email) {
+      setErrorEmail(emailLocales.errors.empty)
+      inputsAreValid = false
+    } else {
+      if (regex.test(email.toLowerCase())) {
+        setErrorEmail(null)
+      } else {
+        setErrorEmail(emailLocales.errors.invalid)
+        inputsAreValid = false
+      }
+    }
+
+    if (message) {
+      setErrorMessage(null)
+    } else {
+      setErrorMessage(messageLocales.errors.empty)
+      inputsAreValid = false
+    }
+
+    return inputsAreValid
+  }
+
   function handleSubmit(e) {
     e.preventDefault()
 
-    console.log("submit!")
-    if (fullname)
-      console.log(fullname)
-    if (email)
-      console.log(email)
-    if (message)
-      console.log(message)
+    setFormIsSubmitted(true)
+    const validInputs = validateInputs()
+
+    if (honeypot) {
+      console.log("Invalid!")
+    } else {
+      if (validInputs) {
+        console.log("Valid!")
+        console.log(fullname)
+        console.log(email)
+        console.log(message)
+      } else {
+        console.log("Invalid!")
+      }
+    }
   }
 
   return (
@@ -47,11 +92,11 @@ const Form = ({ inputsLocales, buttonLocales }) => {
           className="flex flex-wrap justify-between"
         >
           <div
-            className="inline-input mb-6"
+            className="input-group inline-input mb-3"
           >
             <Label
               htmlFor="fullname"
-              classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              classes="block uppercase tracking-wide text-xs font-bold mb-2"
             >
               {fullnameLocales.label}
             </Label>
@@ -61,26 +106,29 @@ const Form = ({ inputsLocales, buttonLocales }) => {
               id="fullname"
               name="fullname"
               classes={classNames(
-                "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                (!formIsSubmitted) ? "" : (errorFullname ? "error" : "success"),
+                "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
               )}
               placeholder={fullnameLocales.placeholder}
               value={fullname}
               onChange={(e) => setFullname(e.target.value)}
             />
 
-            <ErrorMessage
-              classes="text-red-500 text-xs italic"
-            >
-              {fullnameLocales.errors.empty}
-            </ErrorMessage>
+            {formIsSubmitted && errorFullname && (
+              <ErrorMessage
+                classes="text-xs italic"
+              >
+                {errorFullname}
+              </ErrorMessage>
+            )}
           </div>
 
           <div
-            className="inline-input mb-6"
+            className="input-group inline-input mb-3"
           >
             <Label
               htmlFor="email"
-              classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              classes="block uppercase tracking-wide text-xs font-bold mb-2"
             >
               {emailLocales.label}
             </Label>
@@ -90,27 +138,30 @@ const Form = ({ inputsLocales, buttonLocales }) => {
               id="email"
               name="email"
               classes={classNames(
-                "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                (!formIsSubmitted) ? "" : (errorEmail ? "error" : "success"),
+                "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
               )}
               placeholder={emailLocales.placeholder}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            <ErrorMessage
-              classes="text-red-500 text-xs italic"
-            >
-              {emailLocales.errors.invalid}
-            </ErrorMessage>
+            {formIsSubmitted && errorEmail && (
+              <ErrorMessage
+                classes="text-xs italic"
+              >
+                {errorEmail}
+              </ErrorMessage>
+            )}
           </div>
         </div>
 
         <div
-          className="mb-6"
+          className="input-group message mb-3"
         >
           <Label
             htmlFor="message"
-            classes="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            classes="block uppercase tracking-wide text-xs font-bold mb-2"
           >
             {messageLocales.label}
           </Label>
@@ -119,29 +170,32 @@ const Form = ({ inputsLocales, buttonLocales }) => {
             id="message"
             name="message"
             classes={classNames(
-              "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              (!formIsSubmitted) ? "" : (errorMessage ? "error" : "success"),
+              "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
             )}
             placeholder={messageLocales.placeholder}
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
 
-          <ErrorMessage
-            classes="text-red-500 text-xs italic"
-          >
-            {messageLocales.errors.empty}
-          </ErrorMessage>
+          {formIsSubmitted && errorMessage && (
+            <ErrorMessage
+              classes="text-xs italic"
+            >
+              {errorMessage}
+            </ErrorMessage>
+          )}
         </div>
 
         <div
-          className="mb-6"
+          className="hidden mb-3"
         >
           <Input
             htmlType="text"
             id="honeypot"
             name="honeypot"
             classes={classNames(
-              "appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+              "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
             )}
             placeholder={honeypotLocales.placeholder}
             value={honeypot}
@@ -149,7 +203,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
           />
         </div>
 
-        <div className="mb-6">
+        <div className="mb-3">
           <Button
             type="submit"
             classes={classNames(
