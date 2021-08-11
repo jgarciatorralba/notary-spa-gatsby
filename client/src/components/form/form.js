@@ -174,6 +174,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
               "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
             )}
             placeholder={messageLocales.placeholder}
+            maxLength="500"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           />
