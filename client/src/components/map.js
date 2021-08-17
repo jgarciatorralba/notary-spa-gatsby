@@ -6,9 +6,9 @@ import "../styles/components/map.scss"
 const Map = ({ iframeTitle }) => {
   const { language } = useI18next()
   const map = {
-    baseUrl: process.env.GATSBY_MAPS_EMBED_BASE_URL,
+    baseUrl: process.env.GOOGLE_MAPS_EMBED_BASE_URL,
     mode: "place",
-    apiKey: process.env.GATSBY_MAPS_EMBED_API_KEY,
+    apiKey: process.env.GOOGLE_MAPS_EMBED_API_KEY,
     marker: encodeURI("Notaria+Jorge+Míngez+Balaguer"),
     zoom: 16,
   }
