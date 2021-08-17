@@ -128,7 +128,9 @@
       },
       "button": {
         "text": "Enviar"
-      }
+      },
+      "success": "¡Gracias! Su mensaje se ha enviado correctamente.",
+      "error": "Ha habido un problema con su solicitud. Por favor, inténtelo de nuevo más tarde."
     }
   }
 }
