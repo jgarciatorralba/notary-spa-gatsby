@@ -23,7 +23,7 @@ const cors = require('cors')({ origin: true });
 exports.sendEmail = functions.https.onRequest((req, res) => {
 
   // Enable CORS using the `cors` express middleware.
-  cors(req, res, () => {
+  cors(req, res, async () => {
     // Get contact form data from the req and then assigned it to variables
     const fullname = req.body.fullname;
     const email = req.body.email;
@@ -42,6 +42,26 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
             error: "Bad Request: Missing recaptcha token"
           }
         );
+    }
+
+    try {
+      const response = await fetch(verificationUrl, {
+        method: "POST",
+      });
+      const data = await response.json();
+
+      if (!data.success || data.score < 0.7) {
+        return res
+        .status(400)
+        .json(
+          {
+            data: null,
+            error: "Bad Request: Invalid token or insufficient recaptcha score"
+          }
+        );
+      }
+    } catch (error) {
+
     }
 
     // //config the email message
