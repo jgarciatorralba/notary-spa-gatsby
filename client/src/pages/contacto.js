@@ -23,7 +23,7 @@ const ContactPage = () => {
 
   const { title: defaultTitle, description } = metaTranslations
   const { title, header, iframe, form } = contactTranslations
-  const { inputs, button } = form
+  const { inputs, button, success, error } = form
 
   const { language } = useI18next()
 
@@ -52,6 +52,8 @@ const ContactPage = () => {
             <Form
               inputsLocales={inputs}
               buttonLocales={button}
+              successLocales={success}
+              errorLocales={error}
             />
           </div>
         </div>
