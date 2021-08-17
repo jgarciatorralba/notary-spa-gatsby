@@ -77,6 +77,7 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales }) =>
     }
 
     const validInputs = validateInputs()
+    setFormSubmitResult({})
     setFormIsValidated(true)
 
     if (honeypot) {
