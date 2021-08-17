@@ -45,6 +45,14 @@
       width: calc(50% - 1rem);
     }
   }
+
+  .form-result.success {
+    color: $input-success;
+  }
+
+  .form-result.error {
+    color: $input-error;
+  }
 }
 
 .input-group {
