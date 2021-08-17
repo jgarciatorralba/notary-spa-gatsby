@@ -2,6 +2,9 @@ import * as React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
+import { useI18next } from "gatsby-plugin-react-i18next"
+
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Map from "../components/map"
@@ -22,31 +25,38 @@ const ContactPage = () => {
   const { title, header, iframe, form } = contactTranslations
   const { inputs, button } = form
 
+  const { language } = useI18next()
+
   return (
-    <Layout>
-      <Seo
-        defaultTitle={defaultTitle}
-        pageTitle={title}
-        description={description}
-      />
+    <GoogleReCaptchaProvider
+      reCaptchaKey={process.env.RECAPTCHA_V3_SITE_KEY}
+      language={language}
+    >
+      <Layout>
+        <Seo
+          defaultTitle={defaultTitle}
+          pageTitle={title}
+          description={description}
+        />
 
-      <div className="contact-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
-        <h2 className="mb-2 font-bold">
-          {header}
-        </h2>
+        <div className="contact-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
+          <h2 className="mb-2 font-bold">
+            {header}
+          </h2>
 
-        <div className="sections-wrapper">
-          <Map
-            iframeTitle={iframe.title}
-          />
+          <div className="sections-wrapper">
+            <Map
+              iframeTitle={iframe.title}
+            />
 
-          <Form
-            inputsLocales={inputs}
-            buttonLocales={button}
-          />
+            <Form
+              inputsLocales={inputs}
+              buttonLocales={button}
+            />
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </GoogleReCaptchaProvider>
   )
 }
 

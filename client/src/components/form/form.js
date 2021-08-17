@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useState } from "react"
 
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
 import Input from "./input"
 import Textarea from "./textarea"
