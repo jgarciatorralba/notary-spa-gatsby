@@ -70,7 +70,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
     const validInputs = validateInputs()
 
     if (honeypot) {
-      console.log("Invalid!")
+      return
     } else {
       if (validInputs) {
         console.log("Valid!")
