@@ -1,6 +1,8 @@
 import * as React from "react"
 import { useState } from "react"
 
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
+
 import Input from "./input"
 import Textarea from "./textarea"
 import Label from "./label"
@@ -29,6 +31,8 @@ const Form = ({ inputsLocales, buttonLocales }) => {
   const [errorMessage, setErrorMessage] = useState(null)
   const [honeypot, setHoneypot] = useState("")
   const [formIsSubmitted, setFormIsSubmitted] = useState(false)
+
+  const { executeRecaptcha } = useGoogleReCaptcha()
 
   function validateInputs() {
     let inputsAreValid = true
@@ -63,8 +67,12 @@ const Form = ({ inputsLocales, buttonLocales }) => {
     return inputsAreValid
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
+
+    if (!executeRecaptcha) {
+      return
+    }
 
     setFormIsSubmitted(true)
     const validInputs = validateInputs()
@@ -73,10 +81,25 @@ const Form = ({ inputsLocales, buttonLocales }) => {
       return
     } else {
       if (validInputs) {
+        const token = await executeRecaptcha('send_form')
+        const data = JSON.stringify({ fullname, email, message, token })
+
         console.log("Valid!")
-        console.log(fullname)
-        console.log(email)
-        console.log(message)
+        console.log(data)
+
+        // fetch('/submit', {
+        //   method: 'POST',
+        //   headers: {
+        //     'Accept': 'application/json, text/plain, */*',
+        //     'Content-type': 'application/json'
+        //   },
+        //   body: data
+        // })
+        // .then(res => res.json())
+        // .then(data => {
+        //   setNotification(data.msg) //--> dynamically set your notification state via the server
+        // })
+
       } else {
         console.log("Invalid!")
       }
