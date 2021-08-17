@@ -87,6 +87,11 @@ const Form = ({ inputsLocales, buttonLocales }) => {
         console.log("Valid!")
         console.log(data)
 
+        setFullname("")
+        setEmail("")
+        setMessage("")
+        setFormIsSubmitted(false)
+
         // fetch('/submit', {
         //   method: 'POST',
         //   headers: {
