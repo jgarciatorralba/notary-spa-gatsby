@@ -36,3 +36,15 @@
     }
   }
 }
+
+.grecaptcha-badge {
+  // Tablet portrait
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+    bottom: calc(1rem + #{$footer-height-tablet}) !important;
+  }
+
+  // Tablet in landscape, desktops and laptops
+  @media only screen and (min-width: $breakpoint-desktop) {
+    bottom: calc(1rem + #{$footer-height-laptop}) !important;
+  }
+}
