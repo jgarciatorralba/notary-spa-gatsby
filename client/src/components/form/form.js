@@ -96,14 +96,14 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales }) =>
           if (!error) {
             setFormSubmitResult(
               {
-                status: "Success",
+                status: "success",
                 message: successLocales
               }
             )
           } else {
             setFormSubmitResult(
               {
-                status: "Error",
+                status: "error",
                 message: errorLocales
               }
             )
@@ -256,7 +256,7 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales }) =>
         {formSubmitResult && (
           <div
             className={classNames(
-              formSubmitResult.status === "Success" ? "success" : "error",
+              formSubmitResult.status === "success" ? "success" : "error",
               "form-result text-sm mb-3"
             )}
           >
