@@ -15,7 +15,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-const Form = ({ inputsLocales, buttonLocales }) => {
+const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales }) => {
   const {
     fullname: fullnameLocales,
     email: emailLocales,
@@ -30,7 +30,9 @@ const Form = ({ inputsLocales, buttonLocales }) => {
   const [message, setMessage] = useState("")
   const [errorMessage, setErrorMessage] = useState(null)
   const [honeypot, setHoneypot] = useState("")
-  const [formIsSubmitted, setFormIsSubmitted] = useState(false)
+  const [formIsValidated, setFormIsValidated] = useState(false)
+  const [submittingForm, setSubmittingForm] = useState(false)
+  const [formSubmitResult, setFormSubmitResult] = useState({})
 
   const { executeRecaptcha } = useGoogleReCaptcha()
 
@@ -74,37 +76,44 @@ const Form = ({ inputsLocales, buttonLocales }) => {
       return
     }
 
-    setFormIsSubmitted(true)
     const validInputs = validateInputs()
+    setFormIsValidated(true)
 
     if (honeypot) {
       return
     } else {
       if (validInputs) {
+        setSubmittingForm(true)
+
         const token = await executeRecaptcha('send_form')
         const data = JSON.stringify({ fullname, email, message, token })
 
         console.log("Valid!")
         console.log(data)
 
-        setFullname("")
-        setEmail("")
-        setMessage("")
-        setFormIsSubmitted(false)
-
-        // fetch('/submit', {
-        //   method: 'POST',
-        //   headers: {
-        //     'Accept': 'application/json, text/plain, */*',
-        //     'Content-type': 'application/json'
-        //   },
-        //   body: data
-        // })
-        // .then(res => res.json())
-        // .then(data => {
-        //   setNotification(data.msg) //--> dynamically set your notification state via the server
-        // })
-
+        const error = Math.random() > 0.5 ? true : false
+        setTimeout(() => {
+          if (!error) {
+            setFormSubmitResult(
+              {
+                status: "Success",
+                message: successLocales
+              }
+            )
+          } else {
+            setFormSubmitResult(
+              {
+                status: "Error",
+                message: errorLocales
+              }
+            )
+          }
+          setSubmittingForm(false)
+          setFullname("")
+          setEmail("")
+          setMessage("")
+          setFormIsValidated(false)
+        }, 1000)
       } else {
         console.log("Invalid!")
       }
@@ -134,7 +143,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
               id="fullname"
               name="fullname"
               classes={classNames(
-                (!formIsSubmitted) ? "" : (errorFullname ? "error" : "success"),
+                (!formIsValidated) ? "" : (errorFullname ? "error" : "success"),
                 "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
               )}
               placeholder={fullnameLocales.placeholder}
@@ -142,7 +151,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
               onChange={(e) => setFullname(e.target.value)}
             />
 
-            {formIsSubmitted && errorFullname && (
+            {formIsValidated && errorFullname && (
               <ErrorMessage
                 classes="text-xs italic"
               >
@@ -166,7 +175,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
               id="email"
               name="email"
               classes={classNames(
-                (!formIsSubmitted) ? "" : (errorEmail ? "error" : "success"),
+                (!formIsValidated) ? "" : (errorEmail ? "error" : "success"),
                 "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
               )}
               placeholder={emailLocales.placeholder}
@@ -174,7 +183,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
               onChange={(e) => setEmail(e.target.value)}
             />
 
-            {formIsSubmitted && errorEmail && (
+            {formIsValidated && errorEmail && (
               <ErrorMessage
                 classes="text-xs italic"
               >
@@ -198,7 +207,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
             id="message"
             name="message"
             classes={classNames(
-              (!formIsSubmitted) ? "" : (errorMessage ? "error" : "success"),
+              (!formIsValidated) ? "" : (errorMessage ? "error" : "success"),
               "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
             )}
             placeholder={messageLocales.placeholder}
@@ -207,7 +216,7 @@ const Form = ({ inputsLocales, buttonLocales }) => {
             onChange={(e) => setMessage(e.target.value)}
           />
 
-          {formIsSubmitted && errorMessage && (
+          {formIsValidated && errorMessage && (
             <ErrorMessage
               classes="text-xs italic"
             >
@@ -238,10 +247,23 @@ const Form = ({ inputsLocales, buttonLocales }) => {
             classes={classNames(
               "focus:outline-none py-2 px-4 rounded-full"
             )}
+            disabled={submittingForm}
           >
             {buttonLocales.text}
           </Button>
         </div>
+
+        {formSubmitResult && (
+          <div
+            className={classNames(
+              formSubmitResult.status === "Success" ? "success" : "error",
+              "form-result text-sm mb-3"
+            )}
+
+          >
+            {formSubmitResult.message}
+          </div>
+        )}
       </form>
     </div>
   )
