@@ -29,7 +29,7 @@ const ContactPage = () => {
 
   return (
     <GoogleReCaptchaProvider
-      reCaptchaKey={process.env.RECAPTCHA_V3_SITE_KEY}
+      reCaptchaKey={process.env.GATSBY_RECAPTCHA_V3_SITE_KEY}
       language={language}
     >
       <Layout>
