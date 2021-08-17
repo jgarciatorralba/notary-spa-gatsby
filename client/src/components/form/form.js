@@ -259,7 +259,6 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales }) =>
               formSubmitResult.status === "Success" ? "success" : "error",
               "form-result text-sm mb-3"
             )}
-
           >
             {formSubmitResult.message}
           </div>
