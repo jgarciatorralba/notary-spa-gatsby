@@ -87,7 +87,12 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales }) =>
         setSubmittingForm(true)
 
         const token = await executeRecaptcha('send_form')
-        const data = JSON.stringify({ fullname, email, message, token })
+        const data = JSON.stringify({
+          fullname: fullname.trim(),
+          email: email.trim(),
+          message: message.trim(),
+          token
+        })
 
         console.log("Valid!")
         console.log(data)
