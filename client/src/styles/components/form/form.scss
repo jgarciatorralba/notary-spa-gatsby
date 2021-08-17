@@ -46,12 +46,45 @@
     }
   }
 
-  .form-result.success {
-    color: $input-success;
-  }
+  .result-group {
+    display: flex;
+    align-items: center;
 
-  .form-result.error {
-    color: $input-error;
+    // Smartphone portrait
+    @media only screen and (max-width: $breakpoint-mobile) {
+      flex-direction: column;
+      p {
+        margin-top: 1rem;
+      }
+    }
+
+    // Smartphone landscape
+    @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+      flex-direction: row;
+    }
+
+    // Tablet portrait
+    @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+      flex-direction: row;
+    }
+
+    // Tablet in landscape, desktops and laptops
+    @media only screen and (min-width: $breakpoint-desktop) {
+      flex-direction: row;
+    }
+
+    // Large desktops
+    @media only screen and (min-width: $breakpoint-xl) {
+      flex-direction: row;
+    }
+
+    .form-result.success {
+      color: $input-success;
+    }
+  
+    .form-result.error {
+      color: $input-error;
+    }
   }
 }
 

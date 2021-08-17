@@ -241,28 +241,28 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales }) =>
           />
         </div>
 
-        <div className="mb-3">
+        <div className="result-group mb-3">
           <Button
             type="submit"
             classes={classNames(
-              "focus:outline-none py-2 px-4 rounded-full"
+              "focus:outline-none py-2 px-4 rounded-full mr-4"
             )}
             disabled={submittingForm}
           >
             {buttonLocales.text}
           </Button>
-        </div>
 
-        {formSubmitResult && (
-          <div
+          {formSubmitResult && (
+          <p
             className={classNames(
               formSubmitResult.status === "success" ? "success" : "error",
-              "form-result text-sm mb-3"
+              "form-result text-sm"
             )}
           >
             {formSubmitResult.message}
-          </div>
+          </p>
         )}
+        </div>
       </form>
     </div>
   )
