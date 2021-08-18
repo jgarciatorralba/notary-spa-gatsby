@@ -1,35 +1,51 @@
 // Import modules
 const functions = require("firebase-functions");
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
+const fetch = require("node-fetch");
 
 /* 
   When the cloud function is deployed,
   change the origin to 'https://your-deployed-app-url
 */
-const cors = require('cors')({ origin: true });
+const cors = require("cors")({ origin: true });
 
 // Create and config transporter
-// let transporter = nodemailer.createTransport({
-//   host: 'your host',
-//   port: your - port - number,
-//   secure: true, // true for 465, false for other ports
-//   auth: {
-//     user: 'your@email',
-//     pass: 'your password.',
-//   },
-// });
+const emailService = functions.config().email_sender.service;
 
-// Export the cloud function called `sendEmail`
+let transporter;
+if (emailService == "gmail") {
+  transporter = nodemailer.createTransport({
+    service: emailService,
+    auth: {
+      user: functions.config().email_sender.user,
+      pass: functions.config().email_sender.password,
+    },
+  });
+} else {
+  transporter = nodemailer.createTransport({
+    host: functions.config().email_sender.host,
+    port: functions.config().email_sender.port,
+    auth: {
+      user: functions.config().email_sender.user,
+      pass: functions.config().email_sender.password,
+    },
+  });
+}
+
+// Export a cloud function called `sendEmail`
 exports.sendEmail = functions.https.onRequest((req, res) => {
 
-  // Enable CORS using the `cors` express middleware.
+  // Enable CORS using the `cors` express middleware
   cors(req, res, async () => {
-    // Get contact form data from the req and then assigned it to variables
+
+    // Get contact form data from the req and then assign it to variables
     const fullname = req.body.fullname;
     const email = req.body.email;
     const message = req.body.message;
     const token = req.body.token;
+    const language = req.body.language;
 
+    // Validate reCaptcha and send error response if invalid
     const recaptchaBaseUrl = "https://www.google.com/recaptcha/api/siteverify";
     const verificationUrl = `${recaptchaBaseUrl}?secret=${functions.config().recaptcha.secret}&response=${token}`
 
@@ -49,7 +65,6 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         method: "POST",
       });
       const data = await response.json();
-
       if (!data.success || data.score < 0.7) {
         return res
         .status(400)
@@ -61,34 +76,59 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         );
       }
     } catch (error) {
-
+      return res
+        .status(500)
+        .json(
+          {
+            data: null,
+            error: error.toString()
+          }
+        );
     }
 
-    // //config the email message
-    // const mailOptions = {
-    //   from: email,
-    //   to: `your@email`,
-    //   subject: 'New message from the nodemailer-form app',
-    //   text: `${name} says: ${message}`,
-    // };
+    // Config the email message
+    let subject;
+    let html;
+    if (language === "ca") {
+      subject = "Nou missatge rebut per formulari web";
+      html = `
+        <p>Missatge de <strong>${fullname}</strong>:</p>
+        <p>${message}</p>
+      `;
+    } else {
+      subject = "Nuevo mensaje recibido por formulario web";
+      html = `
+        <p>Mensaje de <strong>${fullname}</strong>:</p>
+        <p>${message}</p>
+      `;
+    }
 
-    // //call the built in `sendMail` function and return different responses upon success and failure
-    // return transporter.sendMail(mailOptions, (error, info) => {
-    //   if (error) {
-    //     return res.status(500).send({
-    //       data: {
-    //         status: 500,
-    //         message: error.toString(),
-    //       },
-    //     });
-    //   }
+    let emailData = {
+      from: email,
+      to: functions.config().email_receiver.address,
+      subject: subject,
+      html: html,
+    };
 
-    //   return res.status(200).send({
-    //     data: {
-    //       status: 200,
-    //       message: 'sent',
-    //     },
-    //   });
-    // });
+    // Call the built in `sendMail` function from nodemailer and return response upon success or failure
+    return transporter.sendMail(emailData, (error, info) => {
+      if (error) {
+        return res
+          .status(500)
+          .json({
+            data: null,
+            error: error.toString(),
+          });
+      }
+
+      return res
+        .json({
+          data: {
+            message: "Email sent successfully!",
+            info: info.toString(),
+          },
+          error: null,
+      });
+    });
   });
 });
