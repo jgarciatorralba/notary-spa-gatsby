@@ -1,15 +1,18 @@
 {
-  "recaptcha": {
-    "secret": "6LepagccAAAAAHLiezizMbXJ4gAndy29jyK70JwV"
-  },
   "email_sender": {
     "host": "smtp.mailtrap.io",
-    "service": "mailtrap",
-    "port": "2525",
+    "password": "40bc3917a26656",
     "user": "78425402f50a70",
-    "password": "40bc3917a26656"
+    "service": "mailtrap",
+    "port": "2525"
+  },
+  "deployed_app": {
+    "url": ""
   },
   "email_receiver": {
     "address": "jgarciatorralba@gmail.com"
+  },
+  "recaptcha": {
+    "secret": "6LepagccAAAAAHLiezizMbXJ4gAndy29jyK70JwV"
   }
 }
