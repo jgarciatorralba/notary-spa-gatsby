@@ -3,11 +3,11 @@ const functions = require("firebase-functions");
 const nodemailer = require("nodemailer");
 const fetch = require("node-fetch");
 
-/* 
-  When the cloud function is deployed,
-  change the origin to 'https://your-deployed-app-url
-*/
-const cors = require("cors")({ origin: true });
+// Enable CORS
+const appUrl = functions.config().deployed_app.url;
+const cors = require("cors")({
+  origin: appUrl ? appUrl : true,
+});
 
 // Create and config transporter
 const emailService = functions.config().email_sender.service;
@@ -90,16 +90,24 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
     let subject;
     let html;
     if (language === "ca") {
-      subject = "Nou missatge rebut per formulari web";
+      subject = "Missatge enviat per formulari web";
       html = `
-        <p>Missatge de <strong>${fullname}</strong>:</p>
+        <h4><strong>Autor</strong>:</h4>
+        <p>${fullname}</p>
+        <br>
+        <h4><strong>Contingut</strong>:</h4>
         <p>${message}</p>
+        <br>
       `;
     } else {
-      subject = "Nuevo mensaje recibido por formulario web";
+      subject = "Mensaje enviado por formulario web";
       html = `
-        <p>Mensaje de <strong>${fullname}</strong>:</p>
+        <h4><strong>Autor</strong>:</h4>
+        <p>${fullname}</p>
+        <br>
+        <h4><strong>Contenido</strong>:</h4>
         <p>${message}</p>
+        <br>
       `;
     }
 
