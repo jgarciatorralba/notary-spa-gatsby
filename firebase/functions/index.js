@@ -95,7 +95,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         <h4><strong>Autor</strong>:</h4>
         <p>${fullname}</p>
         <br>
-        <h4><strong>Contingut</strong>:</h4>
+        <h4><strong>Cos del missatge</strong>:</h4>
         <p>${message}</p>
         <br>
       `;
@@ -105,7 +105,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         <h4><strong>Autor</strong>:</h4>
         <p>${fullname}</p>
         <br>
-        <h4><strong>Contenido</strong>:</h4>
+        <h4><strong>Cuerpo del mensaje</strong>:</h4>
         <p>${message}</p>
         <br>
       `;
