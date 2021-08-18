@@ -3,7 +3,7 @@ const functions = require("firebase-functions");
 const nodemailer = require("nodemailer");
 const fetch = require("node-fetch");
 
-// Enable CORS
+// Whitelist CORS origin
 const appUrl = functions.config().deployed_app.url;
 const cors = require("cors")({
   origin: appUrl ? appUrl : true,
