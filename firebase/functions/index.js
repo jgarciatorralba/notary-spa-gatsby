@@ -125,7 +125,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         .json({
           data: {
             message: "Email sent successfully!",
-            info: info.toString(),
+            info: info,
           },
           error: null,
       });
