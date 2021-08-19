@@ -2,6 +2,7 @@ import * as React from "react"
 import { useState } from "react"
 
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
+import firebase from "gatsby-plugin-firebase"
 
 import Input from "./input"
 import Textarea from "./textarea"
@@ -15,7 +16,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales }) => {
+const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, language }) => {
   const {
     fullname: fullnameLocales,
     email: emailLocales,
@@ -35,6 +36,7 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales }) =>
   const [formSubmitResult, setFormSubmitResult] = useState({})
 
   const { executeRecaptcha } = useGoogleReCaptcha()
+  const sendEmail = firebase.functions().httpsCallable('sendEmail');
 
   function validateInputs() {
     let inputsAreValid = true
@@ -80,49 +82,49 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales }) =>
     setFormSubmitResult({})
     setFormIsValidated(true)
 
-    if (honeypot) {
-      return
-    } else {
-      if (validInputs) {
-        setSubmittingForm(true)
+    if (!honeypot && validInputs) {
+      setSubmittingForm(true)
 
-        const token = await executeRecaptcha('send_form')
-        const data = JSON.stringify({
-          fullname: fullname.trim(),
-          email: email.trim(),
-          message: message.trim(),
-          token
-        })
-
-        console.log("Valid!")
-        console.log(data)
-
-        const error = Math.random() > 0.5 ? true : false
-        setTimeout(() => {
-          if (!error) {
-            setFormSubmitResult(
-              {
-                status: "success",
-                message: successLocales
-              }
-            )
-          } else {
-            setFormSubmitResult(
-              {
-                status: "error",
-                message: errorLocales
-              }
-            )
-          }
-          setSubmittingForm(false)
-          setFullname("")
-          setEmail("")
-          setMessage("")
-          setFormIsValidated(false)
-        }, 1000)
-      } else {
-        console.log("Invalid!")
+      const token = await executeRecaptcha('send_form')
+      const data = {
+        fullname: fullname.trim(),
+        email: email.trim(),
+        message: message.trim(),
+        token,
+        language
       }
+
+      try {
+        const response = await sendEmail(data)
+        if (!response.error) {
+          setFormSubmitResult(
+            {
+              status: "success",
+              message: successLocales
+            }
+          )
+        } else {
+          setFormSubmitResult(
+            {
+              status: "error",
+              message: errorLocales
+            }
+          )
+        }
+      } catch(error) {
+        setFormSubmitResult(
+          {
+            status: "error",
+            message: errorLocales
+          }
+        )
+      }
+
+      setSubmittingForm(false)
+      setFullname("")
+      setEmail("")
+      setMessage("")
+      setFormIsValidated(false)
     }
   }
 
