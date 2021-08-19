@@ -95,6 +95,9 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         <h4><strong>Autor</strong>:</h4>
         <p>${fullname}</p>
         <br>
+        <h4><strong>Adreça de correu electrònic</strong>:</h4>
+        <p>${email}</p>
+        <br>
         <h4><strong>Cos del missatge</strong>:</h4>
         <p>${message}</p>
         <br>
@@ -105,6 +108,9 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         <h4><strong>Autor</strong>:</h4>
         <p>${fullname}</p>
         <br>
+        <h4><strong>Dirección de correo electrónico</strong>:</h4>
+        <p>${email}</p>
+        <br>
         <h4><strong>Cuerpo del mensaje</strong>:</h4>
         <p>${message}</p>
         <br>
@@ -112,7 +118,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
     }
 
     let emailData = {
-      from: email,
+      from: functions.config().email_sender.address,
       to: functions.config().email_receiver.address,
       subject: subject,
       html: html,
