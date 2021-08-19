@@ -39,11 +39,11 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
   cors(req, res, async () => {
 
     // Get contact form data from the req and then assign it to variables
-    const fullname = req.body.fullname;
-    const email = req.body.email;
-    const message = req.body.message;
-    const token = req.body.token;
-    const language = req.body.language;
+    const fullname = req.body.data.fullname;
+    const email = req.body.data.email;
+    const message = req.body.data.message;
+    const token = req.body.data.token;
+    const language = req.body.data.language;
 
     // Validate reCaptcha and send error response if invalid
     const recaptchaBaseUrl = "https://www.google.com/recaptcha/api/siteverify";
