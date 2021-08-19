@@ -54,6 +54,7 @@ const ContactPage = () => {
               buttonLocales={button}
               successLocales={success}
               errorLocales={error}
+              language={language}
             />
           </div>
         </div>
