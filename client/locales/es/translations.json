@@ -132,5 +132,11 @@
       "success": "¡Gracias! Su mensaje se ha enviado correctamente.",
       "error": "Ha habido un problema con su solicitud. Por favor, inténtelo de nuevo más tarde."
     }
+  },
+
+  "not-found": {
+    "title": "404",
+    "header": "Página no encontrada",
+    "paragraph": "El enlace que ha seguido puede estar roto, o la página puede haber sido retirada."
   }
 }

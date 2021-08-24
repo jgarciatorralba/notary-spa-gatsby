@@ -132,5 +132,11 @@
       "success": "Gràcies! El seu missatge s'ha enviat correctament.",
       "error": "Hi ha hagut un problema amb la seva sol·licitud. Si us plau, Intenteu-ho de nou més tard."
     }
+  },
+
+  "not-found": {
+    "title": "404",
+    "header": "Pàgina no trobada",
+    "paragraph": "L'enllaç que ha seguit pot estar trencat, o la pàgina pot haver estat retirada."
   }
 }
