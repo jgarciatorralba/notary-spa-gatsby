@@ -1,6 +1,11 @@
 # notary-spa-gatsby
 
-Promotional site for a notary office built with Gatsby.
+<p>
+  Promotional site for a notary office built with Gatsby
+  <a href="https://www.gatsbyjs.com">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="14" style="position: relative; top: 2px;"/>
+  </a>
+</p>
 
 ## Content
 
