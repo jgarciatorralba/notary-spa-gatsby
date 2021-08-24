@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 import firebase from "gatsby-plugin-firebase"
@@ -15,6 +15,8 @@ import "../../styles/components/form/form.scss"
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
+
+let sendEmail;
 
 const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, language }) => {
   const {
@@ -36,7 +38,10 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, lang
   const [formSubmitResult, setFormSubmitResult] = useState({})
 
   const { executeRecaptcha } = useGoogleReCaptcha()
-  const sendEmail = firebase.functions().httpsCallable('sendEmail');
+
+  useEffect(() => {
+    sendEmail = firebase.functions().httpsCallable('sendEmail');
+  }, [])
 
   function validateInputs() {
     let inputsAreValid = true
