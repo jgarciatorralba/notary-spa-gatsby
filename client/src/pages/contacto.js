@@ -8,7 +8,7 @@ import { useI18next } from "gatsby-plugin-react-i18next"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Map from "../components/map"
-import Form from "../components/form/form"
+import Form from "../components/form"
 
 import "../styles/pages/contacto.scss"
 
@@ -40,14 +40,10 @@ const ContactPage = () => {
         />
 
         <div className="contact-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
-          <h2 className="mb-2 font-bold">
-            {header}
-          </h2>
+          <h2 className="mb-2 font-bold">{header}</h2>
 
           <div className="sections-wrapper">
-            <Map
-              iframeTitle={iframe.title}
-            />
+            <Map iframeTitle={iframe.title} />
 
             <Form
               inputsLocales={inputs}

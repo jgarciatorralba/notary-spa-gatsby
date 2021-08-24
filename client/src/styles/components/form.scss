@@ -1,4 +1,4 @@
-@import "../../settings/variables";
+@import "../settings/variables";
 
 .section-form {
   // Smartphone portrait
@@ -81,7 +81,7 @@
     .form-result.success {
       color: $input-success;
     }
-  
+
     .form-result.error {
       color: $input-error;
     }

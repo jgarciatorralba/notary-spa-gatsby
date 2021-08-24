@@ -4,26 +4,32 @@ import { useState, useEffect } from "react"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 import firebase from "gatsby-plugin-firebase"
 
-import Input from "./input"
-import Textarea from "./textarea"
-import Label from "./label"
-import Button from "./button"
-import ErrorMessage from "./errorMessage"
+import Input from "./form-elements/input"
+import Textarea from "./form-elements/textarea"
+import Label from "./form-elements/label"
+import Button from "./form-elements/button"
+import ErrorMessage from "./form-elements/errorMessage"
 
-import "../../styles/components/form/form.scss"
+import "../styles/components/form.scss"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ")
 }
 
-let sendEmail;
+let sendEmail
 
-const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, language }) => {
+const Form = ({
+  inputsLocales,
+  buttonLocales,
+  successLocales,
+  errorLocales,
+  language,
+}) => {
   const {
     fullname: fullnameLocales,
     email: emailLocales,
     message: messageLocales,
-    honeypot: honeypotLocales
+    honeypot: honeypotLocales,
   } = inputsLocales
 
   const [fullname, setFullname] = useState("")
@@ -40,7 +46,7 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, lang
   const { executeRecaptcha } = useGoogleReCaptcha()
 
   useEffect(() => {
-    sendEmail = firebase.functions().httpsCallable('sendEmail');
+    sendEmail = firebase.functions().httpsCallable("sendEmail")
   }, [])
 
   function validateInputs() {
@@ -90,39 +96,33 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, lang
     if (!honeypot && validInputs) {
       setSubmittingForm(true)
 
-      const token = await executeRecaptcha('send_form')
+      const token = await executeRecaptcha("send_form")
       const data = {
         fullname: fullname.trim(),
         email: email.trim(),
         message: message.trim(),
         token,
-        language
+        language,
       }
 
       try {
         const response = await sendEmail(data)
         if (!response.error) {
-          setFormSubmitResult(
-            {
-              status: "success",
-              message: successLocales
-            }
-          )
+          setFormSubmitResult({
+            status: "success",
+            message: successLocales,
+          })
         } else {
-          setFormSubmitResult(
-            {
-              status: "error",
-              message: errorLocales
-            }
-          )
-        }
-      } catch(error) {
-        setFormSubmitResult(
-          {
+          setFormSubmitResult({
             status: "error",
-            message: errorLocales
-          }
-        )
+            message: errorLocales,
+          })
+        }
+      } catch (error) {
+        setFormSubmitResult({
+          status: "error",
+          message: errorLocales,
+        })
       }
 
       setSubmittingForm(false)
@@ -135,15 +135,9 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, lang
 
   return (
     <div className="section-form">
-      <form
-        onSubmit={handleSubmit}
-      >
-        <div
-          className="flex flex-wrap justify-between"
-        >
-          <div
-            className="input-group inline-input mb-3"
-          >
+      <form onSubmit={handleSubmit}>
+        <div className="flex flex-wrap justify-between">
+          <div className="input-group inline-input mb-3">
             <Label
               htmlFor="fullname"
               classes="block uppercase tracking-wide text-xs font-bold mb-2"
@@ -156,26 +150,22 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, lang
               id="fullname"
               name="fullname"
               classes={classNames(
-                (!formIsValidated) ? "" : (errorFullname ? "error" : "success"),
+                !formIsValidated ? "" : errorFullname ? "error" : "success",
                 "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
               )}
               placeholder={fullnameLocales.placeholder}
               value={fullname}
-              onChange={(e) => setFullname(e.target.value)}
+              onChange={e => setFullname(e.target.value)}
             />
 
             {formIsValidated && errorFullname && (
-              <ErrorMessage
-                classes="text-xs italic"
-              >
+              <ErrorMessage classes="text-xs italic">
                 {errorFullname}
               </ErrorMessage>
             )}
           </div>
 
-          <div
-            className="input-group inline-input mb-3"
-          >
+          <div className="input-group inline-input mb-3">
             <Label
               htmlFor="email"
               classes="block uppercase tracking-wide text-xs font-bold mb-2"
@@ -188,27 +178,21 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, lang
               id="email"
               name="email"
               classes={classNames(
-                (!formIsValidated) ? "" : (errorEmail ? "error" : "success"),
+                !formIsValidated ? "" : errorEmail ? "error" : "success",
                 "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
               )}
               placeholder={emailLocales.placeholder}
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={e => setEmail(e.target.value)}
             />
 
             {formIsValidated && errorEmail && (
-              <ErrorMessage
-                classes="text-xs italic"
-              >
-                {errorEmail}
-              </ErrorMessage>
+              <ErrorMessage classes="text-xs italic">{errorEmail}</ErrorMessage>
             )}
           </div>
         </div>
 
-        <div
-          className="input-group message mb-3"
-        >
+        <div className="input-group message mb-3">
           <Label
             htmlFor="message"
             classes="block uppercase tracking-wide text-xs font-bold mb-2"
@@ -220,27 +204,21 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, lang
             id="message"
             name="message"
             classes={classNames(
-              (!formIsValidated) ? "" : (errorMessage ? "error" : "success"),
+              !formIsValidated ? "" : errorMessage ? "error" : "success",
               "appearance-none block w-full py-3 px-4 mb-2 leading-tight focus:outline-none focus:bg-white"
             )}
             placeholder={messageLocales.placeholder}
             maxLength="500"
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={e => setMessage(e.target.value)}
           />
 
           {formIsValidated && errorMessage && (
-            <ErrorMessage
-              classes="text-xs italic"
-            >
-              {errorMessage}
-            </ErrorMessage>
+            <ErrorMessage classes="text-xs italic">{errorMessage}</ErrorMessage>
           )}
         </div>
 
-        <div
-          className="hidden mb-3"
-        >
+        <div className="hidden mb-3">
           <Input
             htmlType="text"
             id="honeypot"
@@ -250,7 +228,7 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, lang
             )}
             placeholder={honeypotLocales.placeholder}
             value={honeypot}
-            onChange={(e) => setHoneypot(e.target.value)}
+            onChange={e => setHoneypot(e.target.value)}
           />
         </div>
 
@@ -266,15 +244,15 @@ const Form = ({ inputsLocales, buttonLocales, successLocales, errorLocales, lang
           </Button>
 
           {formSubmitResult && (
-          <p
-            className={classNames(
-              formSubmitResult.status === "success" ? "success" : "error",
-              "form-result text-sm"
-            )}
-          >
-            {formSubmitResult.message}
-          </p>
-        )}
+            <p
+              className={classNames(
+                formSubmitResult.status === "success" ? "success" : "error",
+                "form-result text-sm"
+              )}
+            >
+              {formSubmitResult.message}
+            </p>
+          )}
         </div>
       </form>
     </div>

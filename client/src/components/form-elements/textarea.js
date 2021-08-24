@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import "../../styles/components/form/textarea.scss"
+import "../../styles/components/form-elements/textarea.scss"
 
 const Textarea = ({
   id,

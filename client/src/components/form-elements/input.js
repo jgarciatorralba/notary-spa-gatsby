@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import "../../styles/components/form/input.scss"
+import "../../styles/components/form-elements/input.scss"
 
 const Input = ({
   htmlType,
