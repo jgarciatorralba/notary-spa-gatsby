@@ -5,6 +5,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import "../styles/pages/404.scss"
+
 const NotFoundPage = () => {
   const { t } = useTranslation()
   const notFoundTranslations = t("not-found", {
