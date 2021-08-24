@@ -1,16 +1,35 @@
 import * as React from "react"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const NotFoundPage = () => (
-  <Layout>
-    <Seo title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+const NotFoundPage = () => {
+  const { t } = useTranslation()
+  const notFoundTranslations = t("not-found", {
+    returnObjects: true,
+  })
+  const metaTranslations = t("metadata", {
+    returnObjects: true,
+  })
+
+  const { title: defaultTitle, description } = metaTranslations
+  const { title, header, paragraph } = notFoundTranslations
+
+  return (
+    <Layout>
+      <Seo
+        defaultTitle={defaultTitle}
+        pageTitle={title}
+        description={description}
+      />
+
+      <h1>{header}</h1>
+      <p>{paragraph}</p>
+    </Layout>
+  )
+}
 
 export default NotFoundPage
 
