@@ -1,1 +1,121 @@
 @import "../settings/variables";
+
+.not-found-wrapper {
+  // Smartphone portrait
+  @media only screen and (max-width: $breakpoint-mobile) {
+    height: calc(100vh - #{$navbar-height} - #{$footer-height-mobile});
+  }
+
+  // Smartphone landscape
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+    height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  // Tablet portrait
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+    height: calc(100vh - #{$navbar-height} - #{$footer-height-tablet});
+  }
+
+  // Tablet in landscape, desktops and laptops
+  @media only screen and (min-width: $breakpoint-desktop) {
+    height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop});
+  }
+
+  .not-found-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .img-container,
+    .text-container {
+      // Smartphone portrait
+      @media only screen and (max-width: $breakpoint-mobile) {
+        width: 100%;
+      }
+
+      // Smartphone landscape
+      @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+        width: 50%;
+        height: 100%;
+      }
+
+      // Tablet portrait
+      @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+        width: 75%;
+      }
+    }
+
+    .img-container {
+      // Tablet in landscape, desktops and laptops
+      @media only screen and (min-width: $breakpoint-desktop) {
+        width: 50%;
+        padding-right: 1rem;
+      }
+
+      // Large desktops
+      @media only screen and (min-width: $breakpoint-xl) {
+        width: 50%;
+        padding-right: 2rem;
+      }
+    }
+
+    .text-container {
+      // Tablet in landscape, desktops and laptops
+      @media only screen and (min-width: $breakpoint-desktop) {
+        width: 50%;
+        padding-left: 1rem;
+      }
+
+      // Large desktops
+      @media only screen and (min-width: $breakpoint-xl) {
+        width: 50%;
+        padding-left: 2rem;
+      }
+    }
+
+    .text-container {
+      // Smartphone portrait
+      @media only screen and (max-width: $breakpoint-mobile) {
+        position: relative;
+        bottom: 10vh;
+        text-align: center;
+      }
+
+      // Tablet portrait
+      @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+        position: relative;
+        bottom: 14vh;
+        text-align: center;
+      }
+
+      h1 {
+        // Smartphone portrait
+        @media only screen and (max-width: $breakpoint-mobile) {
+          font-size: 1.5rem;
+        }
+
+        // Smartphone landscape
+        @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+          font-size: 1.5rem;
+        }
+
+        // Tablet portrait
+        @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+          font-size: 2.25rem;
+        }
+
+        // Tablet in landscape, desktops and laptops
+        @media only screen and (min-width: $breakpoint-desktop) {
+          font-size: 2rem;
+        }
+
+        // Large desktops
+        @media only screen and (min-width: $breakpoint-xl) {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

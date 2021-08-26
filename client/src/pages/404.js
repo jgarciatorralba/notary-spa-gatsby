@@ -5,6 +5,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import NotFoundIcon from "../assets/svgs/404/not-found.svg"
+
 import "../styles/pages/404.scss"
 
 const NotFoundPage = () => {
@@ -27,8 +29,19 @@ const NotFoundPage = () => {
         description={description}
       />
 
-      <h1>{header}</h1>
-      <p>{paragraph}</p>
+      <div className="not-found-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8 flex justify-center items-center">
+        <div className="not-found-content h-full w-full">
+          <div className="img-container">
+            <NotFoundIcon className="mx-auto h-full max-w-full" />
+          </div>
+          <div className="text-container flex items-center">
+            <div>
+              <h1 className="mb-2 font-bold">{header}</h1>
+              <p>{paragraph}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
