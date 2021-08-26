@@ -1,8 +1,8 @@
 @import "../settings/variables";
 
 .section-map {
-  position:relative;
-  overflow:hidden;
+  position: relative;
+  overflow: hidden;
   border: 1px solid $palette-light;
 
   // Smartphone portrait
@@ -28,6 +28,7 @@
   @media only screen and (min-width: $breakpoint-desktop) {
     width: calc(50% - 1rem);
     height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop} - 8rem);
+    min-height: 360px;
     max-height: 650px;
   }
 
@@ -35,14 +36,15 @@
   @media only screen and (min-width: $breakpoint-xl) {
     width: calc(50% - 1rem);
     height: calc(100vh - #{$navbar-height} - #{$footer-height-laptop} - 8rem);
+    min-height: 360px;
     max-height: 650px;
   }
 
   iframe {
-    position:absolute;
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
   }
 }
