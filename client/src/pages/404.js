@@ -37,7 +37,7 @@ const NotFoundPage = () => {
           <div className="text-container flex items-center">
             <div>
               <h1 className="mb-2 font-bold">{header}</h1>
-              <p>{paragraph}</p>
+              <p className="xl:w-10/12">{paragraph}</p>
             </div>
           </div>
         </div>
