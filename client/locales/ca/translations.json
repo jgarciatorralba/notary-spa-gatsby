@@ -138,5 +138,39 @@
     "title": "404",
     "header": "Pàgina no trobada",
     "paragraph": "L'enllaç que ha seguit pot estar trencat, o la pàgina pot haver estat retirada."
+  },
+
+  "services": {
+    "title": "Serveis",
+    "serviceList": [
+      {
+        "key": "corporate",
+        "name": "Tràmits societaris"
+      },
+      {
+        "key": "donations",
+        "name": "Donacions"
+      },
+      {
+        "key": "finance",
+        "name": "Tràmits financers"
+      },
+      {
+        "key": "last-will",
+        "name": "Voluntats anticipades, testaments i herències"
+      },
+      {
+        "key": "marriage",
+        "name": "Tràmits matrimonials"
+      },
+      {
+        "key": "power-of-attorney",
+        "name": "Poders"
+      },
+      {
+        "key": "real-estate",
+        "name": "Tràmits immobiliaris"
+      }
+    ]
   }
 }

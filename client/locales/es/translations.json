@@ -138,5 +138,39 @@
     "title": "404",
     "header": "Página no encontrada",
     "paragraph": "El enlace que ha seguido puede estar roto, o la página puede haber sido retirada."
+  },
+
+  "services": {
+    "title": "Servicios",
+    "serviceList": [
+      {
+        "key": "corporate",
+        "name": "Trámites societarios"
+      },
+      {
+        "key": "donations",
+        "name": "Donaciones"
+      },
+      {
+        "key": "finance",
+        "name": "Trámites financieros"
+      },
+      {
+        "key": "last-will",
+        "name": "Voluntades anticipadas, testamentos y herencias"
+      },
+      {
+        "key": "marriage",
+        "name": "Trámites matrimoniales"
+      },
+      {
+        "key": "power-of-attorney",
+        "name": "Poderes"
+      },
+      {
+        "key": "real-estate",
+        "name": "Trámites inmobiliarios"
+      }
+    ]
   }
 }
