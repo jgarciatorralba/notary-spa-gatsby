@@ -1,0 +1,13 @@
+@import "../../settings/variables";
+
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  min-height: inherit;
+
+  .service-card {
+    width: calc((100% / 3) - 2rem);
+    height: inherit;
+  }
+}
