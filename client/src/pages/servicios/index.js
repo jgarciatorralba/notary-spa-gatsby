@@ -17,7 +17,42 @@ const ServicesPage = () => {
   })
 
   const { title: defaultTitle, description } = metaTranslations
-  const { title, serviceList: services } = servicesTranslations
+  const { title, serviceList } = servicesTranslations
+
+  let services = [
+    {
+      key: "corporate",
+      to: "/servicios/tramites-societarios/"
+    },
+    {
+      key: "donations",
+      to: "/servicios/donaciones/"
+    },
+    {
+      key: "finance",
+      to: "/servicios/tramites-financieros/"
+    },
+    {
+      key: "last-will",
+      to: "/servicios/voluntades/"
+    },
+    {
+      key: "marriage",
+      to: "/servicios/tramites-matrimoniales/"
+    },
+    {
+      key: "power-of-attorney",
+      to: "/servicios/poderes/"
+    },
+    {
+      key: "real-estate",
+      to: "/servicios/tramites-inmobiliarios/"
+    }
+  ]
+
+  services.forEach(service => {
+    service.name = (serviceList.find(serviceListItem => service.key === serviceListItem.key)).name
+  });
 
   return (
     <Layout>
@@ -29,9 +64,13 @@ const ServicesPage = () => {
 
       <div className="services-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
         {(services.map(service => (
-          <div className="service-card flex justify-center items-center p-8 m-4 border bg-red-500 text-center">
-            {service.name}
-          </div>
+          <Link
+            key={service.key}
+            to={service.to}
+            className="service-card m-3"
+          >
+            <div className="w-full h-full p-8 border rounded bg-red-500 text-center flex justify-center items-center">{service.name}</div>
+          </Link>
         )))}
       </div>
     </Layout>
