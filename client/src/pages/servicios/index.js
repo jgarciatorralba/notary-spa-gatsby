@@ -5,6 +5,14 @@ import { graphql } from "gatsby"
 import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 
+import CorporateImage from "../../components/bg-images/services/corporateImage"
+import DonationsImage from "../../components/bg-images/services/donationsImage"
+import MarriageImage from "../../components/bg-images/services/marriageImage"
+import FinanceImage from "../../components/bg-images/services/financeImage"
+import LastWillImage from "../../components/bg-images/services/lastWillImage"
+import PowerOfAttorneyImage from "../../components/bg-images/services/powerOfAttorneyImage"
+import RealEstateImage from "../../components/bg-images/services/realEstateImage"
+
 import "../../styles/pages/servicios/index.scss"
 
 const ServicesPage = () => {
@@ -69,9 +77,47 @@ const ServicesPage = () => {
             to={service.to}
             className="service-card sm:m-3"
           >
-            <div className="w-full h-full p-8 border rounded bg-red-500 text-center">
-              <p>{service.name}</p>
-            </div>
+            {(service.key === "corporate" &&
+              <CorporateImage classes="w-full h-full p-8 text-center">
+                <p>{service.name}</p>
+              </CorporateImage>
+            )}
+
+            {(service.key === "donations" &&
+              <DonationsImage classes="w-full h-full p-8 text-center">
+                <p>{service.name}</p>
+              </DonationsImage>
+            )}
+
+            {(service.key === "marriage" &&
+              <MarriageImage classes="w-full h-full p-8 text-center">
+                <p>{service.name}</p>
+              </MarriageImage>
+            )}
+
+            {(service.key === "finance" &&
+              <FinanceImage classes="w-full h-full p-8 text-center">
+                <p>{service.name}</p>
+              </FinanceImage>
+            )}
+
+            {(service.key === "last-will" &&
+              <LastWillImage classes="w-full h-full p-8 text-center">
+                <p>{service.name}</p>
+              </LastWillImage>
+            )}
+
+            {(service.key === "power-of-attorney" &&
+              <PowerOfAttorneyImage classes="w-full h-full p-8 text-center">
+                <p>{service.name}</p>
+              </PowerOfAttorneyImage>
+            )}
+
+            {(service.key === "real-estate" &&
+              <RealEstateImage classes="w-full h-full p-8 text-center">
+                <p>{service.name}</p>
+              </RealEstateImage>
+            )}
           </Link>
         )))}
       </div>

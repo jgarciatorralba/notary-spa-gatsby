@@ -3,13 +3,13 @@ import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 import { BgImage } from "gbimage-bridge"
 
-import "../../../styles/components/bg-images/services/corporateImage.scss"
+import "../../../styles/components/bg-images/services/powerOfAttorneyImage.scss"
 
-const CorporateImage = ({ children, classes }) => {
+const PowerOfAttorneyImage = ({ children, classes }) => {
   const { image } = useStaticQuery(
     graphql`
       query {
-        image: file(relativePath: { eq: "demo/services/corporate.jpg" }) {
+        image: file(relativePath: { eq: "demo/services/power-of-attorney.jpg" }) {
           childImageSharp {
             gatsbyImageData(
               quality: 100
@@ -27,11 +27,11 @@ const CorporateImage = ({ children, classes }) => {
   return (
     <BgImage
       image={pluginImage}
-      className={`${classes} corporate-bg-image`}
+      className={`${classes} power-of-attorney-bg-image`}
     >
       {children}
     </BgImage>
   )
 }
 
-export default CorporateImage
+export default PowerOfAttorneyImage

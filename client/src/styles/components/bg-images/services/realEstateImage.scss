@@ -1,10 +1,11 @@
 @import "../../../settings/variables";
 
-.corporate-bg-image {
-  background-position: 50% 50%;
+.real-estate-bg-image {
+  background-position: 25% 10%;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+  position: relative;
 
   filter: grayscale(100%);
   color: $palette-darkest;

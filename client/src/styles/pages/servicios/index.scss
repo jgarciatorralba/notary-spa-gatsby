@@ -8,6 +8,8 @@
 
   .service-card {
     transition: transform 0.25s ease-in-out;
+    border-radius: 0.25rem !important;
+    overflow: hidden;
 
     &:hover {
       transform: scale(1.025);
@@ -22,6 +24,7 @@
         bottom: 50%;
         left: 50%;
         transform: translate(-50%, 50%);
+        font-weight: bold;
       }
     }
 
