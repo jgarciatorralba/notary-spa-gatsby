@@ -62,14 +62,16 @@ const ServicesPage = () => {
         description={description}
       />
 
-      <div className="services-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
+      <div className="services-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-4 lg:py-8">
         {(services.map(service => (
           <Link
             key={service.key}
             to={service.to}
-            className="service-card m-3"
+            className="service-card sm:m-3"
           >
-            <div className="w-full h-full p-8 border rounded bg-red-500 text-center flex justify-center items-center">{service.name}</div>
+            <div className="w-full h-full p-8 border rounded bg-red-500 text-center">
+              <p>{service.name}</p>
+            </div>
           </Link>
         )))}
       </div>

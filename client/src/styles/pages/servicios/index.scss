@@ -7,7 +7,50 @@
   min-height: inherit;
 
   .service-card {
-    width: calc((100% / 3) - 1.5rem);
-    height: inherit;
+    transition: transform 0.25s ease-in-out;
+
+    &:hover {
+      transform: scale(1.025);
+      transition: transform 0.25s ease-in-out;
+    }
+
+    div {
+      position: relative;
+
+      p {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+
+    // Smartphone portrait
+    @media only screen and (max-width: $breakpoint-mobile) {
+      width: 100%;
+      height: 200px;
+
+      &:not(:last-child) {
+        margin-bottom: 0.75rem;
+      }
+    }
+  
+    // Smartphone landscape
+    @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+      width: calc(50% - 1.5rem);
+      height: 200px;
+    }
+  
+    // Tablet portrait
+    @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+      width: calc(50% - 1.5rem);
+      height: inherit;
+    }
+  
+    // Tablet in landscape, desktops and laptops
+    @media only screen and (min-width: $breakpoint-desktop) {
+      width: calc((100% / 3) - 1.5rem);
+      height: inherit;
+    }
   }
 }
