@@ -25,6 +25,24 @@
         left: 50%;
         transform: translate(-50%, 50%);
         font-weight: bold;
+        pointer-events: none;
+        user-select: none;
+        color: $palette-lightest;
+        font-size: 1.05rem;
+      }
+
+      .corporate-bg-image,
+      .donations-bg-image,
+      .finance-bg-image,
+      .last-will-bg-image,
+      .marriage-bg-image,
+      .power-of-attorney-bg-image,
+      .real-estate-bg-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
       }
     }
 

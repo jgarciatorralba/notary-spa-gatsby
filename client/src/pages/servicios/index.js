@@ -78,45 +78,52 @@ const ServicesPage = () => {
             className="service-card sm:m-3"
           >
             {(service.key === "corporate" &&
-              <CorporateImage classes="w-full h-full p-8 text-center">
-                <p>{service.name}</p>
-              </CorporateImage>
+              <div className="w-full h-full text-center">
+                <CorporateImage classes="w-full h-full" />
+                <p className="w-3/4">{service.name}</p>
+              </div>
             )}
 
             {(service.key === "donations" &&
-              <DonationsImage classes="w-full h-full p-8 text-center">
-                <p>{service.name}</p>
-              </DonationsImage>
+              <div className="w-full h-full text-center">
+                <DonationsImage classes="w-full h-full" />
+                <p className="w-3/4">{service.name}</p>
+              </div>
             )}
 
             {(service.key === "marriage" &&
-              <MarriageImage classes="w-full h-full p-8 text-center">
-                <p>{service.name}</p>
-              </MarriageImage>
+              <div className="w-full h-full text-center">
+                <MarriageImage classes="w-full h-full" />
+                <p className="w-3/4">{service.name}</p>
+              </div>
             )}
 
             {(service.key === "finance" &&
-              <FinanceImage classes="w-full h-full p-8 text-center">
-                <p>{service.name}</p>
-              </FinanceImage>
+              <div className="w-full h-full text-center">
+                <FinanceImage classes="w-full h-full" />
+                <p className="w-3/4">{service.name}</p>
+              </div>
             )}
 
             {(service.key === "last-will" &&
-              <LastWillImage classes="w-full h-full p-8 text-center">
-                <p>{service.name}</p>
-              </LastWillImage>
+              <div className="w-full h-full text-center">
+                <LastWillImage classes="w-full h-full" />
+                <p className="w-3/4">{service.name}</p>
+              </div>
             )}
 
             {(service.key === "power-of-attorney" &&
-              <PowerOfAttorneyImage classes="w-full h-full p-8 text-center">
-                <p>{service.name}</p>
-              </PowerOfAttorneyImage>
+              <div className="w-full h-full text-center">
+                <PowerOfAttorneyImage classes="w-full h-full" />
+                <p className="w-3/4">{service.name}</p>
+              </div>
             )}
 
             {(service.key === "real-estate" &&
-              <RealEstateImage classes="w-full h-full p-8 text-center">
-                <p>{service.name}</p>
-              </RealEstateImage>
+              <div className="w-full h-full text-center">
+                <RealEstateImage classes="w-full h-full" />
+                <p className="w-3/4">{service.name}</p>
+              </div>
             )}
           </Link>
         )))}
