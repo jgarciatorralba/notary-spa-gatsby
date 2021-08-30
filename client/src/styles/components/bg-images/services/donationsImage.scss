@@ -1,11 +1,10 @@
 @import "../../../settings/variables";
 
 .donations-bg-image {
-  background-position: 50% 80%;
+  background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
 
-  filter: grayscale(100%);
-  color: $palette-darkest;
+  filter: brightness(60%);
 }

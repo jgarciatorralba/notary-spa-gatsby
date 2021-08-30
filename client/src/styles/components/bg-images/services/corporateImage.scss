@@ -6,6 +6,5 @@
   background-size: cover;
   z-index: -1;
 
-  filter: grayscale(100%);
-  color: $palette-darkest;
+  filter: brightness(60%);
 }
