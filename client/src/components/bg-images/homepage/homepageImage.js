@@ -24,9 +24,11 @@ const HomepageImage = ({ children }) => {
 
   const pluginImage = getImage(image)
 
-  return <BgImage image={pluginImage} className="hero-wrapper">
-    {children}
-  </BgImage>
+  return (
+    <BgImage image={pluginImage} className="hero-wrapper">
+      {children}
+    </BgImage>
+  )
 }
 
 export default HomepageImage
