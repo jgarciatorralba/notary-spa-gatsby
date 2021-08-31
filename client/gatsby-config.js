@@ -93,8 +93,16 @@ module.exports = {
           messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
           appId: process.env.FIREBASE_APP_ID,
           measurementId: process.env.FIREBASE_MEASUREMENT_ID,
-        }
-      }
+        },
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `services`,
+        path: `${__dirname}/src/services`,
+      },
     },
   ],
 }
