@@ -72,6 +72,7 @@
     @media only screen and (min-width: $breakpoint-desktop) {
       width: calc((100% / 3) - 1.5rem);
       height: inherit;
+      min-height: 150px;
     }
   }
 }
