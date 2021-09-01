@@ -16,7 +16,7 @@ const ServiceDetails = ({ data }) => {
         <p>{title}</p>
       </div>
       <div>
-        <GatsbyImage image={pluginImage} />
+        <GatsbyImage image={pluginImage} alt="" />
       </div>
     </Layout>
   )
