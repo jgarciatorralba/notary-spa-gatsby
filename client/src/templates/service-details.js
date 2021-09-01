@@ -31,10 +31,14 @@ const ServiceDetails = ({ data }) => {
         description={description}
       />
 
-      <div className="service-details-image">
-        <GatsbyImage image={pluginImage} alt="" />
+      <div className="service-details-image-wrapper">
+        <GatsbyImage
+          className="service-details-image"
+          image={pluginImage}
+          alt=""
+        />
       </div>
-      <div className="service-details-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-4 lg:py-8">
+      <div className="service-details-content-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-4 lg:py-8">
         <p>{title}</p>
       </div>
     </Layout>
@@ -64,6 +68,7 @@ export const query = graphql`
               quality: 100
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
+              transformOptions: { fit: COVER }
             )
           }
         }

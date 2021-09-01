@@ -1,1 +1,9 @@
 @import "../settings/variables";
+
+.service-details-image-wrapper {
+  display: grid;
+
+  .service-details-image {
+    grid-area: 1/1;
+  }
+}
