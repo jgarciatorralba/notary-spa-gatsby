@@ -15,7 +15,7 @@ import RealEstateImage from "../../components/bg-images/services/realEstateImage
 
 import "../../styles/pages/servicios/index.scss"
 
-const ServicesPage = () => {
+const ServicesPage = ({ data }) => {
   const { t } = useTranslation()
   const servicesTranslations = t("services", {
     returnObjects: true,
@@ -27,40 +27,17 @@ const ServicesPage = () => {
   const { title: defaultTitle, description } = metaTranslations
   const { title, serviceList } = servicesTranslations
 
-  let services = [
-    {
-      key: "corporate",
-      to: "/servicios/tramites-societarios/"
-    },
-    {
-      key: "donations",
-      to: "/servicios/donaciones/"
-    },
-    {
-      key: "finance",
-      to: "/servicios/tramites-financieros/"
-    },
-    {
-      key: "last-will",
-      to: "/servicios/voluntades/"
-    },
-    {
-      key: "marriage",
-      to: "/servicios/tramites-matrimoniales/"
-    },
-    {
-      key: "power-of-attorney",
-      to: "/servicios/poderes/"
-    },
-    {
-      key: "real-estate",
-      to: "/servicios/tramites-inmobiliarios/"
-    }
-  ]
-
-  services.forEach(service => {
-    service.name = (serviceList.find(serviceListItem => service.key === serviceListItem.key)).name
-  });
+  let services = []
+  const { nodes } = data.allMarkdownRemark
+  nodes.forEach(node => {
+    const { slug: to, title: key } = node.frontmatter
+    services.push({
+      to: "/servicios/" + to,
+      key,
+      name: serviceList.find(serviceListItem => key === serviceListItem.key)
+        .name,
+    })
+  })
 
   return (
     <Layout>
@@ -71,62 +48,62 @@ const ServicesPage = () => {
       />
 
       <div className="services-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-4 lg:py-8">
-        {(services.map(service => (
+        {services.map(service => (
           <Link
             key={service.key}
             to={service.to}
             className="service-card sm:m-3"
           >
-            {(service.key === "corporate" &&
+            {service.key === "corporate" && (
               <div className="w-full h-full text-center">
                 <CorporateImage classes="w-full h-full" />
                 <p className="w-3/4">{service.name}</p>
               </div>
             )}
 
-            {(service.key === "donations" &&
+            {service.key === "donations" && (
               <div className="w-full h-full text-center">
                 <DonationsImage classes="w-full h-full" />
                 <p className="w-3/4">{service.name}</p>
               </div>
             )}
 
-            {(service.key === "marriage" &&
+            {service.key === "marriage" && (
               <div className="w-full h-full text-center">
                 <MarriageImage classes="w-full h-full" />
                 <p className="w-3/4">{service.name}</p>
               </div>
             )}
 
-            {(service.key === "finance" &&
+            {service.key === "finance" && (
               <div className="w-full h-full text-center">
                 <FinanceImage classes="w-full h-full" />
                 <p className="w-3/4">{service.name}</p>
               </div>
             )}
 
-            {(service.key === "last-will" &&
+            {service.key === "last-will" && (
               <div className="w-full h-full text-center">
                 <LastWillImage classes="w-full h-full" />
                 <p className="w-3/4">{service.name}</p>
               </div>
             )}
 
-            {(service.key === "power-of-attorney" &&
+            {service.key === "power-of-attorney" && (
               <div className="w-full h-full text-center">
                 <PowerOfAttorneyImage classes="w-full h-full" />
                 <p className="w-3/4">{service.name}</p>
               </div>
             )}
 
-            {(service.key === "real-estate" &&
+            {service.key === "real-estate" && (
               <div className="w-full h-full text-center">
                 <RealEstateImage classes="w-full h-full" />
                 <p className="w-3/4">{service.name}</p>
               </div>
             )}
           </Link>
-        )))}
+        ))}
       </div>
     </Layout>
   )
@@ -142,6 +119,14 @@ export const query = graphql`
           ns
           data
           language
+        }
+      }
+    }
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          slug
+          title
         }
       }
     }
