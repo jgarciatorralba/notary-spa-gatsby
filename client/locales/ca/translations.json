@@ -172,5 +172,33 @@
         "name": "Tràmits immobiliaris"
       }
     ]
+  },
+
+  "corporate": {
+    "title": "Tràmits societaris"
+  },
+
+  "donations": {
+    "title": "Donacions"
+  },
+
+  "finance": {
+    "title": "Tràmits financers"
+  },
+
+  "last-will": {
+    "title": "Voluntats anticipades, testaments i herències"
+  },
+
+  "marriage": {
+    "title": "Tràmits matrimonials"
+  },
+
+  "power-of-attorney": {
+    "title": "Poders"
+  },
+
+  "real-estate": {
+    "title": "Tràmits immobiliaris"
   }
 }

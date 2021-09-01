@@ -172,5 +172,33 @@
         "name": "Trámites inmobiliarios"
       }
     ]
+  },
+
+  "corporate": {
+    "title": "Trámites societarios"
+  },
+
+  "donations": {
+    "title": "Donaciones"
+  },
+
+  "finance": {
+    "title": "Trámites financieros"
+  },
+
+  "last-will": {
+    "title": "Voluntades anticipadas, testamentos y herencias"
+  },
+
+  "marriage": {
+    "title": "Trámites matrimoniales"
+  },
+
+  "power-of-attorney": {
+    "title": "Poderes"
+  },
+
+  "real-estate": {
+    "title": "Trámites inmobiliarios"
   }
 }
