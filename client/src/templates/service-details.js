@@ -32,10 +32,10 @@ const ServiceDetails = ({ data }) => {
         description={description}
       />
 
-      <BgImage image={pluginImage} className="service-details-image" />
+      <div className="service-details-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
+        <h2 className="mb-2 font-bold">{title}</h2>
 
-      <div className="service-details-content-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-4 lg:py-8">
-        <p>{title}</p>
+        <BgImage image={pluginImage} className="service-details-image" />
       </div>
     </Layout>
   )
@@ -64,7 +64,6 @@ export const query = graphql`
               quality: 100
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
-              transformOptions: { fit: COVER }
             )
           }
         }
