@@ -24,6 +24,21 @@ const ServiceDetails = ({ data }) => {
   const { title: defaultTitle, description } = metaTranslations
   const { title } = serviceTranslations
 
+  let bgPosition
+  if (service === "marriage") {
+    bgPosition = "50% 35%"
+  } else if (service === "corporate") {
+    bgPosition = "50% 25%"
+  } else if (service === "last-will") {
+    bgPosition = "50% 45%"
+  } else if (service === "real-estate") {
+    bgPosition = "50% 35%"
+  } else if (service === "power-of-attorney") {
+    bgPosition = "50% 75%"
+  } else {
+    bgPosition = "50% 50%"
+  }
+
   return (
     <Layout>
       <Seo
@@ -35,7 +50,11 @@ const ServiceDetails = ({ data }) => {
       <div className="service-details-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
         <h2 className="mb-2 font-bold">{title}</h2>
 
-        <BgImage image={pluginImage} className="service-details-image" />
+        <BgImage
+          image={pluginImage}
+          className="service-details-image"
+          style={{ backgroundPosition: bgPosition }}
+        />
       </div>
     </Layout>
   )

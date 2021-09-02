@@ -6,26 +6,32 @@
   }
 
   .service-details-image {
+    border: 1px solid $palette-light;
     border-radius: 0.5rem;
     overflow: hidden;
 
     // Smartphone portrait
     @media only screen and (max-width: $breakpoint-mobile) {
-      height: 400px;
+      height: 250px;
     }
 
     // Smartphone landscape
     @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
-      height: 400px;
+      height: 250px;
     }
 
     // Tablet portrait
     @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
-      height: 400px;
+      height: 300px;
     }
 
     // Tablet in landscape, desktops and laptops
     @media only screen and (min-width: $breakpoint-desktop) {
+      height: 350px;
+    }
+
+    // Large desktops
+    @media only screen and (min-width: $breakpoint-xl) {
       height: 400px;
     }
   }
