@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Accordion from "../components/accordion"
 
 import "../styles/templates/service-details.scss"
 
@@ -22,7 +23,7 @@ const ServiceDetails = ({ data }) => {
   })
 
   const { title: defaultTitle, description } = metaTranslations
-  const { title } = serviceTranslations
+  const { title, items } = serviceTranslations
 
   let bgPosition
   if (service === "marriage") {
@@ -55,6 +56,8 @@ const ServiceDetails = ({ data }) => {
           className="service-details-image"
           style={{ backgroundPosition: bgPosition }}
         />
+
+        {items && <Accordion items={items} />}
       </div>
     </Layout>
   )
