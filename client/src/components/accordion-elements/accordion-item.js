@@ -16,7 +16,7 @@ const AccordionItem = ({
   const answers = item.answers ?? null
 
   return (
-    <div className="faq__question" key={item.question}>
+    <div className="faq__question">
       <div>
         <button
           aria-expanded={ariaExpanded}

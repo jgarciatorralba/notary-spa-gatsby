@@ -15,6 +15,7 @@ const Accordion = ({ items }) => {
 
     return (
       <AccordionItem
+        key={item.question}
         showDescription={showDescription}
         fontWeightBold={fontWeightBold}
         ariaExpanded={ariaExpanded}
