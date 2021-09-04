@@ -1,0 +1,38 @@
+@import "../../settings/variables";
+
+.faq__question {
+  width: 100%;
+
+  .faq__question-button {
+    width: 100%;
+    text-align: left;
+    position: relative;
+
+    svg {
+      width: 25px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    &[aria-expanded="true"] {
+      svg {
+        transform: translateY(-50%) rotate(-90deg);
+      }
+    }
+  }
+
+  .faq__desc {
+    display: none;
+  }
+
+  .faq__desc.show-description {
+    display: block;
+
+    ul {
+      list-style: disc;
+      padding-left: 2rem;
+    }
+  }
+}
