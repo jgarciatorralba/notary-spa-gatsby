@@ -176,13 +176,13 @@
 
   "corporate": {
     "title": "Trámites societarios",
-    "topics": [
+    "items": [
       {
         "question": "¿Qué es necesario aportar para constituir una Sociedad Limitada?",
         "answer": [
           {
             "type": "list",
-            "items": [
+            "sentences": [
               "<strong>DNI de las partes intervinientes</strong> y, de ser una persona jurídica, la escritura de constitución, la de nombramiento del cargo de representante y el acta de titularidad real.",
               "<strong>Certificado de denominación social</strong> (se puede obtener desde la Notaría).",
               "<strong>Datos identificativos de los socios</strong> (nombre, apellidos, profesión, estado civil, domicilio, porcentaje de aportación al capital social, fecha de nacimiento...). Si el socio es una persona jurídica, deberá actuar su representante y deberá de acreditar su representación.",

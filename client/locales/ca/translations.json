@@ -176,13 +176,13 @@
 
   "corporate": {
     "title": "Tràmits societaris",
-    "topics": [
+    "items": [
       {
         "question": "Què cal aportar per a constituir una societat limitada?",
         "answer": [
           {
             "type": "list",
-            "items": [
+            "sentences": [
               "<strong>DNI de les parts intervinents</strong> i, de ser una persona jurídica, l'escriptura de constitució, la de nomenament del càrrec de representant i l'acta de titularitat real.",
               "<strong>Certificat de denominació social</strong>, que es pot obtenir des de la Notaria.",
               "<strong>Dades identificatives dels socis</strong> (nom, cognoms, professió, estat civil, domicili, percentatge d'aportació al capital social, data de naixement...). Si el soci és una persona jurídica, ha d'actuar el seu representant i haurà d'acreditar la seva representació.",
