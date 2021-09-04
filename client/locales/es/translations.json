@@ -179,7 +179,7 @@
     "items": [
       {
         "question": "¿Qué es necesario aportar para constituir una Sociedad Limitada?",
-        "answer": [
+        "answers": [
           {
             "type": "list",
             "sentences": [

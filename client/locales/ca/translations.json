@@ -179,7 +179,7 @@
     "items": [
       {
         "question": "Què cal aportar per a constituir una societat limitada?",
-        "answer": [
+        "answers": [
           {
             "type": "list",
             "sentences": [
