@@ -194,6 +194,47 @@
             ]
           }
         ]
+      },
+      {
+        "question": "¿Qué documentación debe aportarse para escriturar un cese y nombramiento de algún administrador?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de las partes intervinientes</strong> y, de ser una persona jurídica, la escritura de constitución, la de nombramiento del cargo de representante y el acta de titularidad real.",
+              "<strong>Acreditación de la persona del administrador</strong> cuyo cargo va a ser cesado.",
+              "<strong>Certificado de junta</strong> (sea universal o no, siempre que en este último caso esté debidamente convocada) que resuelva el cese o separación del administrador con las mayorías suficientes; el nombramiento del nuevo con las mayorías necesarias (con su aceptación y plazo).",
+              "<strong>Se advierte de que debe comparecer el nuevo administrador</strong> si es único, <strong>o los mancomunados o cualquiera de los administradores solidarios</strong>. Se debe respetar lo dispuesto en el artículo 111 RRM."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "¿Qué documentación se requiere para vender participaciones sociales?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de las partes intervinientes</strong> y, de ser una persona jurídica, la escritura de constitución, la de nombramiento del cargo de representante y el acta de titularidad real.",
+              "<strong>Identificación de lo que se va a vender</strong>, es decir, las participaciones con sus títulos de adquisición correspondientes.",
+              "<strong>Justificante de los pagos</strong> ya realizados <strong>antes de la firma</strong> (fotocopia del cheque y número de la cuenta donde se cargó; en caso de ser transferencia, deberán aportarse los números de cargo y de destino).",
+              "Si existiese algún tipo de derecho de adquisición preferente previsto por los propios estatutos, éste deberá ser respetado."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "¿Qué documentación se requiere para declarar la unipersonalidad de una sociedad?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Identificación del socio único</strong> (nombre completo, estado civil, profesión, domicilio y DNI).",
+              "<strong>Libro registro de socios</strong> (testimonio notarial del mismo o certificación de su contenido).",
+              "Se advierte de que <strong>debe de comparecer la persona que tenga facultad para elevar a público los acuerdos sociales</strong>, como por ejemplo el administrador único."
+            ]
+          }
+        ]
       }
     ]
   },

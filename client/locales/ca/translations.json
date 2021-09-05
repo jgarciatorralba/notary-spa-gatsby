@@ -194,6 +194,47 @@
             ]
           }
         ]
+      },
+      {
+        "question": "Quina documentació cal aportar per escripturar un cessament i nomenament d'algun administrador?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de les parts intervinents</strong> i, de ser una persona jurídica, l'escriptura de constitució, la de nomenament del càrrec de representant i l'acta de titularitat real.",
+              "<strong>Acreditació de la persona de l'administrador</strong> del qual es cessarà el càrrec.",
+              "<strong>Certificat de junta</strong> (sigui universal o no, sempre que en aquest últim cas estigui degudament convocada) que resolgui el cessament o separació de l'administrador amb les majories suficients; el nomenament de la nova amb les majories necessàries (amb la seva acceptació i termini).",
+              "<strong>S'adverteix que ha de comparèixer el nou administrador</strong> si és únic, <strong>o els mancomunats o qualsevol dels administradors solidaris</strong>. S'ha de respectar el que disposa l'article 111 RRM."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Quina documentació es requereix per vendre participacions socials?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de les parts intervinents</strong> i, de ser una persona jurídica, l'escriptura de constitució, la de nomenament del càrrec de representant i l'acta de titularitat real.",
+              "<strong>Identificació del que es va a vendre</strong>, és a dir, les participacions amb els seus títols d'adquisició corresponents.",
+              "<strong>Justificant dels pagaments</strong> ja realitzats <strong>abans de la signatura</strong> (fotocòpia del xec i número del compte on es va carregar; en cas de ser transferència, s'han d'aportar els números de càrrec i de destinació).",
+              "Si existís algun tipus de dret d'adquisició preferent previst pels propis estatuts, aquest haurà de ser respectat."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Quina documentació es requereix per declarar la unipersonalitat d'una societat?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Identificació del soci únic</strong> (nom complet, estat civil, professió, domicili i DNI).",
+              "<strong>Llibre registre de socis</strong> (testimoni notarial del mateix o certificació del seu contingut).",
+              "S'adverteix que <strong>deu comparèixer la persona que tingui facultat per elevar a públic els acords socials</strong>, com ara l'administrador únic."
+            ]
+          }
+        ]
       }
     ]
   },
