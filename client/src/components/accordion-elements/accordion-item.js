@@ -8,7 +8,7 @@ import "../../styles/components/accordion-elements/accordion-item.scss"
 const AccordionItem = ({
   showDescription,
   ariaExpanded,
-  fontWeightBold,
+  highlighted,
   item,
   index,
   onClick,
@@ -17,24 +17,24 @@ const AccordionItem = ({
 
   return (
     <div className="accordion-item">
-      <div className="py-2">
+      <div className="accordion-item-question py-2">
         <button
           aria-expanded={ariaExpanded}
-          aria-controls={`faq${index + 1}_desc`}
-          data-qa="faq__question-button"
-          className={`faq__question-button ${fontWeightBold}`}
+          aria-controls={`accordion-item-${index + 1}-description`}
+          data-qa="accordion-item-question-button"
+          className={`accordion-item-question-button ${highlighted}`}
           onClick={onClick}
         >
           <p>{item.question}</p>
-          <ChevronLeftIcon className="" />
+          <ChevronLeftIcon className="chevron-left-icon" />
         </button>
       </div>
 
       {answers && (
         <div
-          id={`faq${index + 1}_desc`}
-          data-qa="faq__desc"
-          className={`faq__desc ${showDescription}`}
+          id={`accordion-item-${index + 1}-description`}
+          data-qa="accordion-item-description"
+          className={`accordion-item-description ${showDescription}`}
         >
           {answers.map((answer, answerIndex) => (
             <Fragment key={`answer-${answerIndex}`}>
