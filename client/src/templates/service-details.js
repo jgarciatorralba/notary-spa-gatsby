@@ -18,12 +18,16 @@ const ServiceDetails = ({ data }) => {
   const serviceTranslations = t(service, {
     returnObjects: true,
   })
+  const serviceSharedTranslations = t("service-details", {
+    returnObjects: true,
+  })
   const metaTranslations = t("metadata", {
     returnObjects: true,
   })
 
   const { title: defaultTitle, description } = metaTranslations
   const { title, items } = serviceTranslations
+  const { heading } = serviceSharedTranslations
 
   let bgPosition
   if (service === "marriage") {
@@ -57,7 +61,7 @@ const ServiceDetails = ({ data }) => {
           style={{ backgroundPosition: bgPosition }}
         />
 
-        {items && <Accordion items={items} />}
+        {items && <Accordion items={items} heading={heading} />}
       </div>
     </Layout>
   )
