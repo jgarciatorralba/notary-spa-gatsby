@@ -16,8 +16,8 @@ const AccordionItem = ({
   const answers = item.answers ?? null
 
   return (
-    <div className="faq__question">
-      <div>
+    <div className="accordion-item">
+      <div className="py-2">
         <button
           aria-expanded={ariaExpanded}
           aria-controls={`faq${index + 1}_desc`}
@@ -42,7 +42,7 @@ const AccordionItem = ({
                 <ul>
                   {answer.sentences.map((sentence, listIndex) => (
                     <li key={`sentence-${listIndex}`}>
-                      <p>
+                      <p className="py-2">
                         <Trans>{sentence}</Trans>
                       </p>
                     </li>
@@ -53,7 +53,7 @@ const AccordionItem = ({
               {answer.type === "paragraph" && (
                 <>
                   {answer.sentences.map((sentence, paragraphIndex) => (
-                    <p key={`sentence-${paragraphIndex}`}>
+                    <p key={`sentence-${paragraphIndex}`} className="py-2">
                       <Trans>{sentence}</Trans>
                     </p>
                   ))}
