@@ -9,15 +9,15 @@ const Accordion = ({ items, heading }) => {
   const [activeIndex, setActiveIndex] = useState(null)
 
   const renderedItems = items.map((item, index) => {
-    const showDescription = index === activeIndex ? "show-description" : ""
-    const fontWeightBold = index === activeIndex ? "font-bold" : ""
+    const showDescription = index === activeIndex ? "show" : ""
+    const highlighted = index === activeIndex ? "highlighted" : ""
     const ariaExpanded = index === activeIndex ? "true" : "false"
 
     return (
       <AccordionItem
         key={item.question}
         showDescription={showDescription}
-        fontWeightBold={fontWeightBold}
+        highlighted={highlighted}
         ariaExpanded={ariaExpanded}
         item={item}
         index={index}
