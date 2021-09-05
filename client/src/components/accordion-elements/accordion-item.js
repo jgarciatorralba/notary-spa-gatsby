@@ -14,6 +14,7 @@ const AccordionItem = ({
   onClick,
 }) => {
   const answers = item.answers ?? null
+  const consideration = item.consideration ?? null
 
   return (
     <div className="accordion-item">
@@ -61,6 +62,41 @@ const AccordionItem = ({
               )}
             </Fragment>
           ))}
+
+          {consideration && (
+            <div className="accordion-item-consideration">
+              <h3 className="mb-2 font-bold">{consideration.title}</h3>
+
+              {consideration.answers.map((answer, answerIndex) => (
+                <Fragment key={`consideration-answer-${answerIndex}`}>
+                  {answer.type === "list" && (
+                    <ul>
+                      {answer.sentences.map((sentence, listIndex) => (
+                        <li key={`consideration-sentence-${listIndex}`}>
+                          <p className="py-2">
+                            <Trans>{sentence}</Trans>
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {answer.type === "paragraph" && (
+                    <>
+                      {answer.sentences.map((sentence, paragraphIndex) => (
+                        <p
+                          key={`consideration-sentence-${paragraphIndex}`}
+                          className="py-2"
+                        >
+                          <Trans>{sentence}</Trans>
+                        </p>
+                      ))}
+                    </>
+                  )}
+                </Fragment>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
