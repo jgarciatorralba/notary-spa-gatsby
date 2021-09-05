@@ -300,7 +300,62 @@
   },
 
   "power-of-attorney": {
-    "title": "Poderes"
+    "title": "Poderes",
+    "items": [
+      {
+        "question": "Poder general (poder con todas las facultades posibles) o poder especial (para uno o varios casos concretos)",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI del poderdante y de los apoderados</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Poder para pleitos",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de quien da el poder</strong>.",
+              "<strong>Identificación de quien recibe el poder</strong> (apoderado), por manifestación.",
+              "<strong>Datos del procurador</strong> (nombre y apellidos). Se aconseja aportar el número de colegiación."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Poder preventivo (para el caso de devenir incapaz, o incluso que sirva desde que se otorgue y subsista en caso de devenir incapaz)",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI del poderdante y certificado de nacimiento</strong> del mismo.",
+              "<strong>Identificación (DNI, estado civil, profesión y domicilio) de quien recibe el poder</strong>, por manifestación."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": [
+              "Deberá el cliente pensar y manifestar si quiere que el poder tenga efectos solo en caso de su incapacidad sobrevenida, o si quiere que tenga efectos desde el otorgamiento y que subsista en caso de que devengue incapaz."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Poder mercantil",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de quien da el poder</strong>, y además se comprobará si tiene facultades para otorgar ese poder en nombre de la sociedad, exigiéndose la escritura de constitución de la sociedad donde conste como administrador único o de ser varios que sus facultades sean solidarias. Si sus facultades de representación fuesen mancomunadas, deberá de otorgarse el poder con los demás administradores en función del contenido de la escritura de constitución y nombramiento de administradores."
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   "real-estate": {

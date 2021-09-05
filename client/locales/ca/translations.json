@@ -300,7 +300,62 @@
   },
 
   "power-of-attorney": {
-    "title": "Poders"
+    "title": "Poders",
+    "items": [
+      {
+        "question": "Poder general (poder amb totes les facultats possibles) o poder especial (per a un o diversos casos concrets)",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI del poderdant i dels apoderats</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Poder per a pleits",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de qui dóna el poder</strong>.",
+              "<strong>Identificació de qui rep el poder</strong> (apoderat), per manifestació.",
+              "<strong>Dades de procurador</strong> (nom i cognoms). S'aconsella aportar el nombre de col·legiació."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Poder preventiu (per al cas d'esdevenir incapaç, o fins i tot que serveixi des que s'atorgui i subsisteixi en cas d'esdevenir incapaç)",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI del poderdant i certificat de naixement</strong> del mateix.",
+              "<strong>Identificació (DNI, estat civil, professió i domicili) de qui rep el poder</strong>, per manifestació."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": [
+              "Haurà el client de pensar i manifestar si vol que el poder tingui efectes només en cas de la seva incapacitat sobrevinguda, o si vol que tingui efectes des de l'atorgament i que subsisteixi en cas que reporti incapaç"
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Poder mercantil",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de qui dóna el poder</strong> i, a més, es comprovarà si té facultats per atorgar aquest poder en nom de la societat, exigint l'escriptura de constitució de la societat on consti com a administrador únic, o de ser diversos que les seves facultats siguin solidàries. Si les seves facultats de representació fossin mancomunades, haurà d'atorgar-se el poder amb els altres administradors en funció del contingut de l'escriptura de constitució i nomenament d'administradors."
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   "real-estate": {
