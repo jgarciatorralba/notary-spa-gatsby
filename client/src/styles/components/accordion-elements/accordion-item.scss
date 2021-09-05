@@ -47,7 +47,7 @@
     max-height: 0;
     overflow: hidden;
     padding: 0;
-    transition: all 400ms ease-out;
+    transition: all 400ms linear;
 
     ul {
       list-style: disc;
@@ -57,7 +57,7 @@
     &.show {
       max-height: 1000px;
       padding: 0 0 0.5rem 0;
-      transition: all 400ms ease-out;
+      transition: all 400ms linear;
     }
   }
 }
