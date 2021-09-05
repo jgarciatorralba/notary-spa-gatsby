@@ -5,7 +5,7 @@ import AccordionItem from "./accordion-elements/accordion-item"
 
 import "../styles/components/accordion.scss"
 
-const Accordion = ({ items }) => {
+const Accordion = ({ items, heading }) => {
   const [activeIndex, setActiveIndex] = useState(null)
 
   const renderedItems = items.map((item, index) => {
@@ -29,8 +29,9 @@ const Accordion = ({ items }) => {
   })
 
   return (
-    <div className="faq">
-      <div className="faq__list">{renderedItems}</div>
+    <div className="accordion-wrapper">
+      <h2 className="mb-2 font-bold">{heading}</h2>
+      <div className="accordion-list">{renderedItems}</div>
     </div>
   )
 }
