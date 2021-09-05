@@ -240,7 +240,51 @@
   },
 
   "donations": {
-    "title": "Donacions"
+    "title": "Donacions",
+    "items": [
+      {
+        "question": "Quins documents es requereixen per donar un immoble?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de les parts intervinents</strong> i, de ser una persona jurídica, l'escriptura de constitució, la de nomenament del càrrec de representant i l'acta de titularitat real.",
+              "<strong>Escriptura de propietat</strong> que es pretén donar o en el seu defecte nota simple del registre.",
+              "<strong>Cèdula d'habitabilitat</strong> (o sol·licitud de la mateixa per tècnic competent), o cèdula de qualificació definitiva en cas que es tracti d'un habitatge de protecció oficial.",
+              "<strong>Certificat d'eficiència energètica</strong>: Pot no aportar-s'hi ja que no és requisit ni de l'escriptura, ni de la inscripció. El comprador per tant pot exonerar.",
+              "<strong>Rebut del pagament de l'impost de béns immobles</strong> (I.B.I) dels últims 4 anys.",
+              "<strong>Certificat d'estar al corrent de les despeses de comunitat</strong>.",
+              "Si l'habitatge està gravat amb una hipoteca, certificat de saldo pendent o de <strong>saldo zero</strong>."
+            ]
+          }
+        ],
+        "consideration": {
+          "title": "A tenir en compte...",
+          "answers": [
+            {
+              "type": "paragraph",
+              "sentences": [
+                "Quan es transmet un habitatge antic (més de 45 anys des de la seva construcció), s'aconsella que s'acrediti la <strong>inspecció tècnica d'edificis</strong> (I.T.E)."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "question": "I per donar diners?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI donant</strong> (persona que dóna els diners).",
+              "<strong>DNI donataris</strong> (persones que reben els diners).",
+              "<strong>Grau de parentiu entre donant i donatari</strong>.",
+              "<strong>Acreditació de la forma d'entrega dels diners</strong> en qüestió (fotocòpia, xec i número compte on es va fer el càrrec, en cas de ser transferència, s'han d'aportar els números de càrrec i de destinació)."
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   "finance": {

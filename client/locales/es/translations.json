@@ -240,7 +240,51 @@
   },
 
   "donations": {
-    "title": "Donaciones"
+    "title": "Donaciones",
+    "items": [
+      {
+        "question": "¿Qué documentos se requieren para donar un inmueble?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de las partes intervinientes</strong> y, de ser una persona jurídica, la escritura de constitución, la de nombramiento del cargo de representante y el acta de titularidad real.",
+              "<strong>Escritura de propiedad</strong> que se pretende donar o en su defecto nota simple del registro.",
+              "<strong>Cédula de habitabilidad</strong> (o solicitud de la misma por técnico competente), o cédula de calificación definitiva en caso de que se trate de una vivienda de protección oficial.",
+              "<strong>Certificado de eficiencia energética</strong>: puede no aportarse ya que no es requisito ni de la escritura, ni de la inscripción. El comprador por tanto puede exonerar.",
+              "<strong>Recibo del pago del impuesto de bienes inmuebles</strong> (I.B.I) de los últimos 4 años.",
+              "<strong>Certificado de estar al corriente de los gastos de comunidad</strong>.",
+              "Si la vivienda esta gravada con una hipoteca, certificado de saldo pendiente o de <strong>saldo cero</strong>."
+            ]
+          }
+        ],
+        "consideration": {
+          "title": "A tener en cuenta...",
+          "answers": [
+            {
+              "type": "paragraph",
+              "sentences": [
+                "Cuando se transmite una vivienda antigua (más de 45 años desde su construcción), se aconseja que se acredite la <strong>inspección técnica de edificios</strong> (I.T.E)."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "question": "¿Y para donar dinero?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI donante</strong> (persona que da el dinero).",
+              "<strong>DNI donatarios</strong> (personas que reciben el dinero).",
+              "<strong>Grado de parentesco entre donante y donatario</strong>.",
+              "<strong>Acreditación de la forma de entrega del dinero</strong> en cuestión (fotocopia, cheque y numero cuenta donde se cargó; en caso de ser transferencia, deberán aportarse los números de cargo y de destino)."
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   "finance": {
