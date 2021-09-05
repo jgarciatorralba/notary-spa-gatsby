@@ -174,6 +174,10 @@
     ]
   },
 
+  "service-details": {
+    "heading": "Preguntas frecuentes"
+  },
+
   "corporate": {
     "title": "Trámites societarios",
     "items": [
