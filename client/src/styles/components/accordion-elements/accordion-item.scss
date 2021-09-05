@@ -2,7 +2,6 @@
 
 .accordion-item {
   width: 100%;
-  padding-right: 1rem;
   border-bottom: 1px solid $palette-light;
 
   .accordion-item-question {
@@ -13,11 +12,15 @@
       color: inherit;
       transition: color 300ms ease-in;
 
+      p {
+        width: calc(100% - 1rem);
+      }
+
       .chevron-left-icon {
         width: 1rem;
         position: absolute;
         top: 50%;
-        right: -1rem;
+        right: 0;
         transform: translateY(-50%);
         transition: transform 300ms linear;
       }
