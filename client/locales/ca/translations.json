@@ -325,7 +325,23 @@
   },
 
   "last-will": {
-    "title": "Voluntats anticipades, testaments i herències"
+    "title": "Voluntats anticipades, testaments i herències",
+    "items": [
+      {
+        "question": "Quina documentació es requereix per autoritzar el que es denominen com a \"voluntats anticipades\"?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de l'atorgant</strong>.",
+              "<strong>Targeta sanitària</strong> de l'atorgant.",
+              "<strong>Instruccions</strong> (a determinar amb el Notari).",
+              "<strong>Dades de la persona que haurà de fer valer les voluntats anticipades</strong> (nom complet, número de DNI i telèfon de contacte)."
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   "marriage": {

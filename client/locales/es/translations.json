@@ -325,7 +325,23 @@
   },
 
   "last-will": {
-    "title": "Voluntades anticipadas, testamentos y herencias"
+    "title": "Voluntades anticipadas, testamentos y herencias",
+    "items": [
+      {
+        "question": "¿Qué documentación se requiere para autorizar lo que se denominan como \"voluntades anticipadas\"?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI del otorgante</strong>.",
+              "<strong>Tarjeta sanitaria</strong> del otorgante.",
+              "<strong>Instrucciones</strong> (a determinar con el Notario).",
+              "<strong>Datos de la persona que deberá hacer valer las voluntades anticipadas</strong> (nombre completo, numero de DNI y teléfono de contacto)."
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   "marriage": {
