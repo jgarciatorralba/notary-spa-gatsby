@@ -329,7 +329,39 @@
   },
 
   "marriage": {
-    "title": "Trámites matrimoniales"
+    "title": "Trámites matrimoniales",
+    "items": [
+      {
+        "question": "¿Qué documentación se requiere para contraer matrimonio ante notario?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Identificación de los contrayentes (DNI)</strong>. En caso de no tener nacionalidad española, documentación de identificación vigente que corresponda.",
+              "<strong>DNI de al menos 2 testigos</strong>.",
+              "<strong>Expediente matrimonial tramitado por juzgado competente y resuelto favorablemente</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "¿Qué documentación es necesaria para preparar la escritura de separación o divorcio?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de los futuros ex-cónyuges</strong>. En caso de no tener nacionalidad española, documentación de identificación vigente que corresponda.",
+              "<strong>Fotocopia del DNI del letrado de los ex-cónyuges y su carnet de ejerciente</strong>.",
+              "<strong>Certificado matrimonial que acredite la unión conyugal</strong>.",
+              "<strong>Certificado de empadronamiento</strong> de al menos uno de los cónyuges.",
+              "<strong>Libro de familia</strong>.",
+              "<strong>Convenio regulador de la separación o el divorcio</strong>.",
+              "Si se va a realizar adjudicación de bienes, se requiere documentación complementaria (preguntar en la notaría para el asesoramiento correspondiente)."
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   "power-of-attorney": {

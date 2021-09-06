@@ -329,7 +329,39 @@
   },
 
   "marriage": {
-    "title": "Tràmits matrimonials"
+    "title": "Tràmits matrimonials",
+    "items": [
+      {
+        "question": "Quina documentació es requereix per contraure matrimoni davant notari?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Identificació dels contraents (DNI)</strong>. En cas de no tenir nacionalitat espanyola, documentació d'identificació vigent que correspongui.",
+              "<strong>DNI d'almenys 2 testimonis</strong>.",
+              "<strong>Expedient matrimonial tramitat per jutjat competent i resolt favorablement</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Quina documentació és necessària per preparar l'escriptura de separació o divorci?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI dels futurs ex-cònjuges</strong>. En cas de no tenir nacionalitat espanyola, documentació d'identificació vigent que correspongui.",
+              "<strong>Fotocòpia del DNI del lletrat dels ex-cònjuges i el seu carnet d'exercent</strong>.",
+              "<strong>Certificat matrimonial que acrediti la unió conjugal</strong>.",
+              "<strong>Certificat d'empadronament</strong> d'almenys un dels cònjuges.",
+              "<strong>Llibre de família</strong>.",
+              "<strong>Conveni regulador de la separació o el divorci</strong>.",
+              "Si es va a realitzar adjudicació de béns, es requereix documentació complementària (preguntar a la notaria per a l'assessorament corresponent)."
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   "power-of-attorney": {
