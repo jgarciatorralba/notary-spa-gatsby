@@ -288,7 +288,40 @@
   },
 
   "finance": {
-    "title": "Tràmits financers"
+    "title": "Tràmits financers",
+    "items": [
+      {
+        "question": "Quina documentació hem d'aportar per constituir una hipoteca o per modificar les condicions d'aquesta?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Escriptura de propietat</strong> o en el seu defecte <strong>nota simple registral</strong>.",
+              "<strong>Rebut de l'I.B.I.</strong>",
+              "Si haguessin càrregues anteriors a la finca: <strong>certificat saldo zero</strong> o <strong>provisió per a cancel·lar-les</strong>, llevat que es pretengui que subsisteixin."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": [
+              "El client ha d'haver rebut la informació relativa a la hipoteca des del banc amb l'antelació suficient, i el notari ho comprovarà al dur-se a terme l'acta prèvia a la signatura de la hipoteca."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Quins documents es requereixen per cancel·lar una hipoteca?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Certificat bancari de saldo zero</strong>, que acrediti doncs que ja res es deu.",
+              "<strong>Nota simple registral de la finca</strong> de la qual es cancel·la la hipoteca, o còpia de l'escriptura per la qual es va hipotecar."
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   "last-will": {

@@ -288,7 +288,40 @@
   },
 
   "finance": {
-    "title": "Trámites financieros"
+    "title": "Trámites financieros",
+    "items": [
+      {
+        "question": "¿Qué documentación debemos aportar para constituir una hipoteca o para modificar las condiciones de la misma?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Escritura de propiedad</strong> o en su defecto <strong>nota simple registral</strong>.",
+              "<strong>Recibo del I.B.I.</strong>",
+              "Si hubiesen cargas anteriores en la finca: <strong>certificado saldo cero</strong> o <strong>provisión para cancelarlas</strong>, salvo que se pretenda que subsistan."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": [
+              "El cliente debe haber recibido la información relativa a la hipoteca desde el banco con la antelación suficiente, y el notario la comprobará al llevarse a cabo el acta previa a la firma de la hipoteca."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "¿Qué documentos se requieren para cancelar una hipoteca?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Certificado bancario de saldo cero</strong>, que acredite pues que ya nada se debe.",
+              "<strong>Nota simple registral de la finca</strong> cuya hipoteca se cancela, o copia de la escritura por la cual se hipotecó."
+            ]
+          }
+        ]
+      }
+    ]
   },
 
   "last-will": {
