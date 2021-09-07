@@ -511,6 +511,41 @@
   },
 
   "real-estate": {
-    "title": "Tràmits immobiliaris"
+    "title": "Tràmits immobiliaris",
+    "items": [
+      {
+        "question": "Quina documentació es requereix per vendre un habitatge?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de les parts intervinents</strong> i, de ser una persona jurídica, l'escriptura de constitució, la de nomenament del càrrec de representant i l'acta de titularitat real.",
+              "<strong>Escriptura de la propietat</strong> que es pretén vendre o, en el seu defecte, <strong>nota simple</strong> del registre.",
+              "<strong>Cèdula d'habitabilitat</strong> (o sol·licitud d'expedició per tècnic competent), o cèdula de qualificació definitiva en el cas que es tracti d'un habitatge de protecció oficial.",
+              "<strong>Certificat d'eficiència energètica</strong>: no és necessari per escripturar ni per inscriure. El comprador té dret a exigir-lo, però pot exonerar.",
+              "<strong>Rebut del pagament de l'impost de béns immobles</strong> (I.B.I.) durant els darrers 4 anys</strong>.",
+              "Certificat d'estar al corrent de les <strong>despeses de comunitat</strong>.",
+              "<strong>Justificant dels pagaments</strong> ja realitzats <strong>abans de la signatura</strong> (fotocòpia del xec i número del compte on es va carregar, en cas de ser transferència, s'han d'aportar els números de càrrec i de destinació).",
+              "Si l'habitatge està gravat amb una hipoteca, certificat de saldo pendent o de <strong>saldo zero</strong>."
+            ]
+          }
+        ],
+        "consideration": {
+          "title": "A tenir en compte...",
+          "answers": [
+            {
+              "type": "list",
+              "sentences": [
+                "En les declaracions d'obra nova acabada s'exigeix la <strong>llicència de primera ocupació</strong>.",
+                "Quan l'habitatge procedeix d'execució hipotecària, es requereix que la Generalitat <strong>renunciï al dret de tempteig que ostenta</strong>.",
+                "Quan es transmet un habitatge antic (més de 45 anys des de la seva construcció), es requereix que s'acrediti <strong>la inspecció tècnica d'edificis</strong> (I.T.E.). El comprador pot exonerar de la mateixa.",
+                "Si existís sobre la finca algun arrendament, s'haurà d'aportar <strong>el contracte d'arrendament</strong> per verificar si existeix o no dret d'adquisició preferent.",
+                "Si es tracta de l'habitatge comú de la parella o matrimoni, hauran de comparèixer dues parts davant notari."
+              ]
+            }
+          ]
+        }
+      }
+    ]
   }
 }

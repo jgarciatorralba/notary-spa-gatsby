@@ -511,6 +511,41 @@
   },
 
   "real-estate": {
-    "title": "Trámites inmobiliarios"
+    "title": "Trámites inmobiliarios",
+    "items": [
+      {
+        "question": "¿Qué documentación se requiere para vender una vivienda?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de las partes intervinientes</strong> y, de ser una persona jurídica, la escritura de constitución, la de nombramiento del cargo de representante y el acta de titularidad real.",
+              "<strong>Escritura de propiedad</strong> que se pretende vender o, en su defecto, <strong>nota simple</strong> del registro.",
+              "<strong>Cédula de habitabilidad</strong> (o solicitud de expedición por técnico competente), o cédula de calificación definitiva en caso de que se trate de una vivienda de protección oficial.",
+              "<strong>Certificado de eficiencia energética</strong>: no es necesario para escriturar ni para inscribir. El comprador tiene derecho a exigirlo, pero puede exonerar.",
+              "<strong>Recibo del pago del impuesto de bienes inmuebles</strong> (I.B.I.) durante los últimos 4 años.",
+              "Certificado de estar al corriente de los <strong>gastos de comunidad</strong>.",
+              "<strong>Justificante de los pagos</strong> ya realizados <strong>antes de la firma</strong> (fotocopia del cheque y número de la cuenta donde se cargó; en caso de ser transferencia, deberán aportarse los números de cargo y de destino).",
+              "Si la vivienda esta grabada con una hipoteca, certificado de saldo pendiente o de <strong>saldo cero</strong>."
+            ]
+          }
+        ],
+        "consideration": {
+          "title": "A tener en cuenta...",
+          "answers": [
+            {
+              "type": "list",
+              "sentences": [
+                "En las declaraciones de obra nueva terminada se exige <strong>la licencia de primera ocupación</strong>.",
+                "Cuando la vivienda procede de ejecución hipotecaria, se requiere que la Generalitat <strong>renuncie al derecho de tanteo que ostenta</strong>.",
+                "Cuando se transmite una vivienda antigua (más de 45 años desde su construcción), se requiere que se acredite <strong>la inspección técnica de edificios</strong> (I.T.E.). El comprador puede exonerar de la misma.",
+                "Si existiese sobre la finca algún arrendamiento, deberá aportarse <strong>el contrato de arrendamiento</strong> para verificar si existe o no derecho de adquisición preferente.",
+                "Si se trata de la vivienda común de la pareja o matrimonio, deberán comparecer ambas partes ante notario."
+              ]
+            }
+          ]
+        }
+      }
+    ]
   }
 }
