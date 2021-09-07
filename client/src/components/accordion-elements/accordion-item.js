@@ -64,7 +64,7 @@ const AccordionItem = ({
           ))}
 
           {consideration && (
-            <div className="accordion-item-consideration">
+            <div className="accordion-item-consideration my-4 mx-4 sm:mx-8">
               <h3 className="mb-2 font-bold">{consideration.title}</h3>
 
               {consideration.answers.map((answer, answerIndex) => (
