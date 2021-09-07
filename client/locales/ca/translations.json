@@ -545,6 +545,35 @@
             }
           ]
         }
+      },
+      {
+        "question": "Quina documentació es requereix per escripturar una divisió horitzontal?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de les parts intervinents</strong> i, de ser una persona jurídica, l'escriptura de constitució, la de nomenament del càrrec de representant i l'acta de titularitat real.",
+              "<strong>Escriptura de la propietat</strong> o, en el seu defecte, nota simple del registre.",
+              "<strong>Escriptura de declaració d'obra nova acabada</strong>.",
+              "<strong>Rebut de l'I.B.I.</strong>",
+              "Tota la <strong>informació relativa a la forma de dur a terme aquesta divisió horitzontal</strong>: quotes de cada element, regulació de les despeses, etc."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Quina documentació és necessària per a escripturar alguns dels següents actes: agregació, divisió, agrupació o segregació?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Escriptura que acrediti la propietat</strong> o <strong>nota simple</strong> del registre.",
+              "<strong>Plans amb les coordenades</strong> de referenciació geogràfica.",
+              "<strong>Rebut de l'I.B.I.</strong>",
+              "<strong>Llicència per a realitzar tals actes</strong> o, si no és necessària, haurà d'aportar-se la declaració d'innecessarietat."
+            ]
+          }
+        ]
       }
     ]
   }
