@@ -340,6 +340,77 @@
             ]
           }
         ]
+      },
+      {
+        "question": "Quina documentació s'ha d'aportar per atorgar testament?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI del testador/a</strong>.",
+              "En cas d'existir <strong>fills menors d'edat</strong>, preguntar al Notari per les figures del tutor i l'administrador."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Si una persona mor sense testament es durà a terme l'acta de declaració d'hereus abintestat. Quina documentació aportarem a la notaria?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI del requeridor</strong> (qui requereix al notari perquè dugui a terme l'acta en qüestió) i la seva relació de parentiu amb el difunt.",
+              "<strong>Certificat de defunció</strong>.",
+              "<strong>Certificat d'últimes voluntats</strong>.",
+              "<strong>Llibre de família</strong> o, en el seu defecte, certificat de matrimoni i certificat de naixement de tots els fills.",
+              "<strong>DNI dels dos testimonis</strong>. Han de ser majors d'edat, i no poden ser família consanguínia ni per afinitat de la persona morta, així com tampoc dels hereus ni de l'usufructuari."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": [
+              "Des de la notaria i, depenent del cas, es podrà sol·licitar documentació complementària."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Per tramitar l'herència intestada amb posterioritat a aquesta declaració d'hereus, s'haurà d'aportar:",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de totes les persones cridades a la successió</strong> (generalment, descendents i vidu/vídua).",
+              "<strong>Copia autoritzada de l'acta de requeriment</strong>.",
+              "<strong>Còpia autoritzada de l'acta de notorietat de la declaració d'hereus</strong>.",
+              "<strong>Certificat del registre d'actes d'última voluntat</strong>, per verificar si el difunt va atorgar testament o no (es pot demanar des de la notaria).",
+              "<strong>DNI dels interessats en la successió</strong>.",
+              "<strong>Certificats bancaris dels comptes existents</strong>.",
+              "<strong>Escriptura de propietat</strong> (còpia autoritzada de les escriptures de propietat o, en el seu defecte, nota simple registral). Si és possible, <strong>certificat de l'I.B.I.</strong> i, si hi ha vehicles, fitxa tècnica d'aquestos.",
+              "<strong>Certificat del registre d'assegurances de cobertura de defunció</strong> (es pot demanar des de la notaria).",
+              "<strong>Factura de les despeses de darrera malaltia i enterrament</strong>.",
+              "Si el mort era vidu/vídua: <strong>certificat de defunció de qui va ser el seu espòs/a o còpia autoritzada de l'herència d'aquest/a</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Quina documentació es requereix per preparar una herència testada (acceptació i partició)?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI</strong> de totes les persones cridades a la successió.",
+              "<strong>Certificat de defunció del difunt</strong> (es pot demanar des de la notaria).",
+              "<strong>Certificat del registre d'actes d'última voluntat</strong>, per verificar si el difunt va atorgar testament o no (es pot demanar des de la notaria).",
+              "<strong>Còpia autoritzada del testament o de l'acta notarial d'hereus abintestat</strong>.",
+              "<strong>Escriptura de propietat</strong> (còpia autoritzada de les escriptures de propietat o, en el seu defecte, nota simple registral). Si és possible, <strong>certificat de l'I.B.I.</strong> i, si hi ha vehicles, fitxa tècnica d'aquestos.",
+              "<strong>Certificat del registre d'assegurances de cobertura de defunció</strong> (es pot demanar des de la notaria).",
+              "<strong>Factura de les despeses de darrera malaltia i enterrament</strong>.",
+              "Si el mort era vidu/vídua: <strong>certificat de defunció de qui va ser el seu espòs/a o còpia autoritzada de l'herència d'aquest/a</strong>."
+            ]
+          }
+        ]
       }
     ]
   },

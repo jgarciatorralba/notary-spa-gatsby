@@ -340,6 +340,77 @@
             ]
           }
         ]
+      },
+      {
+        "question": "¿Qué documentación se debe aportar para otorgar testamento?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI del testador/a</strong>.",
+              "En caso de existir <strong>hijos menores de edad</strong>, preguntar al Notario por las figuras del tutor y el administrador."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Si una persona fallece sin testamento se llevará a cabo el acta de declaración de herederos abintestato. ¿Qué documentación aportaremos a la notaría?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI del requirente</strong> (quien requiere al notario para que lleve a cabo el acta en cuestión) y su relación de parentesco con el difunto.",
+              "<strong>Certificado de defunción</strong>.",
+              "<strong>Certificado de ultimas voluntades</strong>.",
+              "<strong>Libro de familia</strong> o, en su defecto, certificado de matrimonio y certificado de nacimiento de todos los hijos.",
+              "<strong>DNI de los dos testigos</strong>. Deben ser mayores de edad y no pueden ser familia consanguínea ni por afinidad de la persona fallecida, así como tampoco de los herederos ni del usufructuario."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": [
+              "Desde la notaría y, dependiendo del caso, podrá solicitarse documentación complementaria."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Para tramitar la herencia intestada con posterioridad a dicha declaración de herederos, deberá aportarse:",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de todas las personas llamadas a la sucesión</strong> (generalmente, descendientes y viudo/a).",
+              "<strong>Copia autorizada del acta de requerimiento</strong>.",
+              "<strong>Copia autorizada del acta de notoriedad de la declaración de herederos</strong>.",
+              "<strong>Certificado del registro de actos de última voluntad</strong>, para verificar si el fallecido otorgó testamento o no (se puede pedir desde la notaría).",
+              "<strong>DNI de los interesados en la sucesión</strong>.",
+              "<strong>Certificados bancarios de las cuentas existentes</strong>.",
+              "<strong>Escritura de propiedad</strong> (copia autorizada de las escrituras de propiedad o, en su defecto, nota simple registral). De ser posible, <strong>certificado del I.B.I.</strong> y, si hay vehículos, <strong>ficha técnica de los mismos</strong>.",
+              "<strong>Certificado del registro de seguros de cobertura de fallecimiento</strong> (se puede pedir desde la notaría).",
+              "<strong>Factura de los gastos de última enfermedad y entierro</strong>.",
+              "Si el fallecido era viudo/a: <strong>certificado de defunción del que fue su esposo/a o copia autorizada de la herencia del mismo</strong>."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "¿Qué documentación se requiere para preparar una herencia testada (aceptación y partición)?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI</strong> de todas las personas llamadas a la sucesión.",
+              "<strong>Certificado de defunción del fallecido</strong> (se puede pedir desde la notaría).",
+              "<strong>Certificado del registro de actos de última voluntad</strong>, para verificar si el fallecido otorgó testamento o no (se puede pedir desde la notaría).",
+              "<strong>Copia autorizada del testamento o del acta notarial de herederos abintestato</strong>.",
+              "<strong>Escritura de propiedad</strong> (copia autorizada de las escrituras de propiedad o, en su defecto, nota simple registral). De ser posible, <strong>certificado del I.B.I.</strong> y, si hay vehículos, <strong>ficha técnica de los mismos</strong>.",
+              "<strong>Certificado del registro de seguros de cobertura de fallecimiento</strong> (se puede pedir desde la notaría).",
+              "<strong>Factura de los gastos de última enfermedad y entierro</strong>.",
+              "Si el fallecido era viudo/a: <strong>certificado de defunción del que fue su esposo/a o copia autorizada de la herencia del mismo</strong>."
+            ]
+          }
+        ]
       }
     ]
   },
