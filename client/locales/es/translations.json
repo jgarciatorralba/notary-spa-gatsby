@@ -547,6 +547,32 @@
         }
       },
       {
+        "question": "¿Qué documentación se requiere para escriturar una declaración de obra nueva terminada (DONT)?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de las partes intervinientes</strong> y, de ser una persona jurídica, la escritura de constitución, la de nombramiento del cargo de representante y el acta de titularidad real.",
+              "<strong>Escritura que acredite la propiedad del inmueble</strong> o, en su defecto, <strong>nota simple</strong> del registro.",
+              "<strong>Cédula de habitabilidad</strong>.",
+              "<strong>Certificado de eficiencia energética</strong>.",
+              "<strong>Recibo del I.B.I.</strong>",
+              "<strong>Libro del edificio</strong>, para su reflejo registral.",
+              "<strong>Solicitud de licencia de primera ocupación</strong>.",
+              "<strong>Seguro decenal</strong>, salvo que se trate de un auto-promotor.",
+              "<strong>Licencia de edificación</strong> a nombre del propietario y vigente.",
+              "<strong>Certificado del técnico</strong> competente con firmas legitimadas notarialmente."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": [
+              "Se aconseja aportar <strong>toda la documentación relativa al proyecto</strong>, tanto a efectos descriptivos (para identificarla debidamente en la escritura), como económicos (para valorarla correctamente a efectos fiscales)."
+            ]
+          }
+        ]
+      },
+      {
         "question": "¿Qué documentación se requiere para escriturar una división horizontal?",
         "answers": [
           {
