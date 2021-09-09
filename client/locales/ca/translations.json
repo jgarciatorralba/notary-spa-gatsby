@@ -547,6 +547,32 @@
         }
       },
       {
+        "question": "Quina documentació es requereix per escripturar una declaració d'obra nova acabada (DONT)?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de les parts intervinents</strong> i, de ser una persona jurídica, l'escriptura de constitució, la de nomenament del càrrec de representant i l'acta de titularitat real.",
+              "<strong>Escriptura que acrediti la propietat de l'immoble</strong> o, en el seu defecte, <strong>nota simple</strong> del registre.",
+              "<strong>Cèdula d'habitabilitat</strong>.",
+              "<strong>Certificat d'eficiència energètica</strong>.",
+              "<strong>Rebut de l'I.B.I.</strong>",
+              "<strong>Llibre de l'edifici</strong>, per al seu reflex registral.",
+              "<strong>Sol·licitud de llicència de primera ocupació</strong>.",
+              "<strong>Segur decennal</strong>, llevat que es tracti d'un auto-promotor.",
+              "<strong>Llicència d'edificació</strong> a nom del propietari i vigent.",
+              "<strong>Certificat de tècnic</strong> competent amb firmes legitimades notarialment."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": [
+              "Es recomana aportar <strong>tota la documentació relativa al projecte</strong>, tant a efectes descriptius (per identificar-la degudament en l'escriptura) com econòmics (per valorar-la correctament a efectes fiscals)."
+            ]
+          }
+        ]
+      },
+      {
         "question": "Quina documentació es requereix per escripturar una divisió horitzontal?",
         "answers": [
           {
