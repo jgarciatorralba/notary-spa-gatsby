@@ -547,6 +547,36 @@
         }
       },
       {
+        "question": "Quina documentació es requereix per dissoldre un condomini (extingir una situació de comunitat)?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de les parts intervinents</strong> i, de ser una persona jurídica, l'escriptura de constitució, la de nomenament del càrrec de representant i l'acta de titularitat real.",
+              "<strong>Escriptura de propietat</strong> del bé la comunitat de la qual es pretén dissoldre, o, en el seu defecte, <strong>nota simple del registre</strong>.",
+              "<strong>Rebut de l'I.B.I.</strong>, o el certificat que acrediti que s'ha pagat durant els últims 4 anys.",
+              "Si la finca està arrendada, haurà d'aportar-se el <strong>contracte d'arrendament</strong>.",
+              "Si l'habitatge està gravat amb una hipoteca, certificat de saldo pendent o de <strong>saldo zero</strong>.",
+              "<strong>Acreditació dels mitjans de compensació a l'adjudicatari</strong>: justificant del xec o transferència, per exemple."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": ["S'aconsella, malgrat no ser obligatori:"]
+          },
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Cèdula d'habitabilitat</strong> o sol·licitud per tècnic competent.",
+              "<strong>Certificat d'eficiència energètica</strong>.",
+              "<strong>Llicència de primera ocupació</strong>.",
+              "<strong>I.T.E.</strong> (inspecció tècnica d'edificis) en cas que l'habitatge tingui més de 45 anys des que es va construir.",
+              "<strong>Certificat que acrediti estar a l'corrent de les despeses de comunitat</strong>."
+            ]
+          }
+        ]
+      },
+      {
         "question": "Quina documentació es requereix per escripturar una declaració d'obra nova acabada (DONT)?",
         "answers": [
           {

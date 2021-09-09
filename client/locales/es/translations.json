@@ -547,6 +547,36 @@
         }
       },
       {
+        "question": "¿Qué documentación se requiere para disolver un condominio (extinguir una situación de comunidad)?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de las partes intervinientes</strong> y, de ser una persona jurídica, la escritura de constitución, la de nombramiento del cargo de representante y el acta de titularidad real.",
+              "<strong>Escritura de propiedad</strong> del bien cuya comunidad se pretende disolver, o en su defecto nota simple del registro.",
+              "<strong>Recibo del I.B.I.</strong> o el certificado que acredite que se ha pagado durante los últimos 4 años.",
+              "Si la finca está arrendada, deberá de aportarse el <strong>contrato de arrendamiento</strong>.",
+              "Si la vivienda esta grabada con una hipoteca, certificado de saldo pendiente o de <strong>saldo cero</strong>.",
+              "<strong>Acreditación de los medios de compensación al adjudicatario</strong>: justificante del cheque o transferencia, por ejemplo."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": ["Se aconseja, pese a no ser obligatorio:"]
+          },
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>Cédula de habitabilidad</strong> o solicitud por técnico competente.",
+              "<strong>Certificado de eficiencia energética</strong>.",
+              "<strong>Licencia de primera ocupación</strong>.",
+              "<strong>I.T.E.</strong> (inspección técnica de edificios) en caso de que la vivienda tenga más de 45 años desde que se construyó.",
+              "<strong>Certificado que acredite estar al corriente de los gastos de comunidad</strong>."
+            ]
+          }
+        ]
+      },
+      {
         "question": "¿Qué documentación se requiere para escriturar una declaración de obra nueva terminada (DONT)?",
         "answers": [
           {
