@@ -37,7 +37,7 @@ const ServiceDetails = ({ data }) => {
   } else if (service === "last-will") {
     bgPosition = "50% 45%"
   } else if (service === "real-estate") {
-    bgPosition = "50% 35%"
+    bgPosition = "50% 37.5%"
   } else if (service === "power-of-attorney") {
     bgPosition = "50% 75%"
   } else {
