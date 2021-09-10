@@ -3,7 +3,7 @@ import { Fragment } from "react"
 import { Trans } from "gatsby-plugin-react-i18next"
 import { ChevronLeftIcon } from "@heroicons/react/outline"
 
-import "../../styles/components/accordion-elements/accordion-item.scss"
+import "../../styles/components/accordion-elements/accordionItem.scss"
 
 const AccordionItem = ({
   showDescription,

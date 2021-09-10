@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useState } from "react"
 
-import AccordionItem from "./accordion-elements/accordion-item"
+import AccordionItem from "./accordion-elements/accordionItem"
 
 import "../styles/components/accordion.scss"
 
