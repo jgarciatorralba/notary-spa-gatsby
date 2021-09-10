@@ -577,7 +577,47 @@
         ]
       },
       {
-        "question": "Quina documentació es requereix per escripturar una declaració d'obra nova acabada (DONT)?",
+        "question": "Quina documentació es requereix per escripturar una declaració d'obra nova en construcció (D.O.N.C.)?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de les parts intervinents</strong> i, de ser una persona jurídica, l'escriptura de constitució, la de nomenament del càrrec de representant i l'acta de titularitat real.",
+              "<strong>Escriptura que acrediti la propietat de l'immoble</strong> o, en el seu defecte, <strong>nota simple del registre</strong>.",
+              "<strong>Rebut de l'I.B.I.</strong>",
+              "<strong>Llicència d'edificació</strong> a nom del propietari i vigent.",
+              "<strong>Certificat de tècnic</strong> competent amb firmes legitimades notarialment."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": [
+              "Es recomana aportar tota la <strong>documentació relativa al projecte</strong>, tant a efectes descriptius (per identificar-la degudament en l'escriptura) com econòmics (per valorar-la correctament a efectes fiscals)."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Quina documentació es requereix per dur a terme un acta de finalització d'obra (A.F.O.)?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de les parts intervinents</strong> i, de ser una persona jurídica, l'escriptura de constitució, la de nomenament del càrrec de representant i l'acta de titularitat real.",
+              "<strong>Escriptura de propietat del sòl</strong> (còpia autoritzada) i escriptura de declaració d'obra nova en construcció o, en el seu defecte, <strong>nota simple del registre</strong>.",
+              "<strong>Cèdula d'habitabilitat</strong>.",
+              "<strong>Certificat d'eficiència energètica</strong>.",
+              "<strong>Rebut de l'I.B.I.</strong>",
+              "<strong>Llibre de l'edifici</strong>, que haurà de dipositar-se al registre amb caràcter previ a l'A.F.O.",
+              "<strong>Sol·licitud de llicència de primera ocupació</strong>.",
+              "<strong>Segur decennal</strong>, llevat que es tracti d'un auto-promotor.",
+              "<strong>Certificat de tècnic</strong> competent sobre la finalització de l'obra, visat pels promotors i legitimat davant notari."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "Quina documentació es requereix per escripturar una declaració d'obra nova terminada (D.O.N.T.)?",
         "answers": [
           {
             "type": "list",

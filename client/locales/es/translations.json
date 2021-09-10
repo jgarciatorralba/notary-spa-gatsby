@@ -102,14 +102,14 @@
       "inputs": {
         "fullname": {
           "label": "Nombre y apellidos",
-          "placeholder": "Carlos García",
+          "placeholder": "Carlos Torres",
           "errors": {
             "empty": "Por favor, complete este campo."
           }
         },
         "email": {
           "label": "Correo electrónico",
-          "placeholder": "carlosgarcia@ejemplo.com",
+          "placeholder": "carlostorres@ejemplo.com",
           "errors": {
             "empty": "Por favor, complete este campo.",
             "invalid": "El formato utilizado no es válido."
@@ -577,7 +577,47 @@
         ]
       },
       {
-        "question": "¿Qué documentación se requiere para escriturar una declaración de obra nueva terminada (DONT)?",
+        "question": "¿Qué documentación se requiere para escriturar una declaración de obra nueva en construcción (D.O.N.C.)?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de las partes intervinientes</strong> y, de ser una persona jurídica, la escritura de constitución, la de nombramiento del cargo de representante y el acta de titularidad real.",
+              "<strong>Escritura que acredite la propiedad del inmueble</strong> o, en su defecto, <strong>nota simple del registro</strong>.",
+              "<strong>Recibo del I.B.I.</strong>",
+              "<strong>Licencia de edificación</strong> a nombre del propietario y vigente.",
+              "<strong>Certificado del técnico</strong> competente con firmas legitimadas notarialmente."
+            ]
+          },
+          {
+            "type": "paragraph",
+            "sentences": [
+              "Se aconseja aportar toda la <strong>documentación relativa al proyecto</strong>, tanto a efectos descriptivos (para identificarla debidamente en la escritura), como económicos (para valorarla correctamente a efectos fiscales)."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "¿Qué documentación se requiere para llevar a efecto un acta de finalización de obra (A.F.O.)?",
+        "answers": [
+          {
+            "type": "list",
+            "sentences": [
+              "<strong>DNI de las partes intervinientes</strong> y, de ser una persona jurídica, la escritura de constitución, la de nombramiento del cargo de representante y el acta de titularidad real.",
+              "<strong>Escritura de propiedad del suelo</strong> (copia autorizada) y escritura de declaración de obra nueva en construcción o, en su defecto, <strong>nota simple del registro</strong>.",
+              "<strong>Cédula de habitabilidad</strong>.",
+              "<strong>Certificado de eficiencia energética</strong>.",
+              "<strong>Recibo del I.B.I.</strong>",
+              "<strong>Libro del edificio</strong>, que deberá depositarse en el registro con carácter previo al A.F.O.",
+              "<strong>Solicitud de licencia de primera ocupación</strong>.",
+              "<strong>Seguro decenal</strong>, salvo que se trate de un auto-promotor.",
+              "<strong>Certificado del técnico</strong> competente sobre la finalización de la obra, visado por los promotores y legitimado ante notario."
+            ]
+          }
+        ]
+      },
+      {
+        "question": "¿Qué documentación se requiere para escriturar una declaración de obra nueva terminada (D.O.N.T.)?",
         "answers": [
           {
             "type": "list",
