@@ -1,14 +1,14 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-import "../styles/components/notaryCard.scss"
+import "../../styles/components/cards/notaryCard.scss"
 
 const NotaryCard = ({ name, bio, highlights }) => {
   return (
     <div className="team-member notary">
       <div className="section-picture p-4 flex items-center">
         <StaticImage
-          src="../assets/images/demo/about/team/notary.jpg"
+          src="../../assets/images/demo/about/team/notary.jpg"
           alt=""
           placeholder="blurred"
           quality={90}

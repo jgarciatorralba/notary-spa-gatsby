@@ -2,8 +2,8 @@ import * as React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Slider from "react-slick"
 
-import NotaryCard from "./notaryCard"
-import MemberCard from "./memberCard"
+import NotaryCard from "./cards/notaryCard"
+import MemberCard from "./cards/memberCard"
 
 import "../styles/components/teamSlider.scss"
 

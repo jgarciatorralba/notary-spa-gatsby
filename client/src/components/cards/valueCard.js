@@ -1,10 +1,10 @@
 import * as React from "react"
 
-import EffectivenessIcon from "../assets/svgs/about/company_values/effectiveness.svg"
-import ProfessionalismIcon from "../assets/svgs/about/company_values/professionalism.svg"
-import ProximityIcon from "../assets/svgs/about/company_values/proximity.svg"
+import EffectivenessIcon from "../../assets/svgs/about/company_values/effectiveness.svg"
+import ProfessionalismIcon from "../../assets/svgs/about/company_values/professionalism.svg"
+import ProximityIcon from "../../assets/svgs/about/company_values/proximity.svg"
 
-import "../styles/components/valueCard.scss"
+import "../../styles/components/cards/valueCard.scss"
 
 const ValueCard = ({ valueKey, valueName, valueDescription }) => {
   return (
