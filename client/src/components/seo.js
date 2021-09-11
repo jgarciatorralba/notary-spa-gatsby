@@ -61,7 +61,7 @@ function Seo({ description, meta, pageTitle, defaultTitle }) {
           content: `summary`,
         },
         {
-          name: `twitter:creator`,
+          name: `author`,
           content: site.siteMetadata?.author || ``,
         },
         {
