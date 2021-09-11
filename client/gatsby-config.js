@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Notaría Mínguez`,
-    description: `ES: Lorem ipsum dolor sit amet, consectetur adipiscing elit. In scelerisque blandit egestas. Etiam ac elit a erat dictum imperdiet. In enim nunc, fringilla sit amet dictum non, tempor vel augue. Integer scelerisque sem varius fermentum tincidunt. Mauris sagittis dignissim tortor vel dictum. Nulla eu condimentum leo.`,
+    description: `En la Notaría Mínguez, ubicada en Vic, nos ponemos a su entera disposición para resolver cualquier duda relacionada con trámites y actos jurídicos. Ofrecemos un asesoramiento personalizado, profesional y de calidad, esencial para la toma de decisiones y la preparación de documentos notariales. Elaboramos sus escrituras de compraventa, testamento, donación y creación de empresas, entre otros.`,
     author: `@jorgartor`,
   },
   plugins: [
