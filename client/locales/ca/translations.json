@@ -672,5 +672,64 @@
         ]
       }
     ]
+  },
+
+  "legal-notice": {
+    "title": "Avís legal",
+    "sections": [
+      {
+        "purpose": {
+          "title": "Objecte",
+          "texts": [
+            {
+              "type": "paragraph",
+              "elements": [
+                "Als efectes de l’article 10 de la Llei 34/2002, d’11 de juliol, de serveis de la societat de la informació i de comerç electrònic, l'informem que el titular d'aquest web és la Notaria Mínguez (des d'ara \"la Notaria\"), amb domicili a la Rambla de l'Hospital nº 6 - 1ª, 08500 de Vic, Barcelona.",
+                "La utilització d'aquest lloc web implica l'acceptació per part de l'usuari de les condicions d'ús incloses en aquest avís.",
+                "D'altra banda, la Notaria adverteix que tant els continguts i serveis d'aquesta pàgina web com les pròpies condicions d'utilització poden ser modificats sense notificació prèvia."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "conditions": {
+          "title": "Condicions d'ús",
+          "texts": [
+            {
+              "type": "paragraph",
+              "elements": [
+                "El web només pot ser utilitzat amb propòsits legals, per tant, l'usuari s'obliga a fer un ús lícit i honrat del web i conforme a les presents condicions, i a no fer servir els seus serveis per a la realització d'activitats contràries a la legislació espanyola, a la moral i a l'ordre públic, assumint per part de l'usuari totes les responsabilitats de danys i perjudicis davant el titular del domini o tercers que puguin derivar-se de pràctiques il·legals o no permeses.",
+                "Entre d'altres i a títol enunciatiu i no limitatiu:"
+              ]
+            },
+            {
+              "type": "list",
+              "elements": [
+                "Realitzar, sense previ consentiment per part de la titular del domini, qualsevol manipulació o alteració d'aquesta pàgina, no assumint el titular del domini cap responsabilitat que pogués derivar d'aquesta manipulació o alteració per tercers.",
+                "Realitzar qualsevol acte que pugui danyar, inutilitzar, sobrecarregar, o deteriorar el web i els serveis i/o impedir el normal ús i utilització per part dels usuaris.",
+                "Introduir i/o utilitzar programes d'ordinador, dades, arxius defectuosos, virus, codi maliciós, equips informàtics o de telecomunicacions o qualsevol altre, independentment de la seva naturalesa, que pugui causar danys al web en qualsevol dels serveis, o en qualssevol actius (físics o lògics) dels sistemes d'informació del titular del domini.",
+                "Violar els drets de tercers a la intimitat, la pròpia imatge, la protecció de dades al secret en les comunicacions, a la propietat intel·lectual i industrial.",
+                "Utilitzar identitats falses, suplantar la identitat d'altres en la utilització del web o en la utilització de qualsevol dels serveis.",
+                "Reproduir, distribuir, modificar o copiar el contingut d'aquesta pàgina, llevat que de disposi de l'autorització del titular del domini o estigui legalment autoritzat."
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "law": {
+          "title": "Legislació aplicable",
+          "texts": [
+            {
+              "type": "paragraph",
+              "elements": [
+                "Les presents Condicions es regiran en tot moment pel que disposa la legislació espanyola."
+              ]
+            }
+          ]
+        }
+      }
+    ]
   }
 }
