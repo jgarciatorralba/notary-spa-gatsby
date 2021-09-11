@@ -43,7 +43,10 @@ function Seo({ description, meta, pageTitle, defaultTitle }) {
         },
         {
           property: `og:title`,
-          content: metaTitle,
+          content:
+            metaTitle !== metaDefaultTitle
+              ? `${metaTitle}|${metaDefaultTitle}`
+              : metaDefaultTitle,
         },
         {
           property: `og:description`,
@@ -63,7 +66,10 @@ function Seo({ description, meta, pageTitle, defaultTitle }) {
         },
         {
           name: `twitter:title`,
-          content: metaTitle,
+          content:
+            metaTitle !== metaDefaultTitle
+              ? `${metaTitle}|${metaDefaultTitle}`
+              : metaDefaultTitle,
         },
         {
           name: `twitter:description`,
