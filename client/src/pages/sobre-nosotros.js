@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation, Trans } from "gatsby-plugin-react-i18next"
 import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
@@ -31,8 +31,7 @@ const AboutPage = () => {
       <div className="about-wrapper max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
         <div className="block-intro mb-4">
           <h2 className="mb-2">
-            <strong>{header.businessName}</strong>{" "}
-            <span>{header.businessLocation}</span>
+            <Trans>{header}</Trans>
           </h2>
           <p className="mb-2">{summary}</p>
         </div>
