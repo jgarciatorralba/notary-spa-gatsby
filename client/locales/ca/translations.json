@@ -795,7 +795,7 @@
             {
               "type": "paragraph",
               "elements": [
-                "Així mateix, s'informa que per a una major garantia en el compliment de la Protecció de dades ha estat designat un Delegat en Protecció de Dades amb la següent informació de contacte:",
+                "Així mateix, s'informa que per a una major garantia en el compliment de la Protecció de dades ha estat designat un Delegat en Protecció de Dades amb la següent informació de contacte: <1>{{contact}}</1>.",
                 "Davant de qualsevol vulneració de drets, es pot presentar una reclamació davant l'Agència Espanyola de Protecció de Dades."
               ]
             }
