@@ -675,57 +675,54 @@
     "title": "Aviso legal",
     "sections": [
       {
-        "purpose": {
-          "title": "Objeto",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "A efectos del artículo 10 de la Ley 34/2002, de 11 de julio, de la Ley de Servicios de la Sociedad de la Información y del Comercio Electrónico; le informamos de que el titular de esta web es la Notaría Mínguez (en adelante \"la Notaría\"), con domicilio en la Rambla del Hospital nº 6 - 1ª, 08500 de Vic, Barcelona.",
-                "La utilización de este sitio web implica la aceptación por parte del usuario de las condiciones de uso incluidas en este aviso.",
-                "Por otra parte, la Notaría advierte que tanto los contenidos y servicios de esta página web como las propias condiciones de utilización pueden ser modificados sin notificación previa."
-              ]
-            }
-          ]
-        }
+        "key": "purpose",
+        "title": "Objeto",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "A efectos del artículo 10 de la Ley 34/2002, de 11 de julio, de la Ley de Servicios de la Sociedad de la Información y del Comercio Electrónico; le informamos de que el titular de esta web es la Notaría Mínguez (en adelante \"la Notaría\"), con domicilio en la Rambla del Hospital nº 6 - 1ª, 08500 de Vic, Barcelona.",
+              "La utilización de este sitio web implica la aceptación por parte del usuario de las condiciones de uso incluidas en este aviso.",
+              "Por otra parte, la Notaría advierte que tanto los contenidos y servicios de esta página web como las propias condiciones de utilización pueden ser modificados sin notificación previa."
+            ]
+          }
+        ]
       },
       {
-        "conditions": {
-          "title": "Condiciones de uso",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "La web sólo puede ser utilizada con propósitos legales, por tanto, el usuario se obliga a hacer un uso lícito y honrado de la web y conforme a las presentes condiciones, y a no utilizar sus servicios para la realización de actividades contrarias a la legislación española, a la moral y al orden público, asumiendo por parte del usuario todas las responsabilidades de daños y perjuicios frente al titular del dominio o terceros que pudieran derivarse de prácticas ilegales o no permitidas.",
-                "Entre otras y a título enunciativo y no limitativo:"
-              ]
-            },
-            {
-              "type": "list",
-              "elements": [
-                "Realizar, sin previo consentimiento por parte del titular del dominio, cualquier manipulación o alteración de esta página, no asumiendo el titular del dominio ninguna responsabilidad que pudiera derivarse de dicha manipulación o alteración por terceros.",
-                "Realizar cualquier acto que pueda dañar, inutilizar, sobrecargar, o deteriorar la web y los servicios y/o impedir el normal uso y utilización por parte de los usuarios.",
-                "Introducir y/o utilizar programas de ordenador, datos, archivos defectuosos, virus, código malicioso, equipos informáticos o de telecomunicaciones o cualquier otro, independientemente de su naturaleza, que pueda causar daños en la web en cualquiera de los servicios, o en cualesquiera activos (físicos o lógicos) de los sistemas de información del titular del dominio.",
-                "Violar los derechos de terceros a la intimidad, la propia imagen, la protección de datos al secreto en las comunicaciones, a la propiedad intelectual e industrial.",
-                "Utilizar identidades falsas, suplantar la identidad de otros en la utilización de la web o en la utilización de cualquiera de los servicios.",
-                "Reproducir, distribuir, modificar o copiar el contenido de esta página, salvo que de disponga de la autorización del titular del dominio o esté legalmente autorizado."
-              ]
-            }
-          ]
-        }
+        "key": "conditions",
+        "title": "Condiciones de uso",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "La web sólo puede ser utilizada con propósitos legales, por tanto, el usuario se obliga a hacer un uso lícito y honrado de la web y conforme a las presentes condiciones, y a no utilizar sus servicios para la realización de actividades contrarias a la legislación española, a la moral y al orden público, asumiendo por parte del usuario todas las responsabilidades de daños y perjuicios frente al titular del dominio o terceros que pudieran derivarse de prácticas ilegales o no permitidas.",
+              "Entre otras y a título enunciativo y no limitativo:"
+            ]
+          },
+          {
+            "type": "list",
+            "elements": [
+              "Realizar, sin previo consentimiento por parte del titular del dominio, cualquier manipulación o alteración de esta página, no asumiendo el titular del dominio ninguna responsabilidad que pudiera derivarse de dicha manipulación o alteración por terceros.",
+              "Realizar cualquier acto que pueda dañar, inutilizar, sobrecargar, o deteriorar la web y los servicios y/o impedir el normal uso y utilización por parte de los usuarios.",
+              "Introducir y/o utilizar programas de ordenador, datos, archivos defectuosos, virus, código malicioso, equipos informáticos o de telecomunicaciones o cualquier otro, independientemente de su naturaleza, que pueda causar daños en la web en cualquiera de los servicios, o en cualesquiera activos (físicos o lógicos) de los sistemas de información del titular del dominio.",
+              "Violar los derechos de terceros a la intimidad, la propia imagen, la protección de datos al secreto en las comunicaciones, a la propiedad intelectual e industrial.",
+              "Utilizar identidades falsas, suplantar la identidad de otros en la utilización de la web o en la utilización de cualquiera de los servicios.",
+              "Reproducir, distribuir, modificar o copiar el contenido de esta página, salvo que de disponga de la autorización del titular del dominio o esté legalmente autorizado."
+            ]
+          }
+        ]
       },
       {
-        "law": {
-          "title": "Legislación aplicable",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "Las presentes Condiciones se regirán en todo momento por lo dispuesto en la legislación española."
-              ]
-            }
-          ]
-        }
+        "key": "law",
+        "title": "Legislación aplicable",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "Las presentes Condiciones se regirán en todo momento por lo dispuesto en la legislación española."
+            ]
+          }
+        ]
       }
     ]
   },
@@ -734,85 +731,103 @@
     "title": "Política de privacidad",
     "sections": [
       {
-        "dataTreatment": {
-          "title": "Responsable del tratamiento de datos personales",
-          "contactDetails": {
-            "companyName": "Notaría Mínguez",
-            "id": {
-              "title": "N.I.F:",
-              "value": "R4455667K"
-            },
-            "email": {
-              "title": "Correo electrónico:",
-              "value": "contact@notariaminguez.com"
-            },
-            "address": {
-              "title": "Dirección:",
-              "street": "Rambla Hospital, 6 - 1ª",
-              "zipCode": "08500 - Vic, Barcelona"
-            },
-            "phone": {
-              "title": "Teléfonos:",
-              "numbers": ["938 850 816", "938 853 752"]
-            }
+        "key": "data-treatment",
+        "title": "Responsable del tratamiento de datos personales",
+        "contactDetails": {
+          "companyName": "Notaría Mínguez",
+          "id": {
+            "title": "N.I.F:",
+            "value": "R4455667K"
+          },
+          "email": {
+            "title": "Correo electrónico:",
+            "value": "contact@notariaminguez.com"
+          },
+          "address": {
+            "title": "Dirección:",
+            "street": "Rambla Hospital, 6 - 1ª",
+            "zipCode": "08500 - Vic, Barcelona"
+          },
+          "phone": {
+            "title": "Teléfonos:",
+            "numbers": ["938 850 816", "938 853 752"]
           }
         }
       },
       {
-        "purpose": {
-          "title": "Finalidad del tratamiento",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "La finalidad del tratamiento de los datos que aporte es la de poder contactar con el remitente de la información, dar respuesta a su petición o consulta y hacer un seguimiento posterior. Los datos serán  tratados sobre la base jurídica del consentimiento de la persona que los proporciona. Puede retirarse dicho consentimiento en cualquier momento, si bien ello no afectará a la licitud de los tratamientos efectuados con anterioridad. El hecho de facilitar los datos es voluntario, aunque, en caso de no hacerlo, no se podrá  responder a la solicitud, consulta o reclamación. Por tanto, la comunicación de sus datos personales a estos efectos es un requisito necesario para que podamos atender las peticiones formuladas por esta vía."
-              ]
-            }
-          ]
-        }
+        "key": "purpose",
+        "title": "Finalidad del tratamiento",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "La finalidad del tratamiento de los datos que aporte es la de poder contactar con el remitente de la información, dar respuesta a su petición o consulta y hacer un seguimiento posterior. Los datos serán  tratados sobre la base jurídica del consentimiento de la persona que los proporciona. Puede retirarse dicho consentimiento en cualquier momento, si bien ello no afectará a la licitud de los tratamientos efectuados con anterioridad. El hecho de facilitar los datos es voluntario, aunque, en caso de no hacerlo, no se podrá  responder a la solicitud, consulta o reclamación. Por tanto, la comunicación de sus datos personales a estos efectos es un requisito necesario para que podamos atender las peticiones formuladas por esta vía."
+            ]
+          }
+        ]
       },
       {
-        "conservation": {
-          "title": "Conservación de la información",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "Los datos serán conservados durante el tiempo necesario para dar respuesta a su solicitud, petición, consulta o reclamación y dar esta por definitivamente cerrada. Posteriormente, serán conservados a modo de histórico de comunicaciones, salvo que usted solicite su supresión. Podrá ejercitar los derechos de acceso, rectificación, supresión, limitación del tratamiento, oposición o en su caso la portabilidad de los datos mediante solicitud dirigida al Responsable del Tratamiento, aportando copia de su documento de identidad a la dirección de contacto indicada anteriormente."
-              ]
-            }
-          ]
-        }
+        "key": "conservation",
+        "title": "Conservación de la información",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "Los datos serán conservados durante el tiempo necesario para dar respuesta a su solicitud, petición, consulta o reclamación y dar esta por definitivamente cerrada. Posteriormente, serán conservados a modo de histórico de comunicaciones, salvo que usted solicite su supresión. Podrá ejercitar los derechos de acceso, rectificación, supresión, limitación del tratamiento, oposición o en su caso la portabilidad de los datos mediante solicitud dirigida al Responsable del Tratamiento, aportando copia de su documento de identidad a la dirección de contacto indicada anteriormente."
+            ]
+          }
+        ]
       },
       {
-        "dataProtectionOfficer": {
-          "title": "Delegado de protección de datos",
-          "contact": "dpd@notariaminguez.com",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "Asimismo, se informa que para una mayor garantía en el cumplimiento de la Protección de datos ha sido designado a un Delegado en Protección de Datos cuya información de contacto es la siguiente: <1>{{contact}}</1>.",
-                "Frente a cualquier vulneración de derechos, puede presentarse una reclamación ante la Agencia Española de Protección de Datos."
-              ]
-            }
-          ]
-        }
+        "key": "data-protection-officer",
+        "title": "Delegado de protección de datos",
+        "contact": "dpd@notariaminguez.com",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "Asimismo, se informa que para una mayor garantía en el cumplimiento de la Protección de datos ha sido designado a un Delegado en Protección de Datos cuya información de contacto es la siguiente: <1>{{contact}}</1>.",
+              "Frente a cualquier vulneración de derechos, puede presentarse una reclamación ante la Agencia Española de Protección de Datos."
+            ]
+          }
+        ]
       },
       {
-        "userResponsibility": {
-          "title": "Responsabilidad del usuario",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "Si se facilitan datos de terceros, quien lo haga asume la responsabilidad de informarles previamente de lo previsto en el artículo 14 del Reglamento General de Protección de Datos.",
-                "El usuario es responsable de que la información que proporcione a través de esta web sea cierta. A estos  efectos, responde de la veracidad de todos los datos que comunique y mantendrá convenientemente actualizada la información facilitada, de tal forma que responda a su situación real. El usuario será responsable de las informaciones falsas o inexactas que proporcione y de los perjuicios que ello cause a la empresa o a terceros.",
-                "Esta empresa garantiza la seguridad y confidencialidad de los datos de carácter personal que le sean facilitados. A tal fin, tiene implantadas las medidas de seguridad de índole técnica y organizativa que son necesarias para evitar su alteración, pérdida, tratamiento o acceso no autorizados, de acuerdo con lo establecido en la normativa aplicable."
-              ]
-            }
-          ]
-        }
+        "key": "user-responsibility",
+        "title": "Responsabilidad del usuario",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "Si se facilitan datos de terceros, quien lo haga asume la responsabilidad de informarles previamente de lo previsto en el artículo 14 del Reglamento General de Protección de Datos.",
+              "El usuario es responsable de que la información que proporcione a través de esta web sea cierta. A estos  efectos, responde de la veracidad de todos los datos que comunique y mantendrá convenientemente actualizada la información facilitada, de tal forma que responda a su situación real. El usuario será responsable de las informaciones falsas o inexactas que proporcione y de los perjuicios que ello cause a la empresa o a terceros.",
+              "Esta empresa garantiza la seguridad y confidencialidad de los datos de carácter personal que le sean facilitados. A tal fin, tiene implantadas las medidas de seguridad de índole técnica y organizativa que son necesarias para evitar su alteración, pérdida, tratamiento o acceso no autorizados, de acuerdo con lo establecido en la normativa aplicable."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  "cookie-policy": {
+    "title": "Política de cookies",
+    "sections": [
+      {
+        "key": "intro",
+        "texts": [
+          "Le informamos, en cumplimiento de la normativa vigente en materia de protección de datos, que este sitio web utiliza cookies propias y de terceros.",
+          "No se utilizarán las cookies para recoger información de carácter personal. Solamente se instalarán si el usuario permanece y continúa navegando en nuestra página web, entendiendo que consiente su uso e instalación."
+        ]
+      },
+      {
+        "key": "definition",
+        "title": "¿Qué es una cookie y para qué sirve?",
+        "texts": [
+          "Una cookie es un pequeño archivo que se almacena en el ordenador del usuario, tableta, smartphone o cualquier otro dispositivo con información sobre la navegación.",
+          "El conjunto de cookies de todos nuestros usuarios nos ayuda a mejorar la calidad de nuestra web, permitiéndonos controlar qué páginas son útiles, cuáles no y cuáles son susceptibles de mejora.",
+          "Las cookies son esenciales para el funcionamiento de Internet, aportando innumerables ventajas en la prestación de servicios interactivos, facilitándole la navegación y usabilidad de los sitios web.",
+          "En ningún caso las cookies podrían dañar su equipo. Por contra, que estén activas nos ayuda a identificar y resolver los errores."
+        ]
       }
     ]
   }

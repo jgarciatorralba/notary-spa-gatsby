@@ -675,57 +675,54 @@
     "title": "Avís legal",
     "sections": [
       {
-        "purpose": {
-          "title": "Objecte",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "Als efectes de l’article 10 de la Llei 34/2002, d’11 de juliol, de serveis de la societat de la informació i de comerç electrònic, l'informem que el titular d'aquest web és la Notaria Mínguez (des d'ara \"la Notaria\"), amb domicili a la Rambla de l'Hospital nº 6 - 1ª, 08500 de Vic, Barcelona.",
-                "La utilització d'aquest lloc web implica l'acceptació per part de l'usuari de les condicions d'ús incloses en aquest avís.",
-                "D'altra banda, la Notaria adverteix que tant els continguts i serveis d'aquesta pàgina web com les pròpies condicions d'utilització poden ser modificats sense notificació prèvia."
-              ]
-            }
-          ]
-        }
+        "key": "purpose",
+        "title": "Objecte",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "Als efectes de l’article 10 de la Llei 34/2002, d’11 de juliol, de serveis de la societat de la informació i de comerç electrònic, l'informem que el titular d'aquest web és la Notaria Mínguez (des d'ara \"la Notaria\"), amb domicili a la Rambla de l'Hospital nº 6 - 1ª, 08500 de Vic, Barcelona.",
+              "La utilització d'aquest lloc web implica l'acceptació per part de l'usuari de les condicions d'ús incloses en aquest avís.",
+              "D'altra banda, la Notaria adverteix que tant els continguts i serveis d'aquesta pàgina web com les pròpies condicions d'utilització poden ser modificats sense notificació prèvia."
+            ]
+          }
+        ]
       },
       {
-        "conditions": {
-          "title": "Condicions d'ús",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "El web només pot ser utilitzat amb propòsits legals, per tant, l'usuari s'obliga a fer un ús lícit i honrat del web i conforme a les presents condicions, i a no fer servir els seus serveis per a la realització d'activitats contràries a la legislació espanyola, a la moral i a l'ordre públic, assumint per part de l'usuari totes les responsabilitats de danys i perjudicis davant el titular del domini o tercers que puguin derivar-se de pràctiques il·legals o no permeses.",
-                "Entre d'altres i a títol enunciatiu i no limitatiu:"
-              ]
-            },
-            {
-              "type": "list",
-              "elements": [
-                "Realitzar, sense previ consentiment per part de la titular del domini, qualsevol manipulació o alteració d'aquesta pàgina, no assumint el titular del domini cap responsabilitat que pogués derivar d'aquesta manipulació o alteració per tercers.",
-                "Realitzar qualsevol acte que pugui danyar, inutilitzar, sobrecarregar, o deteriorar el web i els serveis i/o impedir el normal ús i utilització per part dels usuaris.",
-                "Introduir i/o utilitzar programes d'ordinador, dades, arxius defectuosos, virus, codi maliciós, equips informàtics o de telecomunicacions o qualsevol altre, independentment de la seva naturalesa, que pugui causar danys al web en qualsevol dels serveis, o en qualssevol actius (físics o lògics) dels sistemes d'informació del titular del domini.",
-                "Violar els drets de tercers a la intimitat, la pròpia imatge, la protecció de dades al secret en les comunicacions, a la propietat intel·lectual i industrial.",
-                "Utilitzar identitats falses, suplantar la identitat d'altres en la utilització del web o en la utilització de qualsevol dels serveis.",
-                "Reproduir, distribuir, modificar o copiar el contingut d'aquesta pàgina, llevat que de disposi de l'autorització del titular del domini o estigui legalment autoritzat."
-              ]
-            }
-          ]
-        }
+        "key": "conditions",
+        "title": "Condicions d'ús",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "El web només pot ser utilitzat amb propòsits legals, per tant, l'usuari s'obliga a fer un ús lícit i honrat del web i conforme a les presents condicions, i a no fer servir els seus serveis per a la realització d'activitats contràries a la legislació espanyola, a la moral i a l'ordre públic, assumint per part de l'usuari totes les responsabilitats de danys i perjudicis davant el titular del domini o tercers que puguin derivar-se de pràctiques il·legals o no permeses.",
+              "Entre d'altres i a títol enunciatiu i no limitatiu:"
+            ]
+          },
+          {
+            "type": "list",
+            "elements": [
+              "Realitzar, sense previ consentiment per part de la titular del domini, qualsevol manipulació o alteració d'aquesta pàgina, no assumint el titular del domini cap responsabilitat que pogués derivar d'aquesta manipulació o alteració per tercers.",
+              "Realitzar qualsevol acte que pugui danyar, inutilitzar, sobrecarregar, o deteriorar el web i els serveis i/o impedir el normal ús i utilització per part dels usuaris.",
+              "Introduir i/o utilitzar programes d'ordinador, dades, arxius defectuosos, virus, codi maliciós, equips informàtics o de telecomunicacions o qualsevol altre, independentment de la seva naturalesa, que pugui causar danys al web en qualsevol dels serveis, o en qualssevol actius (físics o lògics) dels sistemes d'informació del titular del domini.",
+              "Violar els drets de tercers a la intimitat, la pròpia imatge, la protecció de dades al secret en les comunicacions, a la propietat intel·lectual i industrial.",
+              "Utilitzar identitats falses, suplantar la identitat d'altres en la utilització del web o en la utilització de qualsevol dels serveis.",
+              "Reproduir, distribuir, modificar o copiar el contingut d'aquesta pàgina, llevat que de disposi de l'autorització del titular del domini o estigui legalment autoritzat."
+            ]
+          }
+        ]
       },
       {
-        "law": {
-          "title": "Legislació aplicable",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "Les presents Condicions es regiran en tot moment pel que disposa la legislació espanyola."
-              ]
-            }
-          ]
-        }
+        "key": "law",
+        "title": "Legislació aplicable",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "Les presents Condicions es regiran en tot moment pel que disposa la legislació espanyola."
+            ]
+          }
+        ]
       }
     ]
   },
@@ -734,85 +731,103 @@
     "title": "Política de privacitat",
     "sections": [
       {
-        "dataTreatment": {
-          "title": "Responsable del tractament de dades personals",
-          "contactDetails": {
-            "companyName": "Notaria Mínguez",
-            "id": {
-              "title": "N.I.F:",
-              "value": "R4455667K"
-            },
-            "email": {
-              "title": "Correu electrònic:",
-              "value": "contact@notariaminguez.com"
-            },
-            "address": {
-              "title": "Direcció:",
-              "street": "Rambla Hospital, 6 - 1ª",
-              "zipCode": "08500 - Vic, Barcelona"
-            },
-            "phone": {
-              "title": "Telèfons:",
-              "numbers": ["938 850 816", "938 853 752"]
-            }
+        "key": "data-treatment",
+        "title": "Responsable del tractament de dades personals",
+        "contactDetails": {
+          "companyName": "Notaria Mínguez",
+          "id": {
+            "title": "N.I.F:",
+            "value": "R4455667K"
+          },
+          "email": {
+            "title": "Correu electrònic:",
+            "value": "contact@notariaminguez.com"
+          },
+          "address": {
+            "title": "Direcció:",
+            "street": "Rambla Hospital, 6 - 1ª",
+            "zipCode": "08500 - Vic, Barcelona"
+          },
+          "phone": {
+            "title": "Telèfons:",
+            "numbers": ["938 850 816", "938 853 752"]
           }
         }
       },
       {
-        "purpose": {
-          "title": "Finalitat del tractament",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "La finalitat del tractament de les dades que aporti és la de poder contactar amb el remitent de la informació, donar resposta a la seva petició o consulta i fer un seguiment posterior. Les dades seran tractades sobre la base jurídica del consentiment de la persona que els proporciona. Pot retirar el consentiment en qualsevol moment, si bé això no afectarà la licitud dels tractaments efectuats amb anterioritat. El fet de facilitar les dades és voluntari, tot i que, en cas de no fer-ho, no es podrà respondre a la sol·licitud, consulta o reclamació. Per tant, la comunicació de les seves dades personals a aquests efectes és un requisit necessari perquè puguem atendre les peticions formulades per aquesta via."
-              ]
-            }
-          ]
-        }
+        "key": "purpose",
+        "title": "Finalitat del tractament",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "La finalitat del tractament de les dades que aporti és la de poder contactar amb el remitent de la informació, donar resposta a la seva petició o consulta i fer un seguiment posterior. Les dades seran tractades sobre la base jurídica del consentiment de la persona que els proporciona. Pot retirar el consentiment en qualsevol moment, si bé això no afectarà la licitud dels tractaments efectuats amb anterioritat. El fet de facilitar les dades és voluntari, tot i que, en cas de no fer-ho, no es podrà respondre a la sol·licitud, consulta o reclamació. Per tant, la comunicació de les seves dades personals a aquests efectes és un requisit necessari perquè puguem atendre les peticions formulades per aquesta via."
+            ]
+          }
+        ]
       },
       {
-        "conservation": {
-          "title": "Conservació de la informació",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "Les dades seran conservades durant el temps necessari per donar resposta a la seva sol·licitud, petició, consulta o reclamació i donar aquesta per definitivament tancada. Posteriorment, seran conservats a manera de històric de comunicacions, llevat que vostè sol·liciti la seva supressió. Vostè podrà exercir els drets d'accés, rectificació, supressió, limitació del tractament, oposició o, si s'escau la portabilitat de les dades mitjançant sol·licitud dirigida al responsable del Tractament, aportant còpia del seu document d'identitat a l'adreça de contacte indicada anteriorment."
-              ]
-            }
-          ]
-        }
+        "key": "conservation",
+        "title": "Conservació de la informació",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "Les dades seran conservades durant el temps necessari per donar resposta a la seva sol·licitud, petició, consulta o reclamació i donar aquesta per definitivament tancada. Posteriorment, seran conservats a manera de històric de comunicacions, llevat que vostè sol·liciti la seva supressió. Vostè podrà exercir els drets d'accés, rectificació, supressió, limitació del tractament, oposició o, si s'escau la portabilitat de les dades mitjançant sol·licitud dirigida al responsable del Tractament, aportant còpia del seu document d'identitat a l'adreça de contacte indicada anteriorment."
+            ]
+          }
+        ]
       },
       {
-        "dataProtectionOfficer": {
-          "title": "Delegat de protecció de dades",
-          "contact": "dpd@notariaminguez.com",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "Així mateix, s'informa que per a una major garantia en el compliment de la Protecció de dades ha estat designat un Delegat en Protecció de Dades amb la següent informació de contacte: <1>{{contact}}</1>.",
-                "Davant de qualsevol vulneració de drets, es pot presentar una reclamació davant l'Agència Espanyola de Protecció de Dades."
-              ]
-            }
-          ]
-        }
+        "key": "data-protection-officer",
+        "title": "Delegat de protecció de dades",
+        "contact": "dpd@notariaminguez.com",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "Així mateix, s'informa que per a una major garantia en el compliment de la Protecció de dades ha estat designat un Delegat en Protecció de Dades amb la següent informació de contacte: <1>{{contact}}</1>.",
+              "Davant de qualsevol vulneració de drets, es pot presentar una reclamació davant l'Agència Espanyola de Protecció de Dades."
+            ]
+          }
+        ]
       },
       {
-        "userResponsibility": {
-          "title": "Responsabilitat de l'usuari",
-          "texts": [
-            {
-              "type": "paragraph",
-              "elements": [
-                "Si es faciliten dades de tercers, qui ho faci assumeix la responsabilitat d'informar-los prèviament del que preveu l'article 14 del Reglament General de Protecció de Dades.",
-                "L'usuari és responsable que la informació que proporcioni a través d'aquesta web sigui certa. A aquests efectes, respon de la veracitat de totes les dades que comuniqui i mantindrà convenientment actualitzada la informació facilitada, de manera que respongui a la seva situació real. L'usuari serà responsable de les informacions falses o inexactes que proporcioni i dels perjudicis que això causi a l'empresa o a tercers.",
-                "Aquesta empresa garanteix la seguretat i confidencialitat de les dades de caràcter personal que li siguin facilitades. Amb aquesta finalitat, té implantades les mesures de seguretat d'índole tècnica i organitzativa que són necessàries per evitar la seva alteració, pèrdua, tractament o accés no autoritzats, d'acord amb el que estableix la normativa aplicable."
-              ]
-            }
-          ]
-        }
+        "key": "user-responsibility",
+        "title": "Responsabilitat de l'usuari",
+        "texts": [
+          {
+            "type": "paragraph",
+            "elements": [
+              "Si es faciliten dades de tercers, qui ho faci assumeix la responsabilitat d'informar-los prèviament del que preveu l'article 14 del Reglament General de Protecció de Dades.",
+              "L'usuari és responsable que la informació que proporcioni a través d'aquesta web sigui certa. A aquests efectes, respon de la veracitat de totes les dades que comuniqui i mantindrà convenientment actualitzada la informació facilitada, de manera que respongui a la seva situació real. L'usuari serà responsable de les informacions falses o inexactes que proporcioni i dels perjudicis que això causi a l'empresa o a tercers.",
+              "Aquesta empresa garanteix la seguretat i confidencialitat de les dades de caràcter personal que li siguin facilitades. Amb aquesta finalitat, té implantades les mesures de seguretat d'índole tècnica i organitzativa que són necessàries per evitar la seva alteració, pèrdua, tractament o accés no autoritzats, d'acord amb el que estableix la normativa aplicable."
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  "cookie-policy": {
+    "title": "Política de cookies",
+    "sections": [
+      {
+        "key": "intro",
+        "texts": [
+          "L'informem, en compliment de la normativa vigent en matèria de protecció de dades, que aquest lloc web utilitza galetes pròpies i de tercers.",
+          "No s'utilitzaran les cookies per recollir informació de caràcter personal. Només s'instal·laran si l'usuari roman i continua navegant a la nostra pàgina web, entenent que consenteix el seu ús i instal·lació."
+        ]
+      },
+      {
+        "key": "definition",
+        "title": "Què és una cookir i per a què serveix?",
+        "texts": [
+          "Una cookie és un petit arxiu que s'emmagatzema a l'ordinador de l'usuari, tauleta, telèfon intel·ligent o qualsevol altre dispositiu amb informació sobre la navegació.",
+          "El conjunt de cookies de tots els nostres usuaris ens ajuda a millorar la qualitat del nostre web, permetent-nos controlar quines pàgines són útils, quines no i quines són susceptibles de millora.",
+          "Les cookies són essencials per al funcionament d'Internet, aportant innombrables avantatges en la prestació de serveis interactius, facilitant la navegació i usabilitat dels llocs web.",
+          "En cap cas les cookies podrien danyar el seu equip. Per contra, que estiguin actives ens ajuda a identificar i resoldre els errors."
+        ]
       }
     ]
   }
