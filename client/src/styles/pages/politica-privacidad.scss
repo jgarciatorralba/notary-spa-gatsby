@@ -4,4 +4,15 @@
   h2 {
     font-size: 1.5rem;
   }
+
+  a {
+    color: $palette-dark;
+    text-decoration: underline;
+    transition: color 300ms linear;
+
+    &:hover {
+      color: $palette-medium;
+      transition: color 300ms linear;
+    }
+  }
 }
