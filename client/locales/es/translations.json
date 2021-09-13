@@ -672,10 +672,9 @@
   },
 
   "legal-notice": {
-    "title": "Aviso legal",
-    "sections": [
-      {
-        "key": "purpose",
+    "header": "Aviso legal",
+    "sections": {
+      "purpose": {
         "title": "Objeto",
         "texts": [
           {
@@ -688,8 +687,7 @@
           }
         ]
       },
-      {
-        "key": "conditions",
+      "conditions": {
         "title": "Condiciones de uso",
         "texts": [
           {
@@ -712,8 +710,7 @@
           }
         ]
       },
-      {
-        "key": "law",
+      "law": {
         "title": "Legislación aplicable",
         "texts": [
           {
@@ -724,14 +721,14 @@
           }
         ]
       }
-    ]
+    }
   },
 
   "privacy-policy": {
-    "title": "Política de privacidad",
-    "sections": [
-      {
-        "key": "data-treatment",
+    "header": "Política de privacidad",
+    "intro": "Los datos personales facilitados a través de esta web se tratarán conforme a las siguientes especificaciones.",
+    "sections": {
+      "dataTreatment": {
         "title": "Responsable del tratamiento de datos personales",
         "contactDetails": {
           "companyName": "Notaría Mínguez",
@@ -750,12 +747,11 @@
           },
           "phone": {
             "title": "Teléfonos:",
-            "numbers": ["938 850 816", "938 853 752"]
+            "numbers": ["+34 938 850 816", "+34 938 853 752"]
           }
         }
       },
-      {
-        "key": "purpose",
+      "purpose": {
         "title": "Finalidad del tratamiento",
         "texts": [
           {
@@ -766,8 +762,7 @@
           }
         ]
       },
-      {
-        "key": "conservation",
+      "conservation": {
         "title": "Conservación de la información",
         "texts": [
           {
@@ -778,8 +773,7 @@
           }
         ]
       },
-      {
-        "key": "data-protection-officer",
+      "dataProtectionOfficer": {
         "title": "Delegado de protección de datos",
         "contact": "dpd@notariaminguez.com",
         "texts": [
@@ -792,8 +786,7 @@
           }
         ]
       },
-      {
-        "key": "user-responsibility",
+      "userResponsibility": {
         "title": "Responsabilidad del usuario",
         "texts": [
           {
@@ -806,21 +799,19 @@
           }
         ]
       }
-    ]
+    }
   },
 
   "cookie-policy": {
-    "title": "Política de cookies",
-    "sections": [
-      {
-        "key": "intro",
+    "header": "Política de cookies",
+    "sections": {
+      "intro": {
         "texts": [
           "Le informamos, en cumplimiento de la normativa vigente en materia de protección de datos, que este sitio web utiliza cookies propias y de terceros.",
           "No se utilizarán las cookies para recoger información de carácter personal. Solamente se instalarán si el usuario permanece y continúa navegando en nuestra página web, entendiendo que consiente su uso e instalación."
         ]
       },
-      {
-        "key": "definition",
+      "definition": {
         "title": "¿Qué es una cookie y para qué sirve?",
         "texts": [
           "Una cookie es un pequeño archivo que se almacena en el ordenador del usuario, tableta, smartphone o cualquier otro dispositivo con información sobre la navegación.",
@@ -829,6 +820,6 @@
           "En ningún caso las cookies podrían dañar su equipo. Por contra, que estén activas nos ayuda a identificar y resolver los errores."
         ]
       }
-    ]
+    }
   }
 }

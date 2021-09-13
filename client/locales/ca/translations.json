@@ -672,10 +672,9 @@
   },
 
   "legal-notice": {
-    "title": "Avís legal",
-    "sections": [
-      {
-        "key": "purpose",
+    "header": "Avís legal",
+    "sections": {
+      "purpose": {
         "title": "Objecte",
         "texts": [
           {
@@ -688,8 +687,7 @@
           }
         ]
       },
-      {
-        "key": "conditions",
+      "conditions": {
         "title": "Condicions d'ús",
         "texts": [
           {
@@ -712,8 +710,7 @@
           }
         ]
       },
-      {
-        "key": "law",
+      "law": {
         "title": "Legislació aplicable",
         "texts": [
           {
@@ -724,14 +721,14 @@
           }
         ]
       }
-    ]
+    }
   },
 
   "privacy-policy": {
-    "title": "Política de privacitat",
-    "sections": [
-      {
-        "key": "data-treatment",
+    "header": "Política de privacitat",
+    "intro": "Les dades personals facilitades a través d'aquesta web es tractaran d'acord amb les següents especificacions.",
+    "sections": {
+      "dataTreatment": {
         "title": "Responsable del tractament de dades personals",
         "contactDetails": {
           "companyName": "Notaria Mínguez",
@@ -750,12 +747,11 @@
           },
           "phone": {
             "title": "Telèfons:",
-            "numbers": ["938 850 816", "938 853 752"]
+            "numbers": ["+34 938 850 816", "+34 938 853 752"]
           }
         }
       },
-      {
-        "key": "purpose",
+      "purpose": {
         "title": "Finalitat del tractament",
         "texts": [
           {
@@ -766,8 +762,7 @@
           }
         ]
       },
-      {
-        "key": "conservation",
+      "conservation": {
         "title": "Conservació de la informació",
         "texts": [
           {
@@ -778,8 +773,7 @@
           }
         ]
       },
-      {
-        "key": "data-protection-officer",
+      "dataProtectionOfficer": {
         "title": "Delegat de protecció de dades",
         "contact": "dpd@notariaminguez.com",
         "texts": [
@@ -792,8 +786,7 @@
           }
         ]
       },
-      {
-        "key": "user-responsibility",
+      "userResponsibility": {
         "title": "Responsabilitat de l'usuari",
         "texts": [
           {
@@ -806,21 +799,19 @@
           }
         ]
       }
-    ]
+    }
   },
 
   "cookie-policy": {
     "title": "Política de cookies",
-    "sections": [
-      {
-        "key": "intro",
+    "sections": {
+      "intro": {
         "texts": [
           "L'informem, en compliment de la normativa vigent en matèria de protecció de dades, que aquest lloc web utilitza galetes pròpies i de tercers.",
           "No s'utilitzaran les cookies per recollir informació de caràcter personal. Només s'instal·laran si l'usuari roman i continua navegant a la nostra pàgina web, entenent que consenteix el seu ús i instal·lació."
         ]
       },
-      {
-        "key": "definition",
+      "definition": {
         "title": "Què és una cookir i per a què serveix?",
         "texts": [
           "Una cookie és un petit arxiu que s'emmagatzema a l'ordinador de l'usuari, tauleta, telèfon intel·ligent o qualsevol altre dispositiu amb informació sobre la navegació.",
@@ -829,6 +820,6 @@
           "En cap cas les cookies podrien danyar el seu equip. Per contra, que estiguin actives ens ajuda a identificar i resoldre els errors."
         ]
       }
-    ]
+    }
   }
 }
