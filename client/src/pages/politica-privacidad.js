@@ -12,11 +12,21 @@ const PrivacyPolicyPage = () => {
   const policyTranslations = t("privacy-policy", {
     returnObjects: true,
   })
+  const contactDetailsTranslations = t("contact-details", {
+    returnObjects: true,
+  })
   const metaTranslations = t("metadata", {
     returnObjects: true,
   })
 
   const { title: defaultTitle, description } = metaTranslations
+  const {
+    companyName,
+    companyId,
+    email,
+    address,
+    phone,
+  } = contactDetailsTranslations
   const { header: title, intro, sections } = policyTranslations
   const {
     dataTreatment,
@@ -42,34 +52,49 @@ const PrivacyPolicyPage = () => {
           <>
             <h3 className="mb-2 mt-4 font-bold">{dataTreatment.title}</h3>
             <p className="mb-2">
-              {dataTreatment.contactDetails.companyName}
+              <Trans
+                i18nKey={dataTreatment.contactDetails.companyName}
+                values={{
+                  companyName: companyName,
+                }}
+              />
               <br />
-              {dataTreatment.contactDetails.id.title}{" "}
-              {dataTreatment.contactDetails.id.value}
+
+              <Trans
+                i18nKey={dataTreatment.contactDetails.id}
+                values={{
+                  companyId: companyId,
+                }}
+              />
               <br />
-              {dataTreatment.contactDetails.email.title}{" "}
-              <a href={`mailto:${dataTreatment.contactDetails.email.value}`}>
-                {dataTreatment.contactDetails.email.value}
-              </a>
+
+              <Trans
+                i18nKey={dataTreatment.contactDetails.email}
+                components={{
+                  1: <a href={`mailto:${email}`}>email</a>,
+                }}
+                values={{
+                  email: email,
+                }}
+              />
               <br />
-              {dataTreatment.contactDetails.address.title}{" "}
-              {dataTreatment.contactDetails.address.street}
-              {" - "}
-              {dataTreatment.contactDetails.address.zipCode}
+
+              <Trans
+                i18nKey={dataTreatment.contactDetails.address}
+                values={{
+                  street: address.street,
+                  zipCode: address.zipCode,
+                }}
+              />
               <br />
-              {dataTreatment.contactDetails.phone.title}{" "}
-              {dataTreatment.contactDetails.phone.numbers.map(
-                (number, index) => {
-                  if (
-                    index ===
-                    dataTreatment.contactDetails.phone.numbers.length - 1
-                  ) {
-                    return number
-                  } else {
-                    return number + " | "
-                  }
-                }
-              )}
+
+              <Trans
+                i18nKey={dataTreatment.contactDetails.phone}
+                values={{
+                  firstPhone: `+34 ${phone.numbers[0]}`,
+                  secondPhone: `+34 ${phone.numbers[1]}`,
+                }}
+              />
             </p>
           </>
         )}
@@ -78,29 +103,13 @@ const PrivacyPolicyPage = () => {
           <>
             <h3 className="mb-2 mt-4 font-bold">{purpose.title}</h3>
             {purpose.texts.map(text => {
-              if (text.type === "paragraph") {
-                return text.elements.map((element, index) => {
-                  return (
-                    <p key={`purpose-paragraph-${index}`} className="mb-2">
-                      {element}
-                    </p>
-                  )
-                })
-              } else if (text.type === "list") {
+              return text.elements.map((element, index) => {
                 return (
-                  <ul>
-                    {text.elements.map((element, index) => {
-                      return (
-                        <li key={`purpose-list-${index}`} className="mb-2">
-                          {element}
-                        </li>
-                      )
-                    })}
-                  </ul>
+                  <p key={`purpose-paragraph-${index}`} className="mb-2">
+                    {element}
+                  </p>
                 )
-              } else {
-                return <></>
-              }
+              })
             })}
           </>
         )}
@@ -109,29 +118,13 @@ const PrivacyPolicyPage = () => {
           <>
             <h3 className="mb-2 mt-4 font-bold">{conservation.title}</h3>
             {conservation.texts.map(text => {
-              if (text.type === "paragraph") {
-                return text.elements.map((element, index) => {
-                  return (
-                    <p key={`conservation-paragraph-${index}`} className="mb-2">
-                      {element}
-                    </p>
-                  )
-                })
-              } else if (text.type === "list") {
+              return text.elements.map((element, index) => {
                 return (
-                  <ul>
-                    {text.elements.map((element, index) => {
-                      return (
-                        <li key={`conservation-list-${index}`} className="mb-2">
-                          {element}
-                        </li>
-                      )
-                    })}
-                  </ul>
+                  <p key={`conservation-paragraph-${index}`} className="mb-2">
+                    {element}
+                  </p>
                 )
-              } else {
-                return <></>
-              }
+              })
             })}
           </>
         )}
@@ -142,27 +135,23 @@ const PrivacyPolicyPage = () => {
               {dataProtectionOfficer.title}
             </h3>
             {dataProtectionOfficer.texts.map(text => {
-              if (text.type === "paragraph") {
-                return text.elements.map((element, index) => {
-                  return (
-                    <p key={`dpo-paragraph-${index}`} className="mb-2">
-                      <Trans
-                        i18nKey={element}
-                        components={{
-                          1: (
-                            <a href={`mailto:${dataProtectionOfficer.contact}`}>
-                              contact
-                            </a>
-                          ),
-                        }}
-                        values={{ contact: dataProtectionOfficer.contact }}
-                      />
-                    </p>
-                  )
-                })
-              } else {
-                return <></>
-              }
+              return text.elements.map((element, index) => {
+                return (
+                  <p key={`dpo-paragraph-${index}`} className="mb-2">
+                    <Trans
+                      i18nKey={element}
+                      components={{
+                        1: (
+                          <a href={`mailto:${dataProtectionOfficer.contact}`}>
+                            contact
+                          </a>
+                        ),
+                      }}
+                      values={{ contact: dataProtectionOfficer.contact }}
+                    />
+                  </p>
+                )
+              })
             })}
           </>
         )}
@@ -171,35 +160,16 @@ const PrivacyPolicyPage = () => {
           <>
             <h3 className="mb-2 mt-4 font-bold">{userResponsibility.title}</h3>
             {userResponsibility.texts.map(text => {
-              if (text.type === "paragraph") {
-                return text.elements.map((element, index) => {
-                  return (
-                    <p
-                      key={`user-responsibility-paragraph-${index}`}
-                      className="mb-2"
-                    >
-                      {element}
-                    </p>
-                  )
-                })
-              } else if (text.type === "list") {
+              return text.elements.map((element, index) => {
                 return (
-                  <ul>
-                    {text.elements.map((element, index) => {
-                      return (
-                        <li
-                          key={`user-responsibility-list-${index}`}
-                          className="mb-2"
-                        >
-                          {element}
-                        </li>
-                      )
-                    })}
-                  </ul>
+                  <p
+                    key={`user-responsibility-paragraph-${index}`}
+                    className="mb-2"
+                  >
+                    {element}
+                  </p>
                 )
-              } else {
-                return <></>
-              }
+              })
             })}
           </>
         )}
