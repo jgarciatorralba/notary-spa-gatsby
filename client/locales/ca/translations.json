@@ -13,6 +13,7 @@
 
   "contact-details": {
     "companyName": "Notaria Mínguez",
+    "companyId": "R4455667K",
     "email": "contact@notariaminguez.com",
     "address": {
       "street": "Rambla Hospital, 6 - 1ª",
@@ -680,7 +681,7 @@
           {
             "type": "paragraph",
             "elements": [
-              "Als efectes de l’article 10 de la Llei 34/2002, d’11 de juliol, de serveis de la societat de la informació i de comerç electrònic, l'informem que el titular d'aquest web és la Notaria Mínguez (des d'ara \"la Notaria\"), amb domicili a la Rambla de l'Hospital nº 6 - 1ª, 08500 de Vic, Barcelona.",
+              "Als efectes de l’article 10 de la Llei 34/2002, d’11 de juliol, de serveis de la societat de la informació i de comerç electrònic, l'informem que aquest web és titularitat de {{companyName}} (des d'ara \"la Notaria\"), amb domicili a {{street}}, {{zipCode}}.",
               "La utilització d'aquest lloc web implica l'acceptació per part de l'usuari de les condicions d'ús incloses en aquest avís.",
               "D'altra banda, la Notaria adverteix que tant els continguts i serveis d'aquesta pàgina web com les pròpies condicions d'utilització poden ser modificats sense notificació prèvia."
             ]
@@ -688,7 +689,7 @@
         ]
       },
       "conditions": {
-        "title": "Condicions d'ús",
+        "title": "Condicions d'utilització",
         "texts": [
           {
             "type": "paragraph",
@@ -704,7 +705,6 @@
               "Realitzar qualsevol acte que pugui danyar, inutilitzar, sobrecarregar, o deteriorar el web i els serveis i/o impedir el normal ús i utilització per part dels usuaris.",
               "Introduir i/o utilitzar programes d'ordinador, dades, arxius defectuosos, virus, codi maliciós, equips informàtics o de telecomunicacions o qualsevol altre, independentment de la seva naturalesa, que pugui causar danys al web en qualsevol dels serveis, o en qualssevol actius (físics o lògics) dels sistemes d'informació del titular del domini.",
               "Violar els drets de tercers a la intimitat, la pròpia imatge, la protecció de dades al secret en les comunicacions, a la propietat intel·lectual i industrial.",
-              "Utilitzar identitats falses, suplantar la identitat d'altres en la utilització del web o en la utilització de qualsevol dels serveis.",
               "Reproduir, distribuir, modificar o copiar el contingut d'aquesta pàgina, llevat que de disposi de l'autorització del titular del domini o estigui legalment autoritzat."
             ]
           }
@@ -731,24 +731,11 @@
       "dataTreatment": {
         "title": "Responsable del tractament de dades personals",
         "contactDetails": {
-          "companyName": "Notaria Mínguez",
-          "id": {
-            "title": "N.I.F:",
-            "value": "R4455667K"
-          },
-          "email": {
-            "title": "Correu electrònic:",
-            "value": "contact@notariaminguez.com"
-          },
-          "address": {
-            "title": "Direcció:",
-            "street": "Rambla Hospital, 6 - 1ª",
-            "zipCode": "08500 - Vic, Barcelona"
-          },
-          "phone": {
-            "title": "Telèfons:",
-            "numbers": ["+34 938 850 816", "+34 938 853 752"]
-          }
+          "companyName": "{{companyName}}",
+          "id": "N.I.F: {{companyId}}",
+          "email": "Correu electrònic: <1>{{email}}</1>",
+          "address": "Direcció: {{street}}, {{zipCode}}",
+          "phone": "Telèfons: {{firstPhone}} | {{secondPhone}}"
         }
       },
       "purpose": {

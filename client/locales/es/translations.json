@@ -13,6 +13,7 @@
 
   "contact-details": {
     "companyName": "Notaría Mínguez",
+    "companyId": "R4455667K",
     "email": "contact@notariaminguez.com",
     "address": {
       "street": "Rambla Hospital, 6 - 1ª",
@@ -680,7 +681,7 @@
           {
             "type": "paragraph",
             "elements": [
-              "A efectos del artículo 10 de la Ley 34/2002, de 11 de julio, de la Ley de Servicios de la Sociedad de la Información y del Comercio Electrónico; le informamos de que el titular de esta web es la Notaría Mínguez (en adelante \"la Notaría\"), con domicilio en la Rambla del Hospital nº 6 - 1ª, 08500 de Vic, Barcelona.",
+              "A efectos del artículo 10 de la Ley 34/2002, de 11 de julio, de la Ley de Servicios de la Sociedad de la Información y del Comercio Electrónico; le informamos de que esta web es titularidad de {{companyName}} (en adelante \"la Notaría\"), con domicilio en {{street}}, {{zipCode}}.",
               "La utilización de este sitio web implica la aceptación por parte del usuario de las condiciones de uso incluidas en este aviso.",
               "Por otra parte, la Notaría advierte que tanto los contenidos y servicios de esta página web como las propias condiciones de utilización pueden ser modificados sin notificación previa."
             ]
@@ -704,7 +705,6 @@
               "Realizar cualquier acto que pueda dañar, inutilizar, sobrecargar, o deteriorar la web y los servicios y/o impedir el normal uso y utilización por parte de los usuarios.",
               "Introducir y/o utilizar programas de ordenador, datos, archivos defectuosos, virus, código malicioso, equipos informáticos o de telecomunicaciones o cualquier otro, independientemente de su naturaleza, que pueda causar daños en la web en cualquiera de los servicios, o en cualesquiera activos (físicos o lógicos) de los sistemas de información del titular del dominio.",
               "Violar los derechos de terceros a la intimidad, la propia imagen, la protección de datos al secreto en las comunicaciones, a la propiedad intelectual e industrial.",
-              "Utilizar identidades falsas, suplantar la identidad de otros en la utilización de la web o en la utilización de cualquiera de los servicios.",
               "Reproducir, distribuir, modificar o copiar el contenido de esta página, salvo que de disponga de la autorización del titular del dominio o esté legalmente autorizado."
             ]
           }
@@ -731,24 +731,11 @@
       "dataTreatment": {
         "title": "Responsable del tratamiento de datos personales",
         "contactDetails": {
-          "companyName": "Notaría Mínguez",
-          "id": {
-            "title": "N.I.F:",
-            "value": "R4455667K"
-          },
-          "email": {
-            "title": "Correo electrónico:",
-            "value": "contact@notariaminguez.com"
-          },
-          "address": {
-            "title": "Dirección:",
-            "street": "Rambla Hospital, 6 - 1ª",
-            "zipCode": "08500 - Vic, Barcelona"
-          },
-          "phone": {
-            "title": "Teléfonos:",
-            "numbers": ["+34 938 850 816", "+34 938 853 752"]
-          }
+          "companyName": "{{companyName}}",
+          "id": "N.I.F: {{companyId}}",
+          "email": "Correo electrónico: <1>{{email}}</1>",
+          "address": "Dirección: {{street}}, {{zipCode}}",
+          "phone": "Teléfonos: {{firstPhone}} | {{secondPhone}}"
         }
       },
       "purpose": {
