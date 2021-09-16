@@ -790,7 +790,7 @@
   },
 
   "cookie-policy": {
-    "title": "Política de cookies",
+    "header": "Política de cookies",
     "sections": {
       "intro": {
         "texts": [
@@ -799,13 +799,42 @@
         ]
       },
       "definition": {
-        "title": "Què és una cookir i per a què serveix?",
+        "title": "Què és una cookie i per a què serveix?",
         "texts": [
           "Una cookie és un petit arxiu que s'emmagatzema a l'ordinador de l'usuari, tauleta, telèfon intel·ligent o qualsevol altre dispositiu amb informació sobre la navegació.",
           "El conjunt de cookies de tots els nostres usuaris ens ajuda a millorar la qualitat del nostre web, permetent-nos controlar quines pàgines són útils, quines no i quines són susceptibles de millora.",
           "Les cookies són essencials per al funcionament d'Internet, aportant innombrables avantatges en la prestació de serveis interactius, facilitant la navegació i usabilitat dels llocs web.",
           "En cap cas les cookies podrien danyar el seu equip. Per contra, que estiguin actives ens ajuda a identificar i resoldre els errors."
         ]
+      },
+      "classification": {
+        "title": "Tipus de cookies",
+        "types": {
+          "managerEntity": {
+            "title": "Segons l'entitat que les gestioni:",
+            "items": [
+              "<strong>Cookies pròpies</strong>: són aquelles que s'envien a l'equip terminal de l'usuari des d'un equip o domini gestionat pel mateix editor i des del qual es presta el servei sol·licitat per l'usuari.",
+              "<strong>Cookies de tercers</strong>: són aquelles que s'envien a l'equip terminal de l'usuari des d'un equip o domini que no és gestionat per l'editor, sinó per una altra entitat que tracta les dades obtingudes a través de les cookies."
+            ]
+          },
+          "timeActive": {
+            "title": "Segons el temps que la cookie roman activa en l'equip:",
+            "items": [
+              "<strong>Cookies de sessió</strong>: són cookies temporals que romanen a l'arxiu de cookies del seu navegador fins que abandoni la pàgina web, de manera que cap queda registrada en el disc dur de l'usuari. La informació obtinguda per mitjà d'aquestes cookies serveix per analitzar les pautes de trànsit de la web. Permeten proporcionar una millor experiència per millorar el contingut i facilitar el seu ús.",
+              "<strong>Cookies permanents</strong>: són emmagatzemades al disc dur i la web les llegeix cada vegada que l'usuari realitza una nova visita. Una cookie permanent es pot accedir i tractar durant un període definit pel responsable de la cookie, després d'aquesta data deixarà de funcionar."
+            ]
+          },
+          "purpose": {
+            "title": "Segons la seva finalitat:",
+            "items": [
+              "<strong>Cookies tècniques</strong>: Permeten a l'usuari la navegació a través d'una pàgina web, plataforma o aplicació i la utilització de les diferents opcions o serveis que en ella hi hagi.",
+              "<strong>Cookies de personalització</strong>: Permeten a l'usuari accedir al servei amb algunes característiques de caràcter general predefinides en funció d'una sèrie de criteris en el terminal de l'usuari com, per exemple, l'idioma, el tipus de navegador a través del qual accedeix al servei, la configuració regional des d'on s'accedeix al servei, etc.",
+              "<strong>Cookies d'anàlisi</strong>: Permeten al responsable d'aquestes, el seguiment i anàlisi del comportament dels usuaris dels llocs web als quals estan vinculades. La informació recollida mitjançant aquest tipus de cookies s'utilitza en el mesurament de l'activitat dels llocs web, aplicació o plataforma i per a l'elaboració de perfils de navegació dels usuaris d'aquests llocs, aplicacions i plataformes, per tal d'introduir millores en funció de l'anàlisi de les dades d'ús que fan els usuaris del servei.",
+              "<strong>Cookies publicitàries</strong>: Permeten la gestió, de la forma més eficaç possible, dels espais publicitaris que, si escau, l'editor hagi inclòs en una pàgina web, aplicació o plataforma des de la qual presta el servei sol·licitat d'acord amb criteris com el contingut editat o la freqüència en què es mostren els anuncis.",
+              "<strong>Cookies de publicitat comportamental</strong>: Permeten la gestió, de la forma més eficaç possible, dels espais publicitaris que, si escau, l'editor hagi inclòs en una pàgina web, aplicació o plataforma des de la qual presta el servei sol·licitat. Aquestes cookies emmagatzemen informació del comportament dels usuaris obtinguda a través de l'observació continuada dels seus hàbits de navegació, cosa que permet desenvolupar un perfil específic per mostrar publicitat en funció de la mateixa."
+            ]
+          }
+        }
       }
     }
   }
