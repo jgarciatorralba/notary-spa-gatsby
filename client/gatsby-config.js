@@ -7,6 +7,14 @@ module.exports = {
     title: `Notaría Mínguez`,
     description: `En la Notaría Mínguez, ubicada en Vic, nos ponemos a su entera disposición para resolver cualquier duda relacionada con trámites y actos jurídicos. Ofrecemos un asesoramiento personalizado, profesional y de calidad, esencial para la toma de decisiones y la preparación de documentos notariales. Elaboramos sus escrituras de compraventa, testamento, donación y creación de empresas, entre otros.`,
     author: `jgarciatorralba`,
+    keywords: [
+      `Notaría`,
+      `Notaria`,
+      `Jorge Mínguez Balaguer`,
+      `Vic`,
+      `Servicios notariales`,
+      `Serveis notarials`,
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

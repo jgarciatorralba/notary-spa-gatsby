@@ -15,6 +15,7 @@ function Seo({ description, meta, pageTitle, defaultTitle }) {
             title
             description
             author
+            keywords
           }
         }
       }
@@ -74,6 +75,10 @@ function Seo({ description, meta, pageTitle, defaultTitle }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `keywords`,
+          content: site.siteMetadata.keywords.join(","),
         },
       ].concat(meta)}
     />
