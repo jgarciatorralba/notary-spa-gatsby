@@ -1,6 +1,10 @@
 @import "../settings/variables";
 
 .cookie-policy-wrapper {
+  h2 {
+    font-size: 1.5rem;
+  }
+
   ul {
     li {
       list-style: disc;
