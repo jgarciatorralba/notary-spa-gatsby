@@ -835,6 +835,40 @@
             ]
           }
         }
+      },
+      "cookiesUsed": {
+        "title": "Cookies habilitades en aquest web",
+        "intro": "A continuació expliquem les cookies que s'utilitzen en aquesta pàgina web i per què.",
+        "list": [
+          "<italic>\"cookies_agreed\"</italic>: es tracta d'una cookie pròpia, de tipus tècnic, que serveix per mantenir l'acceptació per part de l'usuari de l'ús de cookies.",
+          "<italic>\"_ga\"</italic>: és una cookie de Google Analytics, un servei d'anàlisi prestat per Google que utilitza les dades recollides per examinar l'ús de la web. És de tipus tècnic, i s'utilitza per a distingir als usuaris.",
+          "<italic>\"_gat\"</italic>: també de Google Analytics, és de tipus tècnic i s'usa per limitar el percentatge de sol·licituds.",
+          "<italic>\"_gid\"</italic>: una altra cookie tècnica utilitzada per Google Analytics que permet distingir als usuaris."
+        ],
+        "outro": [
+          "La informació que recullen els complements externs de Google en el nostre lloc web, incloent l'adreça IP de l'usuari, pot ser transmesa a Google i emmagatzemada en els seus servidors. Aquesta informació és gestionada enterament per Google. Aquestes cookies no identifiquen l'usuari personalment a menys que tingui activa una sessió a Google, quedant en aquest cas vinculat amb aquest compte de Google.",
+          "Per a més informació consulti: <1>Tipus de cookies que fa servir Google</1> i la Política de Privacitat de Google: <2>Política de privacitat</2>."
+        ]
+      },
+      "configuration": {
+        "title": "Com canviar la configuració de cookies",
+        "intro": "És possible permetre, bloquejar o eliminar les cookies instal·lades en el seu equip mitjançant la configuració de les opcions de el navegador en el vostre ordinador. Si us plau, llegiu atentament la secció d'ajuda del vostre navegador per conèixer més sobre com activar el mode privat o desbloquejar determinades cookies.",
+        "list": [
+          "<strong>Internet Explorer</strong>: podeu consultar el <1>suport de Microsoft</1> o l'ajuda de el navegador.",
+          "<strong>Firefox</strong>: podeu consultar el <1>suport de Mozilla</1> o l'ajuda de el navegador.",
+          "<strong>Chrome</strong>: podeu consultar el <1>suport de Google</1> o l'ajuda de el navegador.",
+          "<strong>Safari</strong>: podeu consultar el <1>suport d'Apple</1> o l'ajuda de el navegador."
+        ],
+        "links": {
+          "explorer": "https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d",
+          "firefox": "https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias",
+          "chrome": "https://support.google.com/chrome/answer/95647?hl=ca&co=GENIE.Platform%3DDesktop",
+          "safari": "https://support.apple.com/ca-es/guide/safari/sfri11471/mac"
+        }
+      },
+      "updates": {
+        "title": "Actualitzacions i canvis en la Política de cookies",
+        "intro": "És possible que actualitzem la Política de Cookies del nostre lloc web. Per això, li recomanem revisar aquesta política cada vegada que accedeixi al nostre lloc amb l'objectiu d'estar adequadament informat sobre com i per què fem servir les galetes. Recordeu que els navegadors poden també canviar les seves polítiques i la ubicació de la informació."
       }
     }
   }
