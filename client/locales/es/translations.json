@@ -840,31 +840,39 @@
         "title": "Cookies habilitadas en esta web",
         "intro": "A continuación explicamos las cookies que se utilizan en esta página web y por qué.",
         "list": [
-          "<italic>\"cookies_agreed\"</italic>: se trata de una cookie propia, de tipo técnico, que sirve para mantener la aceptación por parte del usuario del uso de cookies.",
-          "<italic>\"_ga\"</italic>: es una cookie de Google Analytics, un servicio de análisis prestado por Google que utiliza los datos recogidos para examinar el uso de la web. Es de tipo técnico, y se utiliza para distinguir a los usuarios.",
-          "<italic>\"_gat\"</italic>: también de Google Analytics, es de tipo técnico y se usa para limitar el porcentaje de solicitudes.",
-          "<italic>\"_gid\"</italic>: otra cookie técnica utilizada por Google Analytics que permite distinguir a los usuarios."
+          "<strong>\"cookies_agreed\"</strong>: se trata de una cookie propia, de tipo técnico, que sirve para mantener la aceptación por parte del usuario del uso de cookies.",
+          "<strong>\"_ga\"</strong>: es una cookie de Google Analytics, un servicio de análisis prestado por Google que utiliza los datos recogidos para examinar el uso de la web. Es de tipo técnico, y se utiliza para distinguir a los usuarios.",
+          "<strong>\"_gat\"</strong>: también de Google Analytics, es de tipo técnico y se usa para limitar el porcentaje de solicitudes.",
+          "<strong>\"_gid\"</strong>: otra cookie técnica utilizada por Google Analytics que permite distinguir a los usuarios."
         ],
         "outro": [
           "La información que recogen los complementos externos de Google en nuestro sitio web, incluyendo la dirección IP del usuario, puede ser transmitida a Google y almacenada en sus servidores. Esta información es gestionada enteramente por Google. Estas cookies no identifican al usuario personalmente a menos que tenga activa una sesión en Google, quedando en ese caso vinculado con dicha cuenta de Google.",
           "Para más información consulte: <1>Tipos de cookies que utiliza Google</1> y la Política de Privacidad de Google: <2>Política de privacidad</2>."
-        ]
+        ],
+        "googleCookieTypesAddress": "https://policies.google.com/technologies/cookies?hl=es#types-of-cookies",
+        "googleCookiePolicyAddress": "https://policies.google.com/privacy?hl=es&gl=es"
       },
       "configuration": {
         "title": "Cómo cambiar la configuración de cookies",
         "intro": "Es posible permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones del navegador instalado en su ordenador. Por favor, lea atentamente la sección de ayuda de su navegador para conocer más acerca de cómo activar el modo privado o desbloquear determinadas cookies.",
         "list": [
-          "<strong>Internet Explorer</strong>: puede consultar el <1>soporte de Microsoft</1> o la ayuda del navegador.",
-          "<strong>Firefox</strong>: puede consultar el <1>soporte de Mozilla</1> o la ayuda del navegador.",
-          "<strong>Chrome</strong>: puede consultar el <1>soporte de Google</1> o la ayuda del navegador.",
-          "<strong>Safari</strong>: puede consultar el <1>soporte de Apple</1> o la ayuda del navegador."
-        ],
-        "links": {
-          "explorer": "https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d",
-          "firefox": "https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias",
-          "chrome": "https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&amp;hl=es",
-          "safari": "https://support.apple.com/es-es/guide/safari/sfri11471/mac"
-        }
+          {
+            "content": "<strong>Internet Explorer</strong>: puede consultar el <1>soporte de Microsoft</1> o la ayuda del navegador.",
+            "link": "https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d"
+          },
+          {
+            "content": "<strong>Firefox</strong>: puede consultar el <1>soporte de Mozilla</1> o la ayuda del navegador.",
+            "link": "https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias"
+          },
+          {
+            "content": "<strong>Chrome</strong>: puede consultar el <1>soporte de Google</1> o la ayuda del navegador.",
+            "link": "https://support.google.com/chrome/answer/95647?co=GENIE.Platform%3DDesktop&amp;hl=es"
+          },
+          {
+            "content": "<strong>Safari</strong>: puede consultar el <1>soporte de Apple</1> o la ayuda del navegador.",
+            "link": "https://support.apple.com/es-es/guide/safari/sfri11471/mac"
+          }
+        ]
       },
       "updates": {
         "title": "Actualizaciones y cambios en la Política de cookies",
