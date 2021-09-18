@@ -17,6 +17,18 @@ module.exports = {
     ],
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-gdpr-cookies`,
+      options: {
+        googleAnalytics: {
+          trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+          cookieName: "cookies_agreed",
+          anonymize: true,
+          allowAdFeatures: false,
+        },
+        environments: ["production", "development"],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
