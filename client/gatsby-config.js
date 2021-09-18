@@ -64,7 +64,7 @@ module.exports = {
         localeJsonSourceName: `locale`,
         languages: [`es`, `ca`],
         defaultLanguage: `es`,
-        siteUrl: `http://localhost:8000/`, // https://notariaminguez.com
+        siteUrl: process.env.SITE_URL,
         i18nextOptions: {
           interpolation: {
             escapeValue: false,
