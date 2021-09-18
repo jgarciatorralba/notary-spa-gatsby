@@ -1,1 +1,32 @@
 @import "../settings/variables";
+
+.cookie-policy-wrapper {
+  ul {
+    li {
+      list-style: disc;
+
+      ul {
+        li {
+          list-style: circle;
+        }
+      }
+    }
+
+    .first-level {
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  a {
+    color: $palette-dark;
+    text-decoration: underline;
+    transition: color 300ms linear;
+
+    &:hover {
+      color: $palette-medium;
+      transition: color 300ms linear;
+    }
+  }
+}
