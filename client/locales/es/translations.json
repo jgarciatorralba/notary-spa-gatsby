@@ -879,5 +879,11 @@
         "intro": "Es posible que actualicemos la Política de Cookies de nuestro sitio web. Por ello, le recomendamos revisar esta política cada vez que acceda a nuestro sitio con el objetivo de estar adecuadamente informado sobre cómo y para qué usamos las cookies. Tenga en cuenta que los navegadores pueden también cambiar sus políticas y la ubicación de la información."
       }
     }
+  },
+
+  "cookie-banner": {
+    "text": "Utilizamos cookies de terceros para realizar el análisis de la navegación de los usuarios y mejorar nuestros servicios. Pulsando en \"Aceptar\" consiente dichas cookies. Puede obtener más información, o bien conocer cómo cambiar la configuración, pulsando en el enlace de \"Más información\".",
+    "acceptButton": "Aceptar",
+    "moreInfoLink": "Más información"
   }
 }
