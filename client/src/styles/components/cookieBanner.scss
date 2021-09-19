@@ -1,0 +1,12 @@
+@import "../settings/variables";
+
+.cookie-banner-wrapper {
+  min-height: $footer-height-laptop;
+
+  .cookie-banner-content {
+    p,
+    a {
+      font-size: 14px;
+    }
+  }
+}
