@@ -882,8 +882,7 @@
   },
 
   "cookie-banner": {
-    "text": "Utilizamos cookies de terceros para realizar el análisis de la navegación de los usuarios y mejorar nuestros servicios. Pulsando en \"Aceptar\" consiente dichas cookies. Puede obtener más información, o bien conocer cómo cambiar la configuración, pulsando en el enlace de \"Más información\".",
-    "acceptButton": "Aceptar",
-    "moreInfoLink": "Más información"
+    "text": "Utilizamos cookies de terceros para realizar el análisis de la navegación de los usuarios y mejorar nuestros servicios. Pulsando en \"Aceptar\" consiente dichas cookies. Puede obtener más información, o bien conocer cómo cambiar la configuración, pulsando en el siguiente <1>enlace</1>.",
+    "acceptButton": "Aceptar"
   }
 }
