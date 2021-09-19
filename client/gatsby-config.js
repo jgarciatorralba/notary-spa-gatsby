@@ -40,27 +40,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Notaría Mínguez en Vic`,
-        short_name: `Notaría Mínguez`,
-        lang: `es`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/assets/favicon/emblem.png`,
-        localize: [
-          {
-            start_url: `/ca/`,
-            lang: `ca`,
-            name: `Notaria Mínguez a Vic`,
-            short_name: `Notaria Mínguez`,
-          },
-        ],
-      },
-    },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-sass`,
