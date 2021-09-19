@@ -1,12 +1,106 @@
 @import "../settings/variables";
 
 .cookie-banner-wrapper {
-  min-height: $footer-height-laptop;
+  background-color: $palette-lightest;
+  color: $palette-darkest;
+  border-top: 1px solid $palette-light;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: 999;
+
+  &.not-front-page {
+    box-shadow: 0 -6px 6px -6px $palette-light;
+  }
+
+  // Smartphone portrait
+  @media only screen and (max-width: $breakpoint-mobile) {
+    min-height: $footer-height-mobile;
+  }
+
+  // Smartphone landscape
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: landscape) {
+    min-height: $footer-height-tablet;
+  }
+
+  // Tablet portrait
+  @media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop) and (orientation: portrait) {
+    min-height: $footer-height-tablet;
+  }
+
+  // Tablet in landscape, desktops and laptops
+  @media only screen and (min-width: $breakpoint-desktop) {
+    min-height: $footer-height-laptop;
+  }
 
   .cookie-banner-content {
-    p,
+    margin: 1rem;
+    flex: 1 0 300px;
+
+    p {
+      font-size: 0.875rem;
+    }
+
     a {
-      font-size: 14px;
+      font-size: 0.875rem;
+      color: $palette-dark;
+      text-decoration: underline;
+      transition: color 300ms linear;
+
+      &:hover {
+        color: $palette-medium;
+        transition: color 300ms linear;
+      }
+    }
+
+    // Tablet in landscape, desktops and laptops
+    @media only screen and (min-width: $breakpoint-desktop) {
+      margin-right: 0;
+    }
+
+    // Tablet in landscape, desktops and laptops
+    @media only screen and (min-width: $breakpoint-desktop) {
+      margin: 1rem 1rem 1rem 2rem;
+    }
+  }
+
+  .cookie-banner-btn-wrapper {
+    // Smartphone portrait
+    @media only screen and (max-width: $breakpoint-mobile) {
+      margin: 0 auto;
+    }
+
+    button {
+      font-size: 0.875rem;
+      background-color: $palette-light;
+      cursor: pointer;
+      flex: 0 0 auto;
+      padding: 0.5rem 1rem;
+      margin: 1rem;
+      transition: all 0.25s ease-in-out;
+
+      &:hover {
+        color: $palette-lightest;
+        background-color: $palette-dark;
+        box-shadow: 0 2px 6px $palette-light;
+        transition: all 0.25s ease-in-out;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile) {
+        margin-top: 0;
+      }
+
+      // Tablet in landscape, desktops and laptops
+      @media only screen and (min-width: $breakpoint-desktop) {
+        margin-right: 2rem;
+      }
     }
   }
 }
