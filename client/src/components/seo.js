@@ -80,6 +80,10 @@ function Seo({ description, meta, pageTitle, defaultTitle }) {
           name: `keywords`,
           content: site.siteMetadata.keywords.join(","),
         },
+        {
+          name: `robots`,
+          content: `none`,
+        },
       ].concat(meta)}
     />
   )
