@@ -16,7 +16,7 @@
         width: calc(100% - 1.5rem);
       }
 
-      .chevron-left-icon {
+      .chevron-down-icon {
         width: 1rem;
         position: absolute;
         top: 50%;
@@ -30,8 +30,8 @@
       }
 
       &[aria-expanded="true"] {
-        .chevron-left-icon {
-          transform: translateY(-50%) rotate(-90deg);
+        .chevron-down-icon {
+          transform: translateY(-50%) rotate(-180deg);
           transition: transform 400ms linear;
         }
       }

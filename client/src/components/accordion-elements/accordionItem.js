@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Fragment } from "react"
 import { Trans } from "gatsby-plugin-react-i18next"
-import { ChevronLeftIcon } from "@heroicons/react/outline"
+import { ChevronDownIcon } from "@heroicons/react/outline"
 
 import "../../styles/components/accordion-elements/accordionItem.scss"
 
@@ -27,7 +27,7 @@ const AccordionItem = ({
           onClick={onClick}
         >
           <p>{item.question}</p>
-          <ChevronLeftIcon className="chevron-left-icon" />
+          <ChevronDownIcon className="chevron-down-icon" />
         </button>
       </div>
 
