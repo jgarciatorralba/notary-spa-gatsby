@@ -14,7 +14,7 @@ const NotaryCard = ({ name, bio, highlights }) => {
           quality={90}
         />
       </div>
-      <div className="section-description p-4">
+      <div className="section-description p-4 ml-0.5 sm:ml-0">
         <h3 className="text-xl mb-4">{name}</h3>
         <p className="mb-4">{bio}</p>
         <ul className="list-disc ml-8">
