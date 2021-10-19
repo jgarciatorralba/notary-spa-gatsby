@@ -38,6 +38,12 @@ Promotional site for a notary office built with Gatsby.
 
 ---
 
+## Deployment
+
+The site is temporarily deployed to [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) in the following [url](https://notaryspagatsby.gatsbyjs.io/).
+
+---
+
 ## Author
 
 - **Jorge García Torralba** &#8594; [jorge-garcia](https://github.com/jgarciatorralba)
