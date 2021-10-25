@@ -1,6 +1,6 @@
 # notary-spa-gatsby
 
-Promotional site for a notary office built with Gatsby.
+Promotional site for a notary's office built with Gatsby.
 
 ## Content
 
