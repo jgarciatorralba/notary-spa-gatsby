@@ -31,7 +31,7 @@
 
       &[aria-expanded="true"] {
         .chevron-down-icon {
-          transform: translateY(-50%) rotate(-180deg);
+          transform: translateY(-50%) rotate(180deg);
           transition: transform 400ms linear;
         }
       }
