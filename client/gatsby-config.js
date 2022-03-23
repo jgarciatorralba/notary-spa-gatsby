@@ -48,7 +48,7 @@ module.exports = {
         lang: `es`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#663399`,
+        theme_color: `#22223b`,
         display: `minimal-ui`,
         icon: `src/assets/favicon/emblem.png`,
         localize: [
