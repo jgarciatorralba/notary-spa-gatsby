@@ -4,14 +4,14 @@ Promotional site for a notary's office built with Gatsby.
 
 ## Content
 
-### Navigation:
+### Navigation
 
 - **Home**: serves as a cover page with navbar and footer.
 - **About**: brief description of the company values and slider showcasing the members of the team.
 - **Services**: distributor page to all the services provided by the company, each one having its own service page with Q&As about the matter.
 - **Contact**: includes a map with the location of the business and a contact form to ask for further information or special requests.
 
-### Footer:
+### Footer
 
 - **Legal notice**, **privacy policy** and **cookie policy**: standard texts with legal warnings and site policies for privacy and use of cookies.
 
@@ -19,7 +19,7 @@ Promotional site for a notary's office built with Gatsby.
 
 ## Technologies
 
-### Frontend:
+### Frontend
 
 - Gatsby v3
 - Tailwind CSS
@@ -32,7 +32,7 @@ Promotional site for a notary's office built with Gatsby.
   - Google reCAPTCHA
   - Honeypot
 
-### Backend:
+### Backend
 
 - Serverless: Firebase cloud functions
 
