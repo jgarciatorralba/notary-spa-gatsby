@@ -102,22 +102,22 @@
           "label": "Nom i cognoms",
           "placeholder": "Pau Coll",
           "errors": {
-            "empty": "Si us plau, ompli aquest camp."
+            "empty": "Si us plau, ompliu aquest camp."
           }
         },
         "email": {
           "label": "Correu electrònic",
           "placeholder": "paucoll@exemple.com",
           "errors": {
-            "empty": "Si us plau, ompli aquest camp.",
+            "empty": "Si us plau, ompliu aquest camp.",
             "invalid": "El format utilitzat no és vàlid."
           }
         },
         "message": {
           "label": "Missatge",
-          "placeholder": "Escrigui el seu missatge aquí",
+          "placeholder": "Escriviu el vostre missatge aquí",
           "errors": {
-            "empty": "Si us plau, ompli aquest camp."
+            "empty": "Si us plau, ompliu aquest camp."
           }
         },
         "honeypot": {
@@ -127,15 +127,15 @@
       "button": {
         "text": "Enviar"
       },
-      "success": "Gràcies! El seu missatge s'ha enviat correctament.",
-      "error": "Hi ha hagut un problema amb la seva sol·licitud. Si us plau, Intenteu-ho de nou més tard."
+      "success": "Gràcies! El vostre missatge s'ha enviat correctament.",
+      "error": "Hi ha hagut un problema amb la vostra sol·licitud. Si us plau, Intenteu-ho de nou més tard."
     }
   },
 
   "not-found": {
     "title": "404",
     "header": "Pàgina no trobada",
-    "paragraph": "L'enllaç que ha seguit pot estar trencat, o la pàgina pot haver estat retirada."
+    "paragraph": "L'enllaç que heu seguit pot estar trencat, o la pàgina pot haver estat retirada."
   },
 
   "services": {
